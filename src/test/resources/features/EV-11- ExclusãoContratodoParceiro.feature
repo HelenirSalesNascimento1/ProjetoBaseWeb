@@ -12,7 +12,7 @@ Cenario: Verificar exclusão de condições comerciais MDR ao adicionar produtos
     E preencho os dados do parceiro
     E preencho os dados de parâmetros parceirias 
     E preencho os dados de condições comerciais
-    E excluo os dados de condições comerciais MDR
+    E removo os dados de condições comerciais MDR 
     E validar a exclusão de MDR 
     #E clico no botão continua
     #E preencho os dados de flex 

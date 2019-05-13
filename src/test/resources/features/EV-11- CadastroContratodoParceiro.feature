@@ -13,10 +13,10 @@ Funcionalidade: Cadastro
     E preencho os dados de parâmetros parceirias
     E preencho os dados de condições comerciais
     E clico no botão continua
-    E preencho os dados de flex
+    E preencho os dados de flex 
     Quando clicar no botão cadastrar novo usuário de parceiros
     Entao validar se a conta foi criada com sucesso
-
+ 
   @NomeValorEmBranco
   Cenario: Verificar cadastro com campo CNPJ com valor em branco
     E preencho o campo CNPJ "Em_BRANCO"
@@ -84,7 +84,7 @@ Funcionalidade: Cadastro
   Cenario: Verificar cadastro com campo Nome Parceiro com valor branco
     E preencho o campo Nome Parceiro com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
-    Quando clicar no botão continuar
+    Quando clicar no botão continuar 
     Então apresentar mensagem de erro
 
   @MDRcomSucesso

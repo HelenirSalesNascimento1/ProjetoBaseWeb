@@ -1,15 +1,16 @@
 package pages.page;
 
-import Controller.ControllerPagee;
+import Controller.ControllerPage;
 
-public class LoginPage extends ControllerPagee {
+public class LoginPage extends ControllerPage {
 
 	public void preecherLogin(String login) throws Exception {
-		this.setInput("//input[@id='mat-input-0']", login);
+		this.setInput("//input[@ng-reflect-name='username']", login);
 	}
 
 	public void preecherSenha(String senha) throws Exception {
-		this.setInput("//input[@id='mat-input-1']", senha);
+		this.setInput("//input[@ng-reflect-name='password']", senha);
+		
 	}       
 
 	public void btnLogin() throws Exception {

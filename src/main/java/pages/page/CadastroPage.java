@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 
-import Controller.ControllerPagee;
+import Controller.ControllerPage;
 
-public class CadastroPage extends ControllerPagee {
+public class CadastroPage extends ControllerPage {
 
 	public void preencherCnpj(String cnpj) throws Exception {
 
@@ -51,7 +51,7 @@ public class CadastroPage extends ControllerPagee {
 	}
 
 	public void selecionarUF(String uf) throws Exception {
-		this.getLabel("//span[@class='mat-select-placeholder ng-tns-c10-13 ng-star-inserted']").click();
+		this.getLabel("//mat-select[@ng-reflect-placeholder='UF']").click();
 		this.getLabel("//span[contains(text(),'" + uf + "')]").click();
 
 	}

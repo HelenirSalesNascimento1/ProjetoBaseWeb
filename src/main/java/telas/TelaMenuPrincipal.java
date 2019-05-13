@@ -1,8 +1,8 @@
 package telas;
 
-import Controller.ControllerPagee;
+import Controller.ControllerPage;
 
-public class TelaMenuPrincipal extends ControllerPagee{
+public class TelaMenuPrincipal extends ControllerPage{
 
 	public void acessarMenu(String opcao, String subMenu) {
 		try {

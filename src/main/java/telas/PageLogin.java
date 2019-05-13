@@ -1,8 +1,8 @@
 package telas;
 
-import Controller.ControllerPagee;
+import Controller.ControllerPage;
 
-public class PageLogin extends ControllerPagee {
+public class PageLogin extends ControllerPage {
 
 	public void clicarButton() throws Exception {
 		this.getButton("//button[text() = 'Entrar']").click();

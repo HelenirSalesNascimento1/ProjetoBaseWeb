@@ -10,21 +10,22 @@ public class MassaDadosUtils {
 		switch (value) {
 		case "Em_BRANCO":
 			return "  ";
-			
+
 		default:
-			break;	
+			break;
 
 		}
 		return value;
 	}
+
 	public static String gerarNomeAleatorio(int tamanho) {
 		return RandomStringUtils.randomAlphabetic(tamanho);
 	}
-	
+
 	public static String gerarNumeroAleatorio(int tamanho) {
 		return RandomStringUtils.randomNumeric(tamanho);
 	}
-	
+
 	public static String gerarCNPJ() {
 		Random random = new Random();
 		int[] digits = generateArray(random, 14, 12);
@@ -49,10 +50,10 @@ public class MassaDadosUtils {
 			digits[13] = 0;
 		else
 			digits[13] = 11 - rest;
-		
+
 		return String.valueOf(arrayToLong(digits));
 	}
-	
+
 	private static int[] generateArray(Random random, int length, int quantityOfZeros) {
 		if (quantityOfZeros > length)
 			throw new IllegalArgumentException("quantityOfZeros must be less or equal than length.");
@@ -68,7 +69,7 @@ public class MassaDadosUtils {
 			digits[i] = random.nextInt(10);
 		return digits;
 	}
-	
+
 	private static long arrayToLong(final int[] digits) {
 		long result = 0;
 		long pot = 1;

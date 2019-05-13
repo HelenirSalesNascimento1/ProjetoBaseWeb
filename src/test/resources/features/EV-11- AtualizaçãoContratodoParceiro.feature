@@ -1,14 +1,13 @@
 #language: pt
 #encoding: iso-8859-1
+@GoogleChrome
 Funcionalidade: Cadastro
 
   Contexto: 
     Dado acesso ao portal Parceiros
     E entro com usuario e senha validos
-    E qugit e cadastro uma parceria 
-    E que carrego os dados da parceria cadastrada
-    
-
+   
+   
   #@CadastroComSucessoAtualizaçao
   #Cenario: Validar atualização de parceria com sucesso
     #E altero os dados do parceiro
@@ -21,89 +20,132 @@ Funcionalidade: Cadastro
   
  # Cenario: Validar atualização de parceria do grupo de dados do parceiro
 
+@removendoItemListaMDR
   Cenario: Validar atualização de parceria removendo um item na lista de MDR
-    E preencho os dados do parceiro
-    E preencho os dados de parâmetros parceirias
-    E preencho os dados de condições comerciais
-    E clico para remover item da lista MDR
-    E validar atualização do item removido
-    E clico no botão continua
-    E preencho os dados de flex
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
+    E que carrego os dados da parceria cadastrada 
+    E removo os dados de condições comerciais MDR 
+    Quando remover MDR  
+    Entao atualizar a pagina que foi removido 
+    
+  #Ver com a vivi 
+  #Cenario: Validar atualização de parceria modificando um item na lista de MDR
+    #E preencho os dados do parceiro
+    #E preencho os dados de parâmetros parceirias
+    #E preencho os dados de condições comerciais
+    #E clico para modificando item da lista MDR
+    #E validar atualização do item modificado
+    #E clico no botão continua
+    #E preencho os dados de flex
 
   #Quando cadastrar novo usuário de parceiros
   #Entao validar se a conta foi criada com sucesso
   
-  Cenario: Validar atualização de parceria modificando um item na lista de MDR
-    E preencho os dados do parceiro
-    E preencho os dados de parâmetros parceirias
-    E preencho os dados de condições comerciais
-    E clico para modificando item da lista MDR
-    E validar atualização do item modificado
-    E clico no botão continua
-    E preencho os dados de flex
-
-  #Quando cadastrar novo usuário de parceiros
-  #Entao validar se a conta foi criada com sucesso
+  @AtualizacaoAdicionarItemListaMDR
   Cenario: Validar atualização de parceria adicionando um item na lista de MDR
-    E preencho os dados do parceiro
-    E preencho os dados de parâmetros parceirias
-    E preencho os dados de condições comerciais
-    E clico para adicionando item da lista MDR
-    E validar atualização do item adicionando
-    E clico no botão continua
-    E preencho os dados de flex
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
+    E que carrego os dados da parceria cadastrada 
+    E validar a lista de MDR com sucesso 
+    Quando adicionar a lista MDR 
+    Entao atualizar a pagina que foi adicionada 
 
-  #Quando cadastrar novo usuário de parceiros
-  #Entao validar se a conta foi criada com sucesso
-  Cenario: Validar atualização de parceria do grupo de dados parâmetros de parceria
-
+  #ver com a vivi 
+  #Cenario: Validar atualização de parceria do grupo de dados parâmetros de parceria
+  
+@AtualizacaoCNPJemBranco
   Cenario: Verificar atualização de parceria com o campo CNPJ em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo CNPJ "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
+    Então apresentar mensagem de erro
 
+@AtualizacaoRazaoSocialemBranco
   Cenario: Verificar atualização de parceria com o campo Razão Social em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo RAZAO SOCIAL "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
+    Então apresentar mensagem de erro
 
+@AtualizacaoLOGRADOUROemBranco
   Cenario: Verificar atualização de parceria com o campo LOGRADOURO em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo LOGRADOURO com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
+    Então apresentar mensagem de erro
 
+@AtualizacaoNUMEROemBranco
   Cenario: Verificar atualização de parceria com o campo NUMERO em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo NUMERO com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
-
+    Então apresentar mensagem de erro
+    
+@AtualizacaoBAIRROemBranco
   Cenario: Verificar atualização de parceria com o campo BAIRRO em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo BAIRRO com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
-
+    Então apresentar mensagem de erro
+    
+@AtualizacaoCIDADEemBranco
   Cenario: Verificar atualização de parceria com o campo CIDADE em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo CIDADE com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
+    Então apresentar mensagem de erro
 
+@AtualizacaoUFemBranco
   Cenario: Verificar atualização de parceria com o campo UF em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo UF com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
-
+    Então apresentar mensagem de erro
+    
+@AtualizacaoCEPemBranco
   Cenario: Verificar atualização de parceria com o campo CEP em branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
     E preencho o campo CEP com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
-    Então validar atualização da pagina
+    Então apresentar mensagem de erro
+
+@AtualizacaoNOMEPARCEIROemBranco
+ Cenario: Verificar cadastro com campo Nome Parceiro com valor branco
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros 
+    E entro com usuario e senha validos
+    E preencho o campo Nome Parceiro com valor "Em_BRANCO"
+    Mas preencho os demais campos do parceiros
+    Quando clicar no botão continuar
+    Então apresentar mensagem de erro
+
 
   Cenario: Verificar atualização de parceria com MDR crédito crediário
     E preencho os dados do parceiro

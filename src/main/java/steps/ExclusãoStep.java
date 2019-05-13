@@ -8,7 +8,7 @@ public class ExclusãoStep {
 	
 	MassaDadosUtils dados = new MassaDadosUtils();
 	
-	@Dado("excluo os dados de condições comerciais MDR")
+	@Dado("removo os dados de condições comerciais MDR")
 	public void excluoOsDadosDeCondiçõesComerciaisMDR() throws Exception {
 		ExclusãoFuncionalidade exclusão = new ExclusãoFuncionalidade();
 		exclusão.excluirProduto();

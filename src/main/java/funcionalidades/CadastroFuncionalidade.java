@@ -16,12 +16,16 @@ public class CadastroFuncionalidade {
 	MassaDadosUtils dados = new MassaDadosUtils();
 
 	public CadastroFuncionalidade() throws ClassNotFoundException, SQLException {
-		carregarMassaDados(massa = new MassaCadastro());
+		try {
+			carregarMassaDados(massa = new MassaCadastro());
+		}catch (Exception e) {
+			throw e;
+		}
 	}
 
 	private void carregarMassaDados(MassaCadastro massa) throws ClassNotFoundException, SQLException {
 		String cnpj = MassaDadosUtils.gerarCNPJ();
-		massa.setCnpj(MassaDadosUtils.gerarCNPJ());
+		massa.setCnpj(cnpj);
 		massa.setRazaoSocial(Config.getProperty("razaoSocial"));
 		massa.setNomeParceiro(Config.getProperty("nomeParceiro"));
 		massa.setLogradouro(Config.getProperty("logradouro"));
@@ -41,8 +45,8 @@ public class CadastroFuncionalidade {
 		massa.setNegativo("");
 		massa.setZerado("0000");
 	}
-	
-	
+
+
 
 	public void setCnpj() throws Exception {
 
@@ -88,7 +92,7 @@ public class CadastroFuncionalidade {
 		cadastroPage.preencherCidade(massa.getCidade());
 
 	}
-	
+
 
 	public void selecionarUf() throws Exception {
 
@@ -140,7 +144,7 @@ public class CadastroFuncionalidade {
 	public void setTarifaNegativo() throws Exception {
 		cadastroPage.preencherTarifa(massa.getNegativo());
 	}
-	
+
 	public void setTaxaZerado() throws Exception {
 		cadastroPage.preencherTaxa(massa.getZerado());
 	}
@@ -148,7 +152,7 @@ public class CadastroFuncionalidade {
 	public void setFator1Negativo() throws Exception {
 		cadastroPage.preencherFator1(massa.getNegativo());
 	}
-	
+
 	public void setFator1Zerado() throws Exception {
 		cadastroPage.preencherFator1(massa.getZerado());
 	}
@@ -220,7 +224,7 @@ public class CadastroFuncionalidade {
 	public void selecionarCanaisVenda() throws Exception {
 		cadastroPage.btnCanaisdeVenda();
 	}
-	
+
 	public void selecionarTLMKTAtivo() throws Exception {
 		cadastroPage.btnTLMKTAtivo();
 	}
@@ -309,14 +313,15 @@ public class CadastroFuncionalidade {
 		setCidade();
 		selecionarUf();
 		botaoContinuarCadastroParceiro();
-		
+
 
 	}
+	
 	public void botaoContinuarCadastroParceiro() throws Exception {
 		clicarContinuar();
 	}
-	
-	
+
+
 	public void preencherParceirosComMesmoEndereço() throws Exception {
 		setRazaoSocial();
 		setNomeParceiro();
@@ -353,7 +358,7 @@ public class CadastroFuncionalidade {
 		clicarAdicionarProduto();
 
 	}
-	
+
 	public void preecherCondiçõesComerciaisTaxaNegativo() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
@@ -372,7 +377,7 @@ public class CadastroFuncionalidade {
 		clicarAdicionarProduto();
 
 	}
-	
+
 	public void preecherCondiçõesComerciaisTaxaZerado() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
@@ -392,16 +397,16 @@ public class CadastroFuncionalidade {
 		btnAdicionarProduto();
 
 	}
-	
+
 	public void selecionarModalidadeSemJuro() throws Exception {
 		cadastroPage.selecionarModalidadeSemJuros();
 	}
-	
+
 	public void btnAdicionarProduto() throws Exception {
 		clicarAdicionarProduto();
 	}
-	
-	
+
+
 
 	public void preecherCondiçõesComerciaisSemModalidade() throws Exception {
 		selecionarProduto();
@@ -466,9 +471,9 @@ public class CadastroFuncionalidade {
 		// clicarContinuar3();
 
 	}
-	
-	
-	
+
+
+
 	public void preencherParêmetrosParceirias() throws Exception {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
@@ -488,7 +493,7 @@ public class CadastroFuncionalidade {
 		// btnMatrizRisco();
 
 	}
-	
+
 	public void preencherParêmetrosParceiriasCanalVendaEmBranco() throws Exception {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
@@ -558,7 +563,7 @@ public class CadastroFuncionalidade {
 		btnRegiaoGeografica();
 		clicarContinuar3();
 	}
-	
+
 	public void preencherParametrosParceiriasCanalVendaMaximoItem() throws Exception {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
@@ -611,7 +616,7 @@ public class CadastroFuncionalidade {
 		clicarContinuar3();
 
 	}
-	
+
 
 	public void preencherParametrosParceriaSemPropriedadeAplicar() throws Exception {
 		selecionarClienteFinal();
@@ -644,9 +649,9 @@ public class CadastroFuncionalidade {
 		clicarContinuar3();
 
 	}
-	
-	
-	
+
+
+
 	public void preencherParametrosParceriaSemMarca() throws Exception {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
@@ -923,12 +928,12 @@ public class CadastroFuncionalidade {
 
 	public void preencherTaxaZerada() throws Exception {
 		preecherCondiçõesComerciaisTaxaZerado();
-		
+
 	}
 
 	public void preencherTarifaNegativo() throws Exception {
 		preecherCondiçõesComerciaisTarifaNegativo();
-		
+
 	}
 
 	public void preencherFator1Negativo() throws Exception {
@@ -937,45 +942,45 @@ public class CadastroFuncionalidade {
 
 	public void preencherFator1Zerado() throws Exception {
 		preencherDadosFlexFator1Zerado();
-		
+
 	}
 
 	public void preencherFator2Negativo() throws Exception {
 		preencherDadosFlexFator2Negativo();
-		
+
 	}
 
 	public void preencherFator2Zerado() throws Exception {
 		preencherDadosFlexFator2Zerado();		
 	}
- 
+
 	public void validarCanalVenda() throws Exception {
 		preencherParametrosParceriaSemCanalVenda();
-		
+
 	}
 
 	public void comunicacaoMaximoItem() throws Exception {
-     
+
 		preencherParametrosParceiriasComunicacaoMaximoItem();
 	}
 
 	public void atuacaoMaximoItem() throws Exception {
 		preencherParametrosParceiriasAtuacaoMaximoItem();
-		
+
 	}
 
 	public void canalVendaMaximoItem() throws Exception {
 		preencherParametrosParceiriasCanalVendaMaximoItem();
-		
+
 	}
 
 	public void preencherCanalVendaEmBranco() throws Exception {
 		preencherParêmetrosParceiriasCanalVendaEmBranco();
-		
+
 	}
 
 	public void preecherComunicacaoEmBranco() throws Exception {
-		
+
 		preencherParêmetrosParceiriasCanalVendaEmBranco();
 	}
 
@@ -985,12 +990,12 @@ public class CadastroFuncionalidade {
 
 	public void preencherOutroCNPJ() throws Exception {
 		setCnpj();
-		
+
 	}
 
 	public void preencherComMesmoEndereçoAnteriomente() throws Exception {
 		preencherParceirosComMesmoEndereço();
-		
+
 	}
 	public void msgComSucesso(String msg) throws Exception {
 		System.out.println(cadastroPage.validarMsg(msg) + msg);
@@ -1002,8 +1007,8 @@ public class CadastroFuncionalidade {
 
 	public void btnContinuarCadastroParceiro() throws Exception {
 		botaoContinuarCadastroParceiro();
-		
-		
+
+
 	}
 	public void validarMsgErro(String msg) throws Exception {
 		System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
@@ -1011,10 +1016,10 @@ public class CadastroFuncionalidade {
 
 	public void validarMsgDeErro() throws Exception {
 		validarMsgErro("obrigatório");
-		
-		
+
+
 	}
 
-	
-	
+
+
 }

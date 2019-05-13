@@ -30,10 +30,10 @@ public class CadastroStep {
 	public void preenchoOsDadosDeCondiçõesComerciais() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preecherCondiçõesComerciais();
-	//	cadastroFuncionalidade.btnContinuarMdr();
+		// cadastroFuncionalidade.btnContinuarMdr();
 
 	}
-	
+
 	@Dado("clico no botão continua")
 	public void clicarNoBotãoContinua() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -106,12 +106,12 @@ public class CadastroStep {
 		cadastroFuncionalidade.validarCep(dados.switValue(cep));
 	}
 
-   @Dado("preencho o campo Nome Parceiro com valor {string}")
-   public void preenchoOCampoNomeParceiroComValor(String nomeParceiro) throws Exception {
-	   CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
-	   cadastroFuncionalidade.validarNomeParceiro(dados.switValue(nomeParceiro));
-	   
-  }
+	@Dado("preencho o campo Nome Parceiro com valor {string}")
+	public void preenchoOCampoNomeParceiroComValor(String nomeParceiro) throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarNomeParceiro(dados.switValue(nomeParceiro));
+
+	}
 
 	@Dado("preencho os demais campos do parceiros")
 	public void preenchoOsDemaisCamposDoParceiros() throws Exception {
@@ -227,60 +227,70 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherSemClienteFinal();
 	}
+
 	@Dado("preencho o propriedade terminal {string}")
 	public void preenchoOPropriedadeTerminal(String propriedadeTerminal) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherSemPropriedadeTerminal();
 	}
+
 	@Dado("preencho o propriedade aplicação {string}")
 	public void preenchoOPropriedadeAplicação(String propriedadeAplicacao) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherSemPropriedadeAplicacao();
 	}
+
 	@Dado("preencho o fornecedor da aplicaçao {string}")
 	public void preenchoOFornecedorDaAplicaçao(String fornecedorAplicacao) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherSemForncedorAplicaçao(dados.switValue(fornecedorAplicacao));
 	}
+
 	@Dado("preencho o marca {string}")
 	public void preenchoOMarca(String marca) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.selecionarSemMarca();
-		
+
 	}
+
 	@Dado("preencho o atendimento {string}")
 	public void preenchoOAtendimento(String centralAtendimento) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.selecionarSemCampoCentralAtendimento();
 	}
+
 	@Dado("preencho os MDR com campo campo taxa negativo")
 	public void preenchoOsMDRComCampoCampoTaxaNegativo() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherTaxaNegativo();
 	}
+
 	@Dado("preencho os MDR com campo campo taxa zerado")
 	public void preenchoOsMDRComCampoCampoTaxaZerado() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherTaxaZerada();
 	}
+
 	@Dado("preencho os MDR com campo campo taxa tarifa negativo")
 	public void preenchoOsMDRComCampoCampoTaxaTarifa() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherTarifaNegativo();
-			
+
 	}
+
 	@Dado("preencho os MDR com campo campo fator{int} negativo")
 	public void preenchoOsMDRComCampoCampoFatorNegativo(Integer int1) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherFator1Negativo();
-		
+
 	}
+
 	@Dado("preencho os MDR com campo campo fator{int} zerado")
 	public void preenchoOsMDRComCampoCampoFatorZerado(Integer int1) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherFator1Zerado();
 	}
-	
+
 	@Dado("preencho os MDR com campo fator{int} negativo")
 	public void preenchoOsMDRComCampoFatorNegativo(Integer int1) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -292,45 +302,52 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherFator2Zerado();
 	}
+
 	@Dado("preencho os dados de parâmetros parceirias canal de venda {string}")
 	public void preenchoOsDadosDeParâmetrosParceiriasCanalDeVenda(String canalVenda) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarCanalVenda();
 	}
+
 	@Dado("preencho os dados de parâmetros parceirias maximo itens comunicação")
 	public void preenchoOsDadosDeParâmetrosParceiriasMaximoItensComunicação() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.comunicacaoMaximoItem();
-	} 
+	}
+
 	@Dado("preencho os dados de parâmetros parceirias maximo itens atuação")
 	public void preenchoOsDadosDeParâmetrosParceiriasMaximoItensAtuação() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.atuacaoMaximoItem();
 	}
-	
+
 	@Dado("preencho os dados de parâmetros parceirias maximo itens canal de venda")
 	public void preenchoOsDadosDeParâmetrosParceiriasMaximoItensCanalDeVenda() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.canalVendaMaximoItem();
-		
+
 	}
+
 	@Dado("preencho o canal de venda {string}")
 	public void preenchoOCanalDeVenda(String canalVenda) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherCanalVendaEmBranco();
-		
+
 	}
+
 	@Dado("preencho o comunicação {string}")
 	public void preenchoOComunicação(String comunicacao) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preecherComunicacaoEmBranco();
 	}
+
 	@Dado("preencho o atuação {string}")
 	public void preenchoOAtuação(String atuacao) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preecherAtuacaoEmBranco();
-		
+
 	}
+
 	@Dado("preencho outro cnpj")
 	public void preenchoOutroCnpj() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -342,6 +359,7 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherComMesmoEndereçoAnteriomente();
 	}
+
 	@Quando("clicar no botão cadastrar novo usuário de parceiros")
 	public void clicarNoBotãoCadastrarNovoUsuárioDeParceiros() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -351,9 +369,9 @@ public class CadastroStep {
 	@Entao("validar se a conta foi criada com sucesso")
 	public void validarSeAContaFoiCriadaComSucesso() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
-		cadastroFuncionalidade.validarMsgDeCadastroComSucesso();		
+		cadastroFuncionalidade.validarMsgDeCadastroComSucesso();
 	}
-	
+
 	@Quando("clicar no botão continuar")
 	public void clicarNoBotãoContinuar() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -365,22 +383,17 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErro();
 	}
+
 	@Quando("clico no botão adicionar produto")
 	public void clicoNoBotãoAdicionarProduto() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.btnAdicionarProduto();
 	}
 
-//	@Então("nao deixar selecionar produto")
-//	public void naoDeixarSelecionarProduto() {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    throw new PendingException();
-//	}
-
-
-
-
-
-	
+	// @Então("nao deixar selecionar produto")
+	// public void naoDeixarSelecionarProduto() {
+	// // Write code here that turns the phrase above into concrete actions
+	// throw new PendingException();
+	// }
 
 }
