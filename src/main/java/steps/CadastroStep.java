@@ -395,5 +395,12 @@ public class CadastroStep {
 	// // Write code here that turns the phrase above into concrete actions
 	// throw new PendingException();
 	// }
+	
+	@Dado("no campo propriedade da aplicação selecionar Parceiro e preencho no campo fornecedor da Aplicacao")
+	public void noCampoPropriedadeDaAplicaçãoSelecionarParceiro() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.selecionarParceiro();
+		
+	}
 
 }

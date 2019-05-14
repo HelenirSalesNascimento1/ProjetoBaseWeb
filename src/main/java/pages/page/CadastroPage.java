@@ -84,7 +84,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void selecionarRamoAtividade() throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-8']").click();
+		this.getLabel("//mat-select[@ng-reflect-placeholder='Ramo de Atividade']").click();
 		this.getLabel("//span[contains(text(),'Bares')]").click();
 	}
 
@@ -106,11 +106,11 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnCompulsorio() throws Exception {
-		this.getButton("//mat-slide-toggle[@id='mat-slide-toggle-2']//div[@class='mat-slide-toggle-bar']").click();
+		this.getButton("//span[contains(text(),'Flex compulsório para todos os clientes')]").click();
 	}
 
 	public void btnCampanhaD2() throws Exception {
-		this.getButton("//mat-slide-toggle[@id='mat-slide-toggle-3']//div[@class='mat-slide-toggle-bar']").click();
+		this.getButton("//span[contains(text(),'Campanha D2')]").click();
 	}
 
 	public void preencherRegime(String regime) throws Exception {
@@ -143,10 +143,11 @@ public class CadastroPage extends ControllerPage {
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
 	}
 
-	public void selecionarPropriedadeAplicaçao() throws Exception {
+	public void selecionarPropriedadeAplicaçao(String rede) throws Exception {
 		this.getLabel("//mat-select[@id='mat-select-3']//div[@class='mat-select-value']").click();
-		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
+		this.getLabel("//span[@class='mat-option-text'][contains(text(),'" + rede + "')]").click();
 	}
+	
 
 	public void setFornecedordaAplicaçao(String aplicacao) throws Exception {
 		this.setInput("//input[@id='comercialApplicationProperties']", aplicacao);
@@ -233,12 +234,12 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void preencherProduto(String credito) throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-6']").click();
+		this.getLabel("//mat-select[@ng-reflect-placeholder='Produto']").click();
 		this.getLabel("//span[contains(text(),'"+ credito +"')]").click();
 	}
 
 	public void preencherModalidade(String crediario) throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-7']").click();
+		this.getLabel("//mat-select[@ng-reflect-placeholder='Modalidade']").click();
 		this.getLabel("//span[contains(text(),'" + crediario + "')]").click();
 
 	}
@@ -250,6 +251,15 @@ public class CadastroPage extends ControllerPage {
 
 	public boolean validarMsgDeErro(String msg) throws Exception {
 		return this.getMsg("//mat-error[@id='mat-error-48']//strong[contains(text(),'obrigatório')]", msg);
+	}
+	public void btnCondiçõesComerciais() throws Exception {
+		this.getButton("//div[contains(text(),'Condições Comerciais - MDR')]").click();
+	}
+	public void btnCondiçõesComerciaisFlex() throws Exception {
+		this.getButton("//div[contains(text(),'Condições Comerciais - Flex')]").click();
+	}
+	public void btnParametrosDaParceria() throws Exception {
+		this.getButton("//div[contains(text(),'Parâmetros da Parceria')]").click();
 	}
 
 }

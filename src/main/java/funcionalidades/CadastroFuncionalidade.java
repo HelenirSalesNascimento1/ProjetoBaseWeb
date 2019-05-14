@@ -112,11 +112,11 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarProduto() throws Exception {
-		cadastroPage.selecionarProduto("Débito");
+		cadastroPage.preencherProduto("Débito");
 	}
 
 	public void selecionarModalidade() throws Exception {
-		cadastroPage.selecionarModalidade();
+		cadastroPage.preencherModalidade(" À vista ");
 	}
 
 	public void selecionarRamoDeAtividade() throws Exception {
@@ -212,7 +212,11 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarPropriedadeAplicacao() throws Exception {
-		cadastroPage.selecionarPropriedadeAplicaçao();
+		cadastroPage.selecionarPropriedadeAplicaçao("Rede");
+	}
+	
+	public void selecionarPropriedadeAplicacaoParceiro() throws Exception {
+		cadastroPage.selecionarPropriedadeAplicaçao("Parceiro");
 	}
 
 	public void setFornecedorAplicacao() throws Exception {
@@ -399,7 +403,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarModalidadeSemJuro() throws Exception {
-		cadastroPage.selecionarModalidadeSemJuros();
+		cadastroPage.preencherModalidade(" Parcelado sem juros ");
 	}
 
 	public void btnAdicionarProduto() throws Exception {
@@ -493,6 +497,25 @@ public class CadastroFuncionalidade {
 		// btnMatrizRisco();
 
 	}
+	
+	public void preencherPametrosParceiriasCampoPropriedadeAplicacao() throws Exception {
+		selecionarClienteFinal();
+		selecionarPropriedadeTerminal();
+		selecionarPropriedadeAplicacaoParceiro();
+		setFornecedorAplicacao();
+		selecionarMarca();
+		selecionarCentralAtendimento();
+		btnAntecipaçaoRecebiveis();
+		btnCredenciamento();
+		selecionarTipoCaptura();
+		selecionarTecnologiaCaptura();
+		btnComunicacao();
+		selecionarCanaisVenda();
+		btnLimiteAtuacao();
+		clicarContinuar3();
+	}
+	
+	
 
 	public void preencherParêmetrosParceiriasCanalVendaEmBranco() throws Exception {
 		selecionarClienteFinal();
@@ -774,6 +797,17 @@ public class CadastroFuncionalidade {
 		cadastroPage.preencherProduto("Crédito");
 
 	}
+	
+	public void clicarCondicaoComerciaisMDR() throws Exception {
+		cadastroPage.btnCondiçõesComerciais();
+	}
+	public void clicarCondicaoComerciaisFlex() throws Exception {
+		cadastroPage.btnCondiçõesComerciaisFlex();
+	}
+	public void clicarParametrosDaParceria() throws Exception {
+		cadastroPage.btnParametrosDaParceria();
+	}
+
 
 	public void selecionaModalidadeCrediario() throws Exception {
 		cadastroPage.preencherModalidade("Crediário");
@@ -794,8 +828,22 @@ public class CadastroFuncionalidade {
 		cadastroPage.preencherModalidade("Parcelado sem juros");
 
 	}
+	public void btnCondiçaoComerciaisMDR() throws Exception {
+		clicarCondicaoComerciaisMDR();
+	}
+	
+	public void btnCondiçaoComerciaisFlex() throws Exception {
+		clicarCondicaoComerciaisFlex();
+	}
+	public void btnParametrosDaParceria() throws Exception {
+		clicarParametrosDaParceria();
+	}
 
+	
+	
+	
 	public void preencherDadosMDR() throws Exception {
+		
 		selecionaProdutoCredito();
 		selecionaModalidadeCrediario();
 		selecionarRamoDeAtividade();
@@ -1018,6 +1066,10 @@ public class CadastroFuncionalidade {
 		validarMsgErro("obrigatório");
 
 
+	}
+
+	public void selecionarParceiro() throws Exception {
+		preencherPametrosParceiriasCampoPropriedadeAplicacao();		
 	}
 
 

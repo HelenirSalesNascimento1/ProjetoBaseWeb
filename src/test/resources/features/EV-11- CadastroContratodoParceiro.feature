@@ -9,7 +9,7 @@ Funcionalidade: Cadastro
 
   @CadastroComSucesso
   Cenario: Verificar cadastro de parcerias com todos os campos obrigatório com sucesso
-    E preencho os dados do parceiro
+    E preencho os dados do parceiro 
     E preencho os dados de parâmetros parceirias
     E preencho os dados de condições comerciais
     E clico no botão continua
@@ -152,12 +152,7 @@ Funcionalidade: Cadastro
     E preencho outro cnpj
     E com mesmo endereço anteriomente
 
-  #	  E preencho os dados de parâmetros parceirias
-  #E preencho os dados de condições comerciais
-  #E clico no botão continua
-  #	  E preencho os dados de flex
-  #Quando cadastrar novo usuário de parceiros
-  #Entao validar se a conta foi criada com sucesso
+ 
   @MDRDuplicado
   Cenario: Validar cadastro de parceria com MDR duplicada na mesma requisição
     E preencho os dados do parceiro
@@ -235,12 +230,12 @@ Funcionalidade: Cadastro
     E preencho os dados de parâmetros parceirias
     E seleciono MDR com campo produto débito e modalidade crediario
 
-  @TaxaValorNegativo
-  Cenario: Verificar cadastro de parceria com campo taxa com o valor negativo
-    E preencho os dados do parceiro
-    E preencho os dados de parâmetros parceirias
-    E preencho os MDR com campo campo taxa negativo
-
+  #@TaxaValorNegativo
+  #Cenario: Verificar cadastro de parceria com campo taxa com o valor negativo
+    #E preencho os dados do parceiro
+    #E preencho os dados de parâmetros parceirias
+    #E preencho os MDR com campo campo taxa negativo
+#
   #E preencho os demais campos
   #E clico adicionar produtos
   #E preencho os dados de flex
@@ -362,7 +357,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E preencho o propriedade terminal "Em_BRANCO"
     E preencho demais campos
-    Quando clico no botão continuar
+    Quando clico no botão continuar 
     Entao apresentar mensagem de erro
 
   @propriedadeAplicaçãoFinalEmBranco
@@ -399,10 +394,11 @@ Funcionalidade: Cadastro
   #E preencho os demais campos parâmetros a parceria
   #Quando clico no botão cadastrar parceiro
   #Entao validar se a conta foi criada com sucesso
+  
+@CadastroSelecionarParceiro  
   Cenario: Validar parametros da parceria com campo propriedade da aplicação selecionado parceiro e preencher forcencedor da aplicação
     E preencho os dados do parceiro
-    Mas no campo propriedade da aplicação selecionar Parceiro
-    E habilita campo fornecedor da aplicação
+    Mas no campo propriedade da aplicação selecionar Parceiro e preencho no campo fornecedor da Aplicacao
     E preencho os demais campos
     E clico no botão continuar
     E preencho os dados de condições comerciais
@@ -541,8 +537,9 @@ Funcionalidade: Cadastro
   #E preencho a parceria com campo atuação
   #E selecionar com um item permitido
   #E preencho os demais campos parâmetros a parceria
-  #Quando clico no botão cadastrar parceiro
+  #Quando clico no botão cadastrar parceiro 
   #Entao validar se a conta foi criada com sucesso
+  
   @AtuacaoMaximoDeItens
   Cenario: Verificar cadastro de parceria com campo atuação com  máximo de itens permitidos(obrigatorio)
     E preencho os dados do parceiro
