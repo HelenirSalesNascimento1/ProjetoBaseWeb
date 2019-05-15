@@ -77,7 +77,7 @@ public class CadastroPage extends ControllerPage {
 		this.getLabel("//mat-select[@id='mat-select-7']").click();
 		this.getLabel("//span[contains(text(),'Parcelado sem juros')]").click();
 	}
-	
+
 	public void selecionarModalidade() throws Exception {
 		this.getLabel("//mat-select[@id='mat-select-7']").click();
 		this.getLabel("//span[contains(text(),'À vista')]").click();
@@ -129,6 +129,22 @@ public class CadastroPage extends ControllerPage {
 		this.getButton("//button[@id='btnParceiros3']").click();
 	}
 
+	public void preencherCarteira(String carteira) throws Exception {
+		this.setInput("//input[@id='commercialPortfolio']", carteira);
+	}
+
+	public void preencherCelula(String celula) throws Exception {
+		this.setInput("//input[@id='commercialCell']", celula);
+	}
+
+	public void preencherGrupoComercial(String grupoComercial) throws Exception {
+		this.setInput("//input[@id='commercialGroup']", grupoComercial);
+	}
+
+	public void preencherCanal(String canal) throws Exception {
+		this.setInput("//input[@id='commercialChannel']", canal);
+	}
+
 	public void selecionarPrecificaçaoClienteFinal() throws Exception {
 		this.getLabel("//mat-select[@id='mat-select-1']//div[@class='mat-select-value']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
@@ -147,7 +163,6 @@ public class CadastroPage extends ControllerPage {
 		this.getLabel("//mat-select[@id='mat-select-3']//div[@class='mat-select-value']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'" + rede + "')]").click();
 	}
-	
 
 	public void setFornecedordaAplicaçao(String aplicacao) throws Exception {
 		this.setInput("//input[@id='comercialApplicationProperties']", aplicacao);
@@ -205,7 +220,7 @@ public class CadastroPage extends ControllerPage {
 
 	public void btnRegiaoGeografica() throws Exception {
 		this.getButton("//mat-checkbox[@id='mat-checkbox-27']//div[@class='mat-checkbox-inner-container']").click();
-	}
+	}	
 
 	public void btnMatrizRisco() throws Exception {
 		this.getButton("//mat-slide-toggle[@id='mat-slide-toggle-4']//div[@class='mat-slide-toggle-bar']").click();
@@ -229,18 +244,18 @@ public class CadastroPage extends ControllerPage {
 			System.out.println("Value é : " + allvalue.get(i).getText());
 			System.out.println(allvalue.get(i).getAttribute("textContent"));
 		}
-	
-		
+
 	}
 
 	public void preencherProduto(String credito) throws Exception {
 		this.getLabel("//mat-select[@ng-reflect-placeholder='Produto']").click();
-		this.getLabel("//span[contains(text(),'"+ credito +"')]").click();
+		this.getLabel("//span[contains(text(),'" + credito + "')]").click();
 	}
 
-	public void preencherModalidade(String crediario) throws Exception {
+	public List<String> preencherModalidade(String crediario) throws Exception {
 		this.getLabel("//mat-select[@ng-reflect-placeholder='Modalidade']").click();
 		this.getLabel("//span[contains(text(),'" + crediario + "')]").click();
+		return null;
 
 	}
 
@@ -250,14 +265,21 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public boolean validarMsgDeErro(String msg) throws Exception {
-		return this.getMsg("//mat-error[@id='mat-error-48']//strong[contains(text(),'obrigatório')]", msg);
+		return this.getMsg("//strong[contains(text(),'" + msg + "')]", msg);
 	}
+	
+	public boolean validarMsgDeErroAdicionarProduto(String msg) throws Exception {
+		return this.getMsg("//div[@class='cdk-visually-hidden']", msg);
+	}
+
 	public void btnCondiçõesComerciais() throws Exception {
 		this.getButton("//div[contains(text(),'Condições Comerciais - MDR')]").click();
 	}
+
 	public void btnCondiçõesComerciaisFlex() throws Exception {
 		this.getButton("//div[contains(text(),'Condições Comerciais - Flex')]").click();
 	}
+
 	public void btnParametrosDaParceria() throws Exception {
 		this.getButton("//div[contains(text(),'Parâmetros da Parceria')]").click();
 	}

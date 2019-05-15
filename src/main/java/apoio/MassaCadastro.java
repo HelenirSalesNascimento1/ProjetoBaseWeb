@@ -30,6 +30,42 @@ public class MassaCadastro {
 	private String zerado;
 	private String login;
 	private String senha;
+	private String carteira;
+	private String celula;
+	private String grupoComercial;
+	private String canal;
+
+	public String getCarteira() {
+		return carteira;
+	}
+
+	public void setCarteira(String carteira) {
+		this.carteira = carteira;
+	}
+
+	public String getCelula() {
+		return celula;
+	}
+
+	public void setCelula(String celula) {
+		this.celula = celula;
+	}
+
+	public String getGrupoComercial() {
+		return grupoComercial;
+	}
+
+	public void setGrupoComercial(String grupoComercial) {
+		this.grupoComercial = grupoComercial;
+	}
+
+	public String getCanal() {
+		return canal;
+	}
+
+	public void setCanal(String canal) {
+		this.canal = canal;
+	}
 
 	public String getLogin() {
 		return login;

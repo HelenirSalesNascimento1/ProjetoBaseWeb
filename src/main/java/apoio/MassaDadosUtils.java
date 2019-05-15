@@ -9,7 +9,7 @@ public class MassaDadosUtils {
 	public String switValue(String value) {
 		switch (value) {
 		case "Em_BRANCO":
-			return "  ";
+			return "";
 
 		default:
 			break;

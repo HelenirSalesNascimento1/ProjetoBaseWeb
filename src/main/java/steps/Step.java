@@ -1,7 +1,5 @@
 package steps;
 
-import java.sql.SQLException;
-
 import apoio.MassaDadosUtils;
 import contexto.Aplicacao;
 import contexto.Contexto;
