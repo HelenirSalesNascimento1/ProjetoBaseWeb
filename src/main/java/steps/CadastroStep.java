@@ -454,5 +454,11 @@ public class CadastroStep {
 	@Quando("clico no botão continuar")
 	public void clicoNoBotãoContinuar() {
 	}
+	@Dado("preencho os MDR com campo campo taxa tarifa Zerado")
+	public void preenchoOsMDRComCampoCampoTaxaTarifaZerado() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.preencherTarifaZerada();
+	}
+	
 
 }

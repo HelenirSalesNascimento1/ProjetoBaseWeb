@@ -8,6 +8,9 @@ public class ExclusãoPage extends ControllerPage{
 		getButton("//mat-icon[@class='mat-18 mat-icon material-icons']").click();
 		
 	}
+	public void btnExcluirParceiro() throws Exception {
+		getButton("//button[@id='deletePartner']").click();
+	}
 	
 
 }

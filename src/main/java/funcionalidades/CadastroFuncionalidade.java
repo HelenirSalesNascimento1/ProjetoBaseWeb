@@ -1,6 +1,8 @@
 package funcionalidades;
 
+import java.awt.List;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import apoio.MassaCadastro;
 import apoio.MassaDadosUtils;
@@ -25,6 +27,7 @@ public class CadastroFuncionalidade {
 
 	private void carregarMassaDados(MassaCadastro massa) throws ClassNotFoundException, SQLException {
 		String cnpj = MassaDadosUtils.gerarCNPJ();
+
 		massa.setCnpj(cnpj);
 		massa.setRazaoSocial(Config.getProperty("razaoSocial"));
 		massa.setNomeParceiro(Config.getProperty("nomeParceiro"));
@@ -43,7 +46,7 @@ public class CadastroFuncionalidade {
 		massa.setFator2(Config.getProperty("fator2"));
 		massa.setParametrosParceria(Config.getProperty("parametrosParceria"));
 		massa.setNegativo("");
-		massa.setZerado("0000");
+		massa.setZerado("000000");
 		massa.setCarteira(Config.getProperty("carteira"));
 		massa.setCelula(Config.getProperty("celula"));
 		massa.setGrupoComercial(Config.getProperty("grupoComercial"));
@@ -150,6 +153,10 @@ public class CadastroFuncionalidade {
 
 	public void setTaxaZerado() throws Exception {
 		cadastroPage.preencherTaxa(massa.getZerado());
+	}
+
+	public void setTarifaZerada() throws Exception {
+		cadastroPage.preencherTarifa(massa.getZerado());
 	}
 
 	public void setFator1Negativo() throws Exception {
@@ -429,6 +436,16 @@ public class CadastroFuncionalidade {
 
 	}
 
+	public void preecherCondiçõesComerciaisTarifaZerado() throws Exception {
+		selecionarProduto();
+		selecionarModalidade();
+		selecionarRamoDeAtividade();
+		setTaxaDebito();
+		setTarifaZerada();
+		clicarAdicionarProduto();
+
+	}
+
 	public void preecherCondiçõesComerciaisSemProduto() throws Exception {
 		selecionarModalidadeSemJuro();
 		selecionarRamoDeAtividade();
@@ -539,6 +556,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherPametrosParceiriasCampoPropriedadeAplicacao() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacaoParceiro();
@@ -556,6 +577,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParêmetrosParceiriasCanalVendaEmBranco() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
@@ -566,7 +591,6 @@ public class CadastroFuncionalidade {
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
-		btnComunicacao();
 		selecionarCanaisVenda();
 		clicarContinuar3();
 
@@ -594,6 +618,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceiriasComunicacaoMaximoItem() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
@@ -629,6 +657,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceiriasCanalVendaMaximoItem() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
@@ -648,9 +680,13 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemClienteFinal() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
-		setFornecedorAplicacao();
+		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
 		btnAntecipaçaoRecebiveis();
@@ -665,9 +701,13 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemPropriedadeTerminal() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeAplicacao();
-		setFornecedorAplicacao();
+		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
 		btnAntecipaçaoRecebiveis();
@@ -682,9 +722,13 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemPropriedadeAplicar() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
-		setFornecedorAplicacao();
+		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
 		btnAntecipaçaoRecebiveis();
@@ -699,6 +743,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemCanalVenda() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		setFornecedorAplicacao();
@@ -715,6 +763,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemMarca() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
@@ -732,6 +784,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemCampoCentralAtendimento() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
@@ -907,8 +963,6 @@ public class CadastroFuncionalidade {
 		clicarAdicionarProduto();
 
 	}
-	
-	
 
 	public void preecherDadosMDR3() throws Exception {
 		selecionaProdutoCredito();
@@ -1152,6 +1206,11 @@ public class CadastroFuncionalidade {
 	public void preencherCanalEmBranco(String canal) throws Exception {
 		massa.setCanal(canal);
 		preencherParêmetrosParceirias();
+
+	}
+
+	public void preencherTarifaZerada() throws Exception {
+		preecherCondiçõesComerciaisTarifaZerado();
 
 	}
 

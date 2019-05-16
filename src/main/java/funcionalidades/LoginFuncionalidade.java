@@ -81,7 +81,10 @@ public class LoginFuncionalidade {
 	}
 
 	public void validarSucessoLogin() throws Exception {
-		validarMsgSucesso("Cadastro de Parceiros");
+		validarMsgSucesso(" Bem-vindx, admin@redelabs.tech! ");
+		
+		
+	
 	}
 
 }

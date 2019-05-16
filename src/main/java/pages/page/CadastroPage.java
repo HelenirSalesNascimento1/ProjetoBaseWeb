@@ -1,7 +1,10 @@
 package pages.page;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByName;
 import org.openqa.selenium.WebElement;
 
 import Controller.ControllerPage;
@@ -165,7 +168,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void setFornecedordaAplicaçao(String aplicacao) throws Exception {
-		this.setInput("//input[@id='comercialApplicationProperties']", aplicacao);
+		this.setInput("//input[@id='comercialApplicationProvider']", aplicacao);
 	}
 
 	public void btnCanaisdeVenda() throws Exception {
@@ -282,6 +285,21 @@ public class CadastroPage extends ControllerPage {
 
 	public void btnParametrosDaParceria() throws Exception {
 		this.getButton("//div[contains(text(),'Parâmetros da Parceria')]").click();
+	}
+
+	public void recuperarListaSelect() throws Exception {
+//		this.getLabel("//mat-select[@ng-reflect-placeholder='Modalidade']").click();  //*[@id="cdk-overlay-7"]/div/div
+//		this.getLabel("//span[contains(text(),'" + crediario + "')]").click(); //*[@id="cdk-overlay-7"]/div/div
+		List<WebElement> k = this.getListElement("//*[@id=\"cdk-overlay-7\"]/div");
+		k.size();
+		ArrayList<String> l = new ArrayList<>();
+		for(int i =0;i<k.size(); i++) {
+			l.add(k.get(1).getText());
+			System.out.println(l.get(i));
+		}
+		
+		
+	
 	}
 
 }

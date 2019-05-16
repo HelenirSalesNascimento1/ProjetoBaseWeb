@@ -11,4 +11,4 @@ Cenario: Validar consulta de parceria cadastrado com sucesso
     E consulto os dados do parceiro com CNPJ ja cadastrado 
     Quando restonar os dados de parceria 
     Entao validar cadastro com sucesso
-     
+      

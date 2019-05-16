@@ -15,11 +15,9 @@ Funcionalidade: Cadastro
     E que carrego os dados da parceria cadastrada
     E clico no botão alterar parceiro
     E clico condições comerciais 
-    E removo os dados de condições comerciais MDR   
-    Quando remover MDR  
-    Entao atualizar a pagina que foi removido 
+    Quando removo os dados de condições comerciais MDR   
+    Entao validar a exclusão de MDR
      
-
   
  @AtualizacaoAdicionarItemListaMDR
   Cenario: Validar atualização de parceria adicionando um item na lista de MDR

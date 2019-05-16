@@ -8,7 +8,7 @@ Funcionalidade: Login
  
   @LoginSucesso
   Cenario: validar tela login com usuario e senha validos
-    Quando entro com usuario e senha validos 
+    Quando entro com usuario e senha validos  
     Entao validar conta conectada com sucesso    
 
   @LoginUsuarioInvalido

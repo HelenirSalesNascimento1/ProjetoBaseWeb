@@ -45,6 +45,16 @@ public abstract class ControllerPage {
 		}
 
 	}
+	
+	public List<WebElement> getListElement(String XPATH_INPUT) throws Exception {
+		try {
+			return webDriverFactory.getWebDriver().findElements(By.xpath(XPATH_INPUT));
+		} catch (Exception e) {
+			System.out.println("Erro ao encontrar xPath: " + XPATH_INPUT);
+			throw e;
+		}
+
+	}
 
 	public void setInput(String xPath, String value) throws Exception {
 		getElement(xPath).sendKeys(value);

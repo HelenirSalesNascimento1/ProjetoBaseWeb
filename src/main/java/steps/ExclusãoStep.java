@@ -17,8 +17,6 @@ public class ExclusãoStep {
 	@Dado("validar a exclusão de MDR")
 	public void validarAExclusãoDeMDR() {
 	
-		//ExclusãoFuncionalidade exclusão = new ExclusãoFuncionalidade();
-		//exclusão.validarExclusao();
 	}
 
 }
