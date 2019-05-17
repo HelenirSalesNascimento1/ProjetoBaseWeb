@@ -81,7 +81,7 @@ public class LoginFuncionalidade {
 	}
 
 	public void validarSucessoLogin() throws Exception {
-		validarMsgSucesso(" Bem-vindx, admin@redelabs.tech! ");
+		validarMsgSucesso(" Bem-vindo, ADMIN! ");
 		
 		
 	

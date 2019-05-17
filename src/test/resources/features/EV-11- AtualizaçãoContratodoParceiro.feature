@@ -50,14 +50,14 @@ Funcionalidade: Cadastro
     E que cadastro uma parceria
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos
-    E que carrego os dados da parceria cadastrada
+    E que carrego os dados da parceria cadastrada 
     E clico no botão alterar parceiro
     E preencho o campo razao social "Em_BRANCO"
     Quando clicar no botão continuar
     Então apresentar mensagem de erro
 
 @AtualizacaoLOGRADOUROemBranco
-  Cenario: Verificar atualização de parceria com o campo LOGRADOURO em branco
+  Cenario: Verificar atualização de parceria com o campo logradouro em branco
     E que cadastro uma parceria
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos
@@ -68,7 +68,7 @@ Funcionalidade: Cadastro
     Então apresentar mensagem de erro
 
 @AtualizacaoNUMEROemBranco
-  Cenario: Verificar atualização de parceria com o campo NUMERO em branco
+  Cenario: Verificar atualização de parceria com o campo número em branco
     E que cadastro uma parceria
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos
@@ -80,7 +80,7 @@ Funcionalidade: Cadastro
     Então apresentar mensagem de erro
     
 @AtualizacaoBAIRROemBranco
-  Cenario: Verificar atualização de parceria com o campo BAIRRO em branco
+  Cenario: Verificar atualização de parceria com o campo bairro em branco
     E que cadastro uma parceria
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos
@@ -92,7 +92,7 @@ Funcionalidade: Cadastro
     Então apresentar mensagem de erro
     
 @AtualizacaoCIDADEemBranco
-  Cenario: Verificar atualização de parceria com o campo CIDADE em branco
+  Cenario: Verificar atualização de parceria com o campo cidade em branco
     E que cadastro uma parceria
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos
@@ -116,7 +116,7 @@ Funcionalidade: Cadastro
     Então apresentar mensagem de erro
     
 @AtualizacaoCEPemBranco
-  Cenario: Verificar atualização de parceria com o campo CEP em branco
+  Cenario: Verificar atualização de parceria com o campo cep em branco
     E que cadastro uma parceria
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos 
@@ -138,7 +138,7 @@ Funcionalidade: Cadastro
     Mas preencho os demais campos do parceiros
     Quando clicar no botão continuar
     Então apresentar mensagem de erro
-
+    
 @AtualizacaoParceriaCrediroCrediario
   Cenario: Verificar atualização de parceria com MDR crédito crediário
     E que cadastro uma parceria
@@ -151,6 +151,7 @@ Funcionalidade: Cadastro
     Quando clico no botão adicionar produto
     #Então apresentar mensagem de sucesso 
 
+#fazer testes para colocar na mrr
 @AtualizacaoParceriaCrediroVista
   Cenario: Verificar atualização de parceria com MDR crédito à vista
     E que cadastro uma parceria
@@ -162,6 +163,7 @@ Funcionalidade: Cadastro
     E seleciono MDR com campo produto credito e modalidade à vista
     Quando clico no botão adicionar produto
     #Então apresentar mensagem sem sucesso 
+    
     
 @AtualizacaoParceriaParceladoComJuros
   Cenario: Verificar atualização de parceria com MDR crédito parcelado com juros
@@ -234,8 +236,6 @@ Funcionalidade: Cadastro
     E seleciono MDR com campo produto débito e modalidade crediario
     Quando clico no botão adicionar produto
     #Então sem sucesso 
-
-
 
 
 @AtualizacaoTaxaBranco

@@ -454,11 +454,22 @@ public class CadastroStep {
 	@Quando("clico no botão continuar")
 	public void clicoNoBotãoContinuar() {
 	}
+
 	@Dado("preencho os MDR com campo campo taxa tarifa Zerado")
 	public void preenchoOsMDRComCampoCampoTaxaTarifaZerado() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherTarifaZerada();
 	}
-	
+
+	@Então("apresentar mensagem que ja existe MDR cadastrado")
+	public void apresentarMensagemQueJaExisteMDRCadastrado() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDuplicadaMDR();
+
+	}
+
+	@Então("deixar passar o teste")
+	public void deixarPassarOTeste() {
+	}
 
 }

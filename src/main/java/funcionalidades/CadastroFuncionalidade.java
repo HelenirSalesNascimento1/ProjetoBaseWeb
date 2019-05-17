@@ -360,7 +360,7 @@ public class CadastroFuncionalidade {
 		setBairro();
 		setCidade();
 		selecionarUf();
-		botaoContinuarCadastroParceiro();
+		//botaoContinuarCadastroParceiro();
 
 	}
 
@@ -917,7 +917,14 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionaProdutoVista() throws Exception {
-		cadastroPage.preencherModalidade("À vista");
+		
+		try {
+			cadastroPage.preencherModalidade("À vista");
+		} catch (Exception e) {
+			System.out.println("Erro ao selecionar opção a vista pois Crédito não possui essa opção");
+			throw e;
+		}
+		
 
 	}
 
@@ -1170,6 +1177,16 @@ public class CadastroFuncionalidade {
 
 	public void validarMsgErro(String msg) throws Exception {
 		System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
+	
+	}
+	 public void validarMsgDuplicada(String msg) throws Exception {
+		 System.out.println(cadastroPage.validarMsgDeErroAdicionarProduto(msg) + msg);
+	 }
+	
+	
+	public void validarMsgDuplicada() throws Exception {
+		validarMsgDuplicada("Já existe MDR cadastrado para estes parâmetros.");
+
 	}
 
 	public void validarMsgDeErroObrigatorio() throws Exception {
@@ -1212,6 +1229,11 @@ public class CadastroFuncionalidade {
 	public void preencherTarifaZerada() throws Exception {
 		preecherCondiçõesComerciaisTarifaZerado();
 
+	}
+
+	public void validarMsgDuplicadaMDR() throws Exception {
+		
+		validarMsgDuplicada();
 	}
 
 }
