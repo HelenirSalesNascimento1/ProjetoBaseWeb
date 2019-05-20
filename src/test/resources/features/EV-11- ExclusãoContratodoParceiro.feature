@@ -1,5 +1,5 @@
 #language: pt
-#encoding: iso-8859-1
+#encoding: UTF-8
 @GoogleChrome
 Funcionalidade: Exclusão do Contrato do Parceiro
 
@@ -20,4 +20,4 @@ Funcionalidade: Exclusão do Contrato do Parceiro
   Cenario: Verificar exclusão de cadastro de parceiros
     E consulto os dados do parceiro com CNPJ ja cadastrado
     Quando clico no botão excluir parceiro
-    Então aprensentar mensagem que foi desabilitado parceiro
+    Entao aprensentar mensagem que foi desabilitado parceiro
