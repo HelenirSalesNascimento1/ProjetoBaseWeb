@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 		strict = false, 
 	    glue = {"classpath:steps"}, 
 	    features = {"classpath:features"},
-	    tags = {"@CadastroComSucesso"}
+	    tags = {"@MDRProdutoValorEmBranco"}
 		)
 
 public class Runner {  

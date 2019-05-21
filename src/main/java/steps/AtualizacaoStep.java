@@ -23,8 +23,8 @@ public class AtualizacaoStep {
 	@Dado("que cadastro uma parceria")
 	public void queCadastroUmaParceria() throws Exception {
 		cadastroFuncionalidade.preencherParceiros();
-		cadastroFuncionalidade.preencherParêmetrosParceirias();
-		cadastroFuncionalidade.preecherCondiçõesComerciais();
+		cadastroFuncionalidade.preencherParametrosParceirias();
+		cadastroFuncionalidade.preecherCondiÃ§ÃµesComerciais();
 		cadastroFuncionalidade.btnContinuarMdr();
 		cadastroFuncionalidade.preencherDadosFlex();
 		cadastroFuncionalidade.btnCadastrarParceiro();
@@ -84,22 +84,22 @@ public class AtualizacaoStep {
 		
 	}
 	
-	@Dado("clico no botão alterar parceiro")
-	public void clicoNoBotãoAlterarParceiro() throws Exception {
+	@Dado("clico no botao alterar parceiro")
+	public void clicoNoBotaoAlterarParceiro() throws Exception {
 	}
 	
-	@Dado("clico condições comerciais")
-	public void clicoCondiçõedsComerciais() throws Exception {
-		cadastroFuncionalidade.btnCondiçaoComerciaisMDR();
+	@Dado("clico condicoes comerciais")
+	public void clicoCondiÃ§ÃµedsComerciais() throws Exception {
+		cadastroFuncionalidade.btnCondiÃ§aoComerciaisMDR();
 		
 	}
-	@Dado("clico condições comerciais flex")
-	public void clicoCondiçõesComerciaisFlex() throws Exception {
-		cadastroFuncionalidade.btnCondiçaoComerciaisFlex();
+	@Dado("clico condicoes comerciais flex")
+	public void clicoCondiÃ§oesComerciaisFlex() throws Exception {
+		cadastroFuncionalidade.btnCondiÃ§aoComerciaisFlex();
 	}
 	
-	@Dado("clico parâmetros da parceria")
-	public void clicoParâmetrosDaParceria() throws Exception {
+	@Dado("clico parï¿½metros da parceria")
+	public void clicoParametrosDaParceria() throws Exception {
 		cadastroFuncionalidade.btnParametrosDaParceria();
 	}
 	@Dado("preencho o campo TAXA com valor {string}")

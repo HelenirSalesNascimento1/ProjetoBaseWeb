@@ -116,11 +116,11 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarProduto() throws Exception {
-		cadastroPage.preencherProduto("Débito");
+		cadastroPage.preencherProduto("DÃ©bito");
 	}
 
 	public void selecionarModalidade() throws Exception {
-		cadastroPage.preencherModalidade(" À vista ");
+		cadastroPage.preencherModalidade(" Ã€ vista ");
 	}
 
 	public void selecionarRamoDeAtividade() throws Exception {
@@ -185,7 +185,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void clicarCompulsório() throws Exception {
+	public void clicarCompulsorio() throws Exception {
 		cadastroPage.btnCompulsorio();
 
 	}
@@ -212,15 +212,15 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarClienteFinal() throws Exception {
-		cadastroPage.selecionarPrecificaçaoClienteFinal();
+		cadastroPage.selecionarPrecificaÃ§aoClienteFinal();
 	}
 
 	public void preencherCarteira(String carteira) throws Exception {
 		cadastroPage.preencherCarteira(carteira);
 	}
 
-	public void btnAntecipaçaoRecebiveis() throws Exception {
-		cadastroPage.btnPermiteAntecipação();
+	public void btnAntecipaÃ§aoRecebiveis() throws Exception {
+		cadastroPage.btnPermiteAntecipaÃ§ao();
 	}
 
 	public void selecionarPropriedadeTerminal() throws Exception {
@@ -228,11 +228,11 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarPropriedadeAplicacao() throws Exception {
-		cadastroPage.selecionarPropriedadeAplicaçao("Rede");
+		cadastroPage.selecionarPropriedadeAplicaÃ§ao("Rede");
 	}
 
 	public void selecionarPropriedadeAplicacaoParceiro() throws Exception {
-		cadastroPage.selecionarPropriedadeAplicaçao("Parceiro");
+		cadastroPage.selecionarPropriedadeAplicaÃ§ao("Parceiro");
 	}
 
 	public void preencherCarteira() throws Exception {
@@ -261,7 +261,7 @@ public class CadastroFuncionalidade {
 
 	public void setFornecedorAplicacao() throws Exception {
 
-		cadastroPage.setFornecedordaAplicaçao(massa.getParametrosParceria());
+		cadastroPage.setFornecedordaAplicaÃ§ao(massa.getParametrosParceria());
 
 	}
 
@@ -297,16 +297,16 @@ public class CadastroFuncionalidade {
 
 	public void btnComunicacao() throws Exception {
 
-		cadastroPage.btnComunicaçao();
+		cadastroPage.btnComunicaÃ§ao();
 
 	}
 
 	public void btnSerasa() throws Exception {
-		cadastroPage.btnComunicaçaoSerasa();
+		cadastroPage.btnComunicaÃ§aoSerasa();
 	}
 
 	public void btnAtivacaoProdutos() throws Exception {
-		cadastroPage.btnComunicaçaoAtivacaoProdutos();
+		cadastroPage.btnComunicaÃ§aoAtivacaoProdutos();
 	}
 
 	public void selecionarCentralAtendimento() throws Exception {
@@ -368,7 +368,7 @@ public class CadastroFuncionalidade {
 		clicarContinuar();
 	}
 
-	public void preencherParceirosComMesmoEndereço() throws Exception {
+	public void preencherParceirosComMesmoEndereÃ§o() throws Exception {
 		setRazaoSocial();
 		setNomeParceiro();
 		setCep();
@@ -396,7 +396,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preecherCondiçõesComerciais() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciais() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
 		selecionarRamoDeAtividade();
@@ -406,7 +406,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preecherCondiçõesComerciaisTaxaNegativo() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisTaxaNegativo() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
 		selecionarRamoDeAtividade();
@@ -416,7 +416,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preecherCondiçõesComerciaisTarifaNegativo() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisTarifaNegativo() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
 		selecionarRamoDeAtividade();
@@ -426,7 +426,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preecherCondiçõesComerciaisTaxaZerado() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisTaxaZerado() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
 		selecionarRamoDeAtividade();
@@ -436,7 +436,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preecherCondiçõesComerciaisTarifaZerado() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisTarifaZerado() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
 		selecionarRamoDeAtividade();
@@ -446,7 +446,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preecherCondiçõesComerciaisSemProduto() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisSemProduto() throws Exception {
 		selecionarModalidadeSemJuro();
 		selecionarRamoDeAtividade();
 		setTaxaCredito();
@@ -463,7 +463,7 @@ public class CadastroFuncionalidade {
 		clicarAdicionarProduto();
 	}
 
-	public void preecherCondiçõesComerciaisSemModalidade() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisSemModalidade() throws Exception {
 		selecionarProduto();
 		selecionarRamoDeAtividade();
 		setTaxaDebito();
@@ -472,7 +472,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preecherCondiçõesComerciaisSemRamo() throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisSemRamo() throws Exception {
 		selecionarProduto();
 		selecionarModalidade();
 		setTaxaDebito();
@@ -482,7 +482,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherDadosFlex() throws Exception {
-		clicarCompulsório();
+		clicarCompulsorio();
 		clicarCampanhaD2();
 		setRegime();
 		setFator1();
@@ -492,7 +492,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherDadosFlexFator1Negativo() throws Exception {
-		clicarCompulsório();
+		clicarCompulsorio();
 		clicarCampanhaD2();
 		setRegime();
 		setFator1Negativo();
@@ -502,7 +502,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherDadosFlexFator1Zerado() throws Exception {
-		clicarCompulsório();
+		clicarCompulsorio();
 		clicarCampanhaD2();
 		setRegime();
 		setFator1Zerado();
@@ -512,7 +512,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherDadosFlexFator2Negativo() throws Exception {
-		clicarCompulsório();
+		clicarCompulsorio();
 		clicarCampanhaD2();
 		setRegime();
 		setFator1();
@@ -522,7 +522,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherDadosFlexFator2Zerado() throws Exception {
-		clicarCompulsório();
+		clicarCompulsorio();
 		clicarCampanhaD2();
 		setRegime();
 		setFator1();
@@ -531,7 +531,7 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preencherParêmetrosParceirias() throws Exception {
+	public void preencherParametrosParceirias() throws Exception {
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -542,7 +542,7 @@ public class CadastroFuncionalidade {
 		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -566,7 +566,7 @@ public class CadastroFuncionalidade {
 		setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -576,7 +576,7 @@ public class CadastroFuncionalidade {
 		clicarContinuar3();
 	}
 
-	public void preencherParêmetrosParceiriasCanalVendaEmBranco() throws Exception {
+	public void preencherParametrosParceiriasCanalVendaEmBranco() throws Exception {
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -587,7 +587,7 @@ public class CadastroFuncionalidade {
 		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -598,14 +598,14 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preencherParêmetrosParceiriasComunicacaoEmBranco() throws Exception {
+	public void preencherParametrosParceiriasComunicacaoEmBranco() throws Exception {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
 		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -627,7 +627,7 @@ public class CadastroFuncionalidade {
 		selecionarPropriedadeAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -645,7 +645,7 @@ public class CadastroFuncionalidade {
 		selecionarPropriedadeAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -666,7 +666,7 @@ public class CadastroFuncionalidade {
 		selecionarPropriedadeAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -689,7 +689,7 @@ public class CadastroFuncionalidade {
 		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -710,7 +710,7 @@ public class CadastroFuncionalidade {
 		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -731,7 +731,7 @@ public class CadastroFuncionalidade {
 		// setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -752,7 +752,7 @@ public class CadastroFuncionalidade {
 		setFornecedorAplicacao();
 		selecionarMarca();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -772,7 +772,7 @@ public class CadastroFuncionalidade {
 		selecionarPropriedadeAplicacao();
 		setFornecedorAplicacao();
 		selecionarCentralAtendimento();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -793,7 +793,7 @@ public class CadastroFuncionalidade {
 		selecionarPropriedadeAplicacao();
 		setFornecedorAplicacao();
 		selecionarMarca();
-		btnAntecipaçaoRecebiveis();
+		btnAntecipaÃ§aoRecebiveis();
 		btnCredenciamento();
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
@@ -855,7 +855,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMdrSucesso() throws Exception {
-		preecherCondiçõesComerciais();
+		preecherCondiÃ§ÃµesComerciais();
 		validarMensagemMDR();
 		btnContinuarMdr();
 	}
@@ -866,45 +866,45 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherMDRSemProduto() throws Exception {
-		preecherCondiçõesComerciaisSemProduto();
+		preecherCondiÃ§ÃµesComerciaisSemProduto();
 		// btnContinuarMdr();
 	}
 
 	public void preencherMDRSemModalidade() throws Exception {
-		preecherCondiçõesComerciaisSemModalidade();
+		preecherCondiÃ§ÃµesComerciaisSemModalidade();
 		// btnContinuarMdr();
 	}
 
 	public void preencherMDRSemRamo() throws Exception {
-		preecherCondiçõesComerciaisSemRamo();
+		preecherCondiÃ§ÃµesComerciaisSemRamo();
 		// btnContinuarMdr();
 	}
 
-	public void preecherCondiçõesComerciaisSemTaxa(String taxa) throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisSemTaxa(String taxa) throws Exception {
 		massa.setTaxaDebito(taxa);
-		preecherCondiçõesComerciais();
+		preecherCondiÃ§ÃµesComerciais();
 		// btnContinuarMdr();
 
 	}
 
-	public void preecherCondiçõesComerciaisSemTarifa(String tarifa) throws Exception {
+	public void preecherCondiÃ§ÃµesComerciaisSemTarifa(String tarifa) throws Exception {
 		massa.setTarifaDebito(tarifa);
-		preecherCondiçõesComerciais();
+		preecherCondiÃ§ÃµesComerciais();
 		// btnContinuarMdr();
 
 	}
 
 	public void selecionaProdutoCredito() throws Exception {
-		cadastroPage.preencherProduto("Crédito");
+		cadastroPage.preencherProduto("CrÃ©dito");
 
 	}
 
 	public void clicarCondicaoComerciaisMDR() throws Exception {
-		cadastroPage.btnCondiçõesComerciais();
+		cadastroPage.btnCondiÃ§oesComerciais();
 	}
 
 	public void clicarCondicaoComerciaisFlex() throws Exception {
-		cadastroPage.btnCondiçõesComerciaisFlex();
+		cadastroPage.btnCondiÃ§oesComerciaisFlex();
 	}
 
 	public void clicarParametrosDaParceria() throws Exception {
@@ -912,16 +912,16 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionaModalidadeCrediario() throws Exception {
-		cadastroPage.preencherModalidade("Crediário");
+		cadastroPage.preencherModalidade("CrediÃ¡rio");
 
 	}
 
 	public void selecionaProdutoVista() throws Exception {
 		
 		try {
-			cadastroPage.preencherModalidade("À vista");
+			cadastroPage.preencherModalidade(" Ã€ vista ");
 		} catch (Exception e) {
-			System.out.println("Erro ao selecionar opção a vista pois Crédito não possui essa opção");
+			System.out.println("Erro ao selecionar opÃ§Ã£o a vista pois CrÃ©dito nÃ£o possui essa opÃ§Ã£o");
 			throw e;
 		}
 		
@@ -938,11 +938,11 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void btnCondiçaoComerciaisMDR() throws Exception {
+	public void btnCondiÃ§aoComerciaisMDR() throws Exception {
 		clicarCondicaoComerciaisMDR();
 	}
 
-	public void btnCondiçaoComerciaisFlex() throws Exception {
+	public void btnCondiÃ§aoComerciaisFlex() throws Exception {
 		clicarCondicaoComerciaisFlex();
 	}
 
@@ -1030,13 +1030,13 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preencherCondiçaoComerciaisFlexSemRegime(String regime) throws Exception {
+	public void preencherCondiÃ§aoComerciaisFlexSemRegime(String regime) throws Exception {
 		massa.setRegime(regime);
 		preencherDadosFlex();
 
 	}
 
-	public void preencherCondiçaoFlexSemFator1(String fator1) throws Exception {
+	public void preencherCondiÃ§aoFlexSemFator1(String fator1) throws Exception {
 		massa.setFator1(fator1);
 		preencherDadosFlex();
 
@@ -1063,9 +1063,9 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preencherSemForncedorAplicaçao(String fornecedorAplicaçao) throws Exception {
-		massa.setParametrosParceria(fornecedorAplicaçao);
-		preencherParêmetrosParceirias();
+	public void preencherSemForncedorAplicaÃ§ao(String fornecedorAplicaÃ§ao) throws Exception {
+		massa.setParametrosParceria(fornecedorAplicaÃ§ao);
+		preencherParametrosParceirias();
 	}
 
 	public void selecionarSemMarca() throws Exception {
@@ -1079,16 +1079,16 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherTaxaNegativo() throws Exception {
-		preecherCondiçõesComerciaisTaxaNegativo();
+		preecherCondiÃ§ÃµesComerciaisTaxaNegativo();
 	}
 
 	public void preencherTaxaZerada() throws Exception {
-		preecherCondiçõesComerciaisTaxaZerado();
+		preecherCondiÃ§ÃµesComerciaisTaxaZerado();
 
 	}
 
 	public void preencherTarifaNegativo() throws Exception {
-		preecherCondiçõesComerciaisTarifaNegativo();
+		preecherCondiÃ§ÃµesComerciaisTarifaNegativo();
 
 	}
 
@@ -1131,17 +1131,17 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherCanalVendaEmBranco() throws Exception {
-		preencherParêmetrosParceiriasCanalVendaEmBranco();
+		preencherParametrosParceiriasCanalVendaEmBranco();
 
 	}
 
 	public void preecherComunicacaoEmBranco() throws Exception {
 
-		preencherParêmetrosParceiriasCanalVendaEmBranco();
+		preencherParametrosParceiriasCanalVendaEmBranco();
 	}
 
 	public void preecherAtuacaoEmBranco() throws Exception {
-		preencherParêmetrosParceiriasCanalVendaEmBranco();
+		preencherParametrosParceiriasCanalVendaEmBranco();
 	}
 
 	public void preencherOutroCNPJ() throws Exception {
@@ -1149,8 +1149,8 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void preencherComMesmoEndereçoAnteriomente() throws Exception {
-		preencherParceirosComMesmoEndereço();
+	public void preencherComMesmoEndereÃ§oAnteriomente() throws Exception {
+		preencherParceirosComMesmoEndereÃ§o();
 
 	}
 
@@ -1172,7 +1172,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMsgDeErroAdicionarProduto() throws Exception {
-		validarMsgDeErroAdicionarProduto("O campo produto é obrigatório");
+		validarMsgDeErroAdicionarProduto("O campo produto Ã© obrigatÃ³rio");
 	}
 
 	public void validarMsgErro(String msg) throws Exception {
@@ -1185,17 +1185,17 @@ public class CadastroFuncionalidade {
 	
 	
 	public void validarMsgDuplicada() throws Exception {
-		validarMsgDuplicada("Já existe MDR cadastrado para estes parâmetros.");
+		validarMsgDuplicada("JÃ¡ existe MDR cadastrado para estes parametros.");
 
 	}
 
 	public void validarMsgDeErroObrigatorio() throws Exception {
-		validarMsgErro("obrigatório");
+		validarMsgErro("continuar");
 
 	}
 
 	public void validarMsgDeErroObrigatoria() throws Exception {
-		validarMsgErro("obrigatória");
+		validarMsgErro("obrigatÃ³ria");
 
 	}
 
@@ -1205,29 +1205,29 @@ public class CadastroFuncionalidade {
 
 	public void preencherCarteiraEmBranco(String carteira) throws Exception {
 		massa.setCarteira(carteira);
-		preencherParêmetrosParceirias();
+		preencherParametrosParceirias();
 	}
 
 	public void preencherCelulaEmBranco(String celula) throws Exception {
 		massa.setCelula(celula);
-		preencherParêmetrosParceirias();
+		preencherParametrosParceirias();
 
 	}
 
 	public void preencherGrupoComercialEmBranco(String grupoComercial) throws Exception {
 		massa.setGrupoComercial(grupoComercial);
-		preencherParêmetrosParceirias();
+		preencherParametrosParceirias();
 
 	}
 
 	public void preencherCanalEmBranco(String canal) throws Exception {
 		massa.setCanal(canal);
-		preencherParêmetrosParceirias();
+		preencherParametrosParceirias();
 
 	}
 
 	public void preencherTarifaZerada() throws Exception {
-		preecherCondiçõesComerciaisTarifaZerado();
+		preecherCondiÃ§ÃµesComerciaisTarifaZerado();
 
 	}
 

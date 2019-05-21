@@ -13,9 +13,9 @@ public class Step {
 	MassaDadosUtils dados = new MassaDadosUtils();
 
 	@Dado("acesso ao portal Parceiros")
-	public void acessoAoPortalSeuBarriga() throws Exception {
+	public void acessoAoPortalParceiro() throws Exception {
 		app = new Aplicacao();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		app.acessarPagina(Contexto.recuperarInstancia().recuperarLink());
 	}
 

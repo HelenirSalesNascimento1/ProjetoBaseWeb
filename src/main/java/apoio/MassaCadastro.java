@@ -21,7 +21,7 @@ public class MassaCadastro {
 	private String fator2;
 	private String parametrosParceria;
 	private String marca;
-	private String comunicaçao;
+	private String comunicaÃ§ao;
 	private String centralAtendimento;
 	private String limiteAtuacao;
 	private String matrizRisco;
@@ -115,12 +115,12 @@ public class MassaCadastro {
 		this.marca = marca;
 	}
 
-	public String getComunicaçao() {
-		return comunicaçao;
+	public String getComunicaÃ§ao() {
+		return comunicaÃ§ao;
 	}
 
-	public void setComunicaçao(String comunicaçao) {
-		this.comunicaçao = comunicaçao;
+	public void setComunicaÃ§ao(String comunicaÃ§ao) {
+		this.comunicaÃ§ao = comunicaÃ§ao;
 	}
 
 	public String getCentralAtendimento() {

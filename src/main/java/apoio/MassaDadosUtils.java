@@ -17,6 +17,17 @@ public class MassaDadosUtils {
 		}
 		return value;
 	}
+	public String switValues(String value) {
+		switch (value) {
+		case "Em_BRANCO":
+			return "   ";
+
+		default:
+			break;
+
+		}
+		return value;
+	}
 
 	public static String gerarNomeAleatorio(int tamanho) {
 		return RandomStringUtils.randomAlphabetic(tamanho);

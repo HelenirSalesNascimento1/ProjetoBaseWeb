@@ -2,20 +2,20 @@ package steps;
 
 import apoio.MassaDadosUtils;
 import cucumber.api.java.pt.Dado;
-import funcionalidades.Exclus„oFuncionalidade;
+import funcionalidades.Exclus√£oFuncionalidade;
 
-public class Exclus„oStep {
+public class Exclus√£oStep {
 	
 	MassaDadosUtils dados = new MassaDadosUtils();
 	
 	@Dado("removo os dados de condicoes comerciais MDR")
-	public void excluoOsDadosDeCondiÁıesComerciaisMDR() throws Exception {
-		Exclus„oFuncionalidade exclus„o = new Exclus„oFuncionalidade();
-		exclus„o.excluirProduto();
+	public void excluoOsDadosDeCondi√ß√µesComerciaisMDR() throws Exception {
+		Exclus√£oFuncionalidade exclus√£o = new Exclus√£oFuncionalidade();
+		exclus√£o.excluirProduto();
 	}
 
-	@Dado("validar a exclus„o de MDR")
-	public void validarAExclus„oDeMDR() {
+	@Dado("validar a exclusao de MDR")
+	public void validarAExclusaoDeMDR() {
 	
 	}
 

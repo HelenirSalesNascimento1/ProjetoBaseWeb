@@ -4,20 +4,18 @@ import java.sql.SQLException;
 
 import apoio.MassaCadastro;
 import apoio.MassaDadosUtils;
-import pages.page.CadastroPage;
-import pages.page.Exclus„oPage;
-import pages.page.LoginPage;
+import pages.page.Exclus√£oPage;
 import readers.Config;
 import utils.WebDriverFactory;
 
-public class Exclus„oFuncionalidade {
+public class Exclus√£oFuncionalidade {
 	
 	WebDriverFactory DriverFactory = new WebDriverFactory();
-	Exclus„oPage exclus„oPage = new Exclus„oPage();
+	Exclus√£oPage exclus√£oPage = new Exclus√£oPage();
 	MassaCadastro massa;
 	MassaDadosUtils dados = new MassaDadosUtils();
 	
-	public Exclus„oFuncionalidade() throws ClassNotFoundException, SQLException {
+	public Exclus√£oFuncionalidade() throws ClassNotFoundException, SQLException {
 		carregarMassaDados(massa = new MassaCadastro());
 	}
 
@@ -44,7 +42,7 @@ public class Exclus„oFuncionalidade {
 	}
 
 	public void excluirProduto() throws Exception {
-		exclus„oPage.btnExcluirProduto();
+		exclus√£oPage.btnExcluirProduto();
 		
 	}
 

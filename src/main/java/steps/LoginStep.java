@@ -16,15 +16,15 @@ public class LoginStep {
 
 	}
 
-	@Quando("login com usuário válido e senha inválida")
-	public void loginComUsuárioVálidoESenhaInválida() throws Exception {
+	@Quando("login com usuï¿½rio vï¿½lido e senha invï¿½lida")
+	public void loginComUsuarioValidoESenhaInvalida() throws Exception {
 		LoginFuncionalidade loginFuncionalidade = new LoginFuncionalidade();
 		loginFuncionalidade.senhaInvalido();
 
 	} 
 
-	@Quando("login sem usuário {string}")
-	public void loginSemUsuário(String login) throws Exception {
+	@Quando("login sem usuï¿½rio {string}")
+	public void loginSemUsuario(String login) throws Exception {
 		LoginFuncionalidade loginFuncionalidade = new LoginFuncionalidade();
 		loginFuncionalidade.loginEmBraco(dados.switValue(login));
 	}
