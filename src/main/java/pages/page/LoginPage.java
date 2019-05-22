@@ -17,6 +17,6 @@ public class LoginPage extends ControllerPage {
 		getButton("//button[@class='mat-button']").click();
 }
 	public boolean validarMsg(String msg) throws Exception {
-      return this.getMsg("//div[contains(text(),'Bem-vindo, ADMIN!')]", msg);
+      return this.getMsg("//div[contains(text(),'Bem-vindo,')]", msg);
  
 } }

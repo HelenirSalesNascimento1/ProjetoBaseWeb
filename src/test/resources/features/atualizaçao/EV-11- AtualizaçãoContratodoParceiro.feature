@@ -6,6 +6,7 @@ Funcionalidade: Atualizacao
   Contexto: 
     Dado acesso ao portal Parceiros
     E entro com usuario e senha validos
+    E validar conta conectada com sucesso
    
 @removendoItemListaMDR
   Cenario: Validar atualizacao de parceria removendo um item na lista de MDR
@@ -13,10 +14,10 @@ Funcionalidade: Atualizacao
     E acesso ao portal Parceiros   
     E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada  
-    E clico no botao alterar parceiro
+    E clico no botao alterar parceiro 
     E clico condicoes comerciais
     Quando removo os dados de condicoes comerciais MDR   
-    Entao validar a exclusao de MDR
+    Entao validar a exclusao de MDR 
      
   
  @AtualizacaoAdicionarItemListaMDR
@@ -30,7 +31,6 @@ Funcionalidade: Atualizacao
     Quando validar a lista de MDR com sucesso 
     Entao atualizar a pagina que foi adicionada a lista 
 
-
   
 @AtualizacaoCNPJemBranco
   Cenario: Verificar atualiza��o de parceria com o campo CNPJ em branco
@@ -42,7 +42,7 @@ Funcionalidade: Atualizacao
     E preencho o campo CNPJ "Em_BRANCO" 
     Mas preencho os demais campos do parceiros
     Quando clicar no botao continuar
-    Entao apresentar mensagem de erro
+    Entao nao habilitar o botao
 
 @AtualizacaoRazaoSocialemBranco
   Cenario: Verificar atualiza��o de parceria com o campo Raz�o Social em branco

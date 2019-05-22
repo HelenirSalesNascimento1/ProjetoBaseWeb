@@ -1,5 +1,6 @@
 package contexto;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Contexto {
@@ -12,11 +13,11 @@ public class Contexto {
 			instancia = new Contexto();
 		}
 		return instancia;
-	}
+	} 
 
 	
 	private static ArrayList<String> listaURL = new ArrayList<String>();{
-		listaURL.add("http://partner.ui.redelabs.tech/#/login");
+		listaURL.add("http://localhost:4200/#/login?returnUrl=%2F");
 		listaURL.add("Link2");
 		listaURL.add("Link3");
 		listaURL.add("Link4");

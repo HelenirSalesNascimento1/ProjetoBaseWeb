@@ -23,7 +23,9 @@ public class AtualizacaoStep {
 	@Dado("que cadastro uma parceria")
 	public void queCadastroUmaParceria() throws Exception {
 		cadastroFuncionalidade.preencherParceiros();
+		cadastroFuncionalidade.botaoContinuarCadastroParceiro();
 		cadastroFuncionalidade.preencherParametrosParceirias();
+		cadastroFuncionalidade.clicarContinuar3();
 		cadastroFuncionalidade.preecherCondiçõesComerciais();
 		cadastroFuncionalidade.btnContinuarMdr();
 		cadastroFuncionalidade.preencherDadosFlex();

@@ -233,13 +233,13 @@ public class CadastroStep {
 		cadastroFuncionalidade.preencherSemPropriedadeTerminal();
 	}
 
-	@Dado("preencho o propriedade aplica��o {string}")
+	@Dado("preencho o propriedade aplicaçao {string}")
 	public void preenchoOPropriedadeAplicaçao(String propriedadeAplicacao) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherSemPropriedadeAplicacao();
 	}
 
-	@Dado("preencho o fornecedor da aplica�ao {string}")
+	@Dado("preencho o fornecedor da aplicacao {string}")
 	public void preenchoOFornecedorDaAplicaçao(String fornecedorAplicacao) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preencherSemForncedorAplicaçao(dados.switValue(fornecedorAplicacao));
@@ -308,7 +308,7 @@ public class CadastroStep {
 		cadastroFuncionalidade.validarCanalVenda();
 	}
 
-	@Dado("preencho os dados de par�metros parceirias maximo itens comunica��o")
+	@Dado("preencho os dados de parametros parceirias maximo itens comunicacao")
 	public void preenchoOsDadosDeParametrosParceiriasMaximoItensComunicaçao() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.comunicacaoMaximoItem();
@@ -334,7 +334,7 @@ public class CadastroStep {
 
 	}
 
-	@Dado("preencho o comunica��o {string}")
+	@Dado("preencho o comunicacao {string}")
 	public void preenchoOComunicaçao(String comunicacao) throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.preecherComunicacaoEmBranco();
@@ -382,11 +382,28 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroObrigatorio();
 	}
-
-	@Entao("apresentar mensagem de erro obrigatoria")
-	public void apresentarMensagemDeErroObrigatoria() throws Exception {
+	@Entao("nao habilitar o botao2")
+	public void apresentarMensagemDeErrobtn3() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
-		cadastroFuncionalidade.validarMsgDeErroObrigatoria();
+		cadastroFuncionalidade.validarMsgDeErroObrigatoriobtn3();
+	}
+
+	@Entao("apresentar mensagem de erro campo regime")
+	public void apresentarMensagemDeErroregime() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDeErroObrigatoriaRegime();
+	}
+	
+	@Entao("apresentar mensagem de erro campo fator1")
+	public void apresentarMensagemDeErrofator1() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDeErroObrigatoriaFator1();
+	}
+	
+	@Entao("apresentar mensagem de erro campo fator2")
+	public void apresentarMensagemDeErrofator2() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDeErroObrigatoriaFator1();
 	}
 
 	@Quando("clico no botao adicionar produto")
@@ -401,7 +418,7 @@ public class CadastroStep {
 	// throw new PendingException();
 	// }
 
-	@Dado("no campo propriedade da aplica��o selecionar Parceiro e preencho no campo fornecedor da Aplicacao")
+	@Dado("no campo propriedade da aplicacao selecionar Parceiro e preencho no campo fornecedor da Aplicacao")
 	public void noCampoPropriedadeDaApliçaoSelecionarParceiro() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.selecionarParceiro();
@@ -434,10 +451,36 @@ public class CadastroStep {
 		cadastroFuncionalidade.preencherCanalEmBranco(dados.switValue(canal));
 	}
 
-	@Entao("apresentar mensagem de erro campo obrigatorio")
+	@Entao("apresentar mensagem de erro campo produto obrigatorio")
 	public void apresentarMensagemDeErroCampoObrigatorio() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroAdicionarProduto();
+	}
+	@Entao("apresentar mensagem de erro campo modalidade obrigatorio")
+	public void apresentarMensagemDeErroModalidadeObrigatorio() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDeErroAdicionarModalidade();
+	}
+	
+	
+	
+	@Entao("apresentar mensagem de erro campo ramo de atividade obrigatorio")
+	public void apresentarMensagemDeErroRamoAtividadeObrigatorio() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDeErroAdicionaRamoAtividade();
+	}
+	
+	
+	@Entao("apresentar mensagem de erro campo taxa obrigatorio")
+	public void apresentarMensagemDeErroTaxaObrigatorio() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDeErroAdicionaTaxa();
+	}
+	
+	@Entao("apresentar mensagem de erro campo tarifa obrigatorio")
+	public void apresentarMensagemDeErroTarifaObrigatorio() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarMsgDeErroAdicionaTarifa();
 	}
 
 	@Entao("validar a lista de MDR")

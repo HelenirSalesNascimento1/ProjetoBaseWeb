@@ -549,6 +549,29 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
+		//clicarContinuar3();
+
+		// btnMatrizRisco();
+
+	}
+	public void preencherParametrosParceiria() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
+		selecionarClienteFinal();
+		selecionarPropriedadeTerminal();
+		selecionarPropriedadeAplicacao();
+		// setFornecedorAplicacao();
+		selecionarMarca();
+		selecionarCentralAtendimento();
+		btnAntecipaçaoRecebiveis();
+		btnCredenciamento();
+		selecionarTipoCaptura();
+		selecionarTecnologiaCaptura();
+		btnComunicacao();
+		selecionarCanaisVenda();
+		btnLimiteAtuacao();
 		clicarContinuar3();
 
 		// btnMatrizRisco();
@@ -592,6 +615,7 @@ public class CadastroFuncionalidade {
 		selecionarTipoCaptura();
 		selecionarTecnologiaCaptura();
 		selecionarCanaisVenda();
+		btnLimiteAtuacao();
 		clicarContinuar3();
 
 		// btnMatrizRisco();
@@ -640,6 +664,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceiriasAtuacaoMaximoItem() throws Exception {
+		preencherCarteira();
+		preencherCelula();
+		preencherGrupoComercial();
+		preencherCanal();
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
@@ -696,7 +724,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		clicarContinuar3();
+		//aclicarContinuar3();
 
 	}
 
@@ -717,7 +745,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		clicarContinuar3();
+		//clicarContinuar3();
 
 	}
 
@@ -738,7 +766,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		clicarContinuar3();
+		//clicarContinuar3();
 
 	}
 
@@ -779,7 +807,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		clicarContinuar3();
+		//clicarContinuar3();
 
 	}
 
@@ -800,7 +828,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		clicarContinuar3();
+		//clicarContinuar3();
 
 	}
 
@@ -1064,8 +1092,8 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherSemForncedorAplicaçao(String fornecedorAplicaçao) throws Exception {
-		massa.setParametrosParceria(fornecedorAplicaçao);
-		preencherParametrosParceirias();
+	massa.setParametrosParceria(fornecedorAplicaçao);
+	preencherParametrosParceiria();
 	}
 
 	public void selecionarSemMarca() throws Exception {
@@ -1167,20 +1195,43 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void validarMsgDeErroAdicionarProduto(String msg) throws Exception {
-		System.out.println(cadastroPage.validarMsgDeErroAdicionarProduto(msg) + msg);
+	public void validarMsgDeError(String msg) throws Exception {
+		System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
 	}
 
 	public void validarMsgDeErroAdicionarProduto() throws Exception {
-		validarMsgDeErroAdicionarProduto("O campo produto é obrigatório");
+		validarMsgDeError("O campo produto é obrigatório");
+		
+	}
+	public void validarMsgDeErroAdicionarModalidade() throws Exception {
+		validarMsgDeError("O campo modalidade é obrigatório");
+		
+	}
+	public void validarMsgDeErroAdicionaRamoAtividade() throws Exception {
+		validarMsgDeError("O campo ramo de atividade é obrigatório");
+		
+	}
+	public void validarMsgDeErroAdicionaTaxa() throws Exception {
+		validarMsgDeError("O campo taxa é obrigatório");
+		
+	}
+	
+	public void validarMsgDeErroAdicionaTarifa() throws Exception {
+		validarMsgDeError("O campo tarifa é obrigatório");
+		
 	}
 
 	public void validarMsgErro(String msg) throws Exception {
 		System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
 	
 	}
+	
+	public void validarMsgErrobtn3(String msg) throws Exception {
+		System.out.println(cadastroPage.validarMsgDeErroBtn3(msg) + msg);
+	
+	}
 	 public void validarMsgDuplicada(String msg) throws Exception {
-		 System.out.println(cadastroPage.validarMsgDeErroAdicionarProduto(msg) + msg);
+		 System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
 	 }
 	
 	
@@ -1193,9 +1244,28 @@ public class CadastroFuncionalidade {
 		validarMsgErro("continuar");
 
 	}
+	
+	public void validarMsgDeErroObrigatoriobtn3() throws Exception {
+		validarMsgErrobtn3("continuar");
 
-	public void validarMsgDeErroObrigatoria() throws Exception {
-		validarMsgErro("obrigatória");
+	}
+
+	public void validarMsgDeErroObrigatoriaRegime() throws Exception {
+		validarMsgDeError(" O regime é Inválido ");
+
+	}
+	
+	public void validarMsgDeErroObrigatoriaFator1() throws Exception {
+		validarMsgDeError(" O fator1 é inválido ");
+
+	}
+	public void validarMsgDeErroObrigatoriaFator2() throws Exception {
+		validarMsgDeError("O fator2 é inválido");
+
+	}
+	
+	public void validarMsgDeErroObrigatoriaCarteira() throws Exception {
+		validarMsgDeError("O campo carteira é obrigatório");
 
 	}
 

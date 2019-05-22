@@ -81,7 +81,7 @@ public class LoginFuncionalidade {
 	}
 
 	public void validarSucessoLogin() throws Exception {
-		validarMsgSucesso(" Bem-vindo, ADMIN! ");
+		validarMsgSucesso(" Bem-vindo, ");
 		
 		
 	

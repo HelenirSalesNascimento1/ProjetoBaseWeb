@@ -242,10 +242,11 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void validarMdrSucesso() throws Exception {
-		List<WebElement> allvalue = this.table("//table[@class='mat-elevation-z8 mat-table']");
+		List<WebElement> allvalue = 
+				this.table("//table[@class='mat-elevation-z8 mat-table']");
 		for (int i = 0; i < allvalue.size(); i++) {
 			System.out.println("Value é : " + allvalue.get(i).getText());
-			System.out.println(allvalue.get(i).getAttribute("textContent"));
+	    //	System.out.println(allvalue.get(i).getAttribute("Já existe MDR cadastrado para estes parâmetros."));
 		}
 
 	}
@@ -271,7 +272,12 @@ public class CadastroPage extends ControllerPage {
 		return this.getMsg("//button[@id='btnParceiros1']//span[@class='mat-button-wrapper'][contains(text(),'" + msg + "')]", msg);
 	}
 	
-	public boolean validarMsgDeErroAdicionarProduto(String msg) throws Exception {
+
+	public boolean validarMsgDeErroBtn3(String msg) throws Exception {
+		return this.getMsg("//button[@id='btnParceiros3']//span[@class='mat-button-wrapper'][contains(text(),'" + msg + "')]", msg);
+	}
+	
+	public boolean validarMsgDeError(String msg) throws Exception {
 		return this.getMsg("//div[@class='cdk-visually-hidden']", msg);
 	}
 
