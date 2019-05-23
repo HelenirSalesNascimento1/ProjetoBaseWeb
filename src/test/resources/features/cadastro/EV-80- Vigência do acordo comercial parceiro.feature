@@ -1,6 +1,6 @@
 #language: pt
 #encoding: UTF-8
-@GoogleChrome @Regressivo
+@GoogleChrome 
 Funcionalidade: Cadastro
 
   Contexto: 
@@ -37,7 +37,7 @@ Funcionalidade: Cadastro
     Quando preencher os demais campos
     Entao passa o teste
 
-  Cenario: Verificar cadastro dos parametros parceirias campo caledario, data inicio nao pode ser posterior a data fim
+  Cenario: Verificar cadastro dos parametros parceirias campo caledario, data inicio pode ser posterior a data fim
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
@@ -55,16 +55,8 @@ Funcionalidade: Cadastro
     Quando preencher os demais campos
     Entao passa o testes
 
-  Cenario: Verificar cadastro dos parametros parceirias campo caledario, data corrente nao pode ser anterior data inicio
-    E preencho os dados do parceiro
-    E clicar no botao continuar
-    E preencho os dados de parametros parceirias
-    E seleciono campo caledario
-    E seleciono a data corrente não pode ser anterior data inicio
-    Quando preencher os demais campos
-    Entao nao passar o teste
 
-  Cenario: Verificar cadastro dos parametros parceirias campo caledario, data fim deve ser posterior ou igual a data corrente
+  Cenario: Verificar cadastro dos parametros parceirias campo caledario, data fim deve igual a data corrente
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
@@ -73,11 +65,4 @@ Funcionalidade: Cadastro
     Quando preencher os demais campos
     Entao passa o teste
 
-  Cenario: Verificar cadastro dos parametros parceirias campo caledario, data corrente nao pode ser posterior data fim
-    E preencho os dados do parceiro
-    E clicar no botao continuar
-    E preencho os dados de parametros parceirias
-    E seleciono campo caledario
-    E seleciono a data corrente que não pode= ser posterior data fim
-    Quando preencher os demais campos
-    Entao erro
+ 

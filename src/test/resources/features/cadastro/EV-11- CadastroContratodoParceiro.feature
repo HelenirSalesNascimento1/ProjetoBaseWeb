@@ -9,10 +9,11 @@ Funcionalidade: Cadastro
     E validar conta conectada com sucesso
  
   @CadastroComSucesso
-  Cenario: Verificar cadastro de parcerias com todos os campos obrigat�rio com sucesso
+  Cenario: Verificar cadastro de parcerias com todos os campos obrigatario com sucesso
     E preencho os dados do parceiro
     E clicar no botao continuar 
-    E preencho os dados de parametros parceirias 
+    E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais  
     E clico no botao continua  
     E preencho os dados de flex
@@ -53,7 +54,7 @@ Funcionalidade: Cadastro
     Mas preencho os demais campos do parceiros
     Quando clico no botao continuar
     Entao habilitar o botao continuar
-
+ 
   @BairroValorEmBranco
   Cenario: Verificar cadastro com campo bairro com valor branco
     E preencho o campo BAIRRO com valor "Em_BRANCO"
@@ -94,13 +95,15 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
-    E validar a lista de MDR com sucesso
+    Quando clicar no botao continuar parametro de parceirias
+    Entao validar a lista de MDR com sucesso
 
   @MDRProdutoValorEmBranco
   Cenario: Verificar cadastro condiçoes comerciais MDR campo produto com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho o campo produto com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clico no botao adicionar produto
@@ -111,6 +114,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho o campo modalidade com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clico no botao adicionar produto
@@ -121,6 +125,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho o campo ramo de atividade com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando  clico no botao adicionar produto
@@ -131,6 +136,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho o campo taxa com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clico no botao adicionar produto
@@ -141,6 +147,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho o campo tarifa com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
     Quando clico no botao adicionar produto
@@ -151,6 +158,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -166,6 +174,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao adicionar produto
     E preencho os dados de condiçoes comerciais
@@ -186,6 +195,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto credito e modalidade crediario
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
@@ -195,6 +205,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto credito e modalidade � vista
     Quando clico no botao adicionar produto
     #Entao validar sem sucesso
@@ -204,6 +215,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto credito e modalidade com juros
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
@@ -213,6 +225,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto credito e modalidade parcelado sem juros
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
@@ -223,6 +236,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade a vista
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
@@ -232,6 +246,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade parcelado com juros
 
   @MDRDebitoSemJuros
@@ -239,6 +254,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade sem juros
 
   @MDRDebitoCrediario
@@ -246,6 +262,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade crediario
 
   @TaxaValorZerado
@@ -253,6 +270,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os MDR com campo campo taxa zerado
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
@@ -262,6 +280,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os MDR com campo campo taxa tarifa Zerado
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
@@ -271,6 +290,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho o campo regime "Em_BRANCO"
@@ -282,6 +302,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho o campo fator1 "Em_BRANCO"
@@ -293,6 +314,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os MDR com campo campo fator1 zerado
@@ -304,6 +326,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho o campo fatorr2 "Em_BRANCO"
@@ -326,6 +349,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os MDR com campo fator2 zerado
@@ -369,7 +393,7 @@ Funcionalidade: Cadastro
     Entao nao habilitar o botao2
 
   @ClienteFinalEmBranco
-  Cenario: Verificar cadastro de parceria com campo precifica��o cliente final com valor em branco
+  Cenario: Verificar cadastro de parceria com campo precificacao cliente final com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o precificacao cliente final "Em_BRANCO"
@@ -404,18 +428,15 @@ Funcionalidade: Cadastro
     Quando clico no botao continuar
     Entao nao habilitar o botao2
 
+#bug
   @FornecedoraplicacaoEmBranco
   Cenario: Verificar cadastro de parceria sem o campo fornecedor da aplicacao  em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o fornecedor da aplicacao "Em_BRANCO"
     E preencho demais campos
-    E clico no botao continuar
-    E preencho os dados de condiçoes comerciais
-    E clico no botao continua
-    E preencho os dados de flex
-    Quando clicar no botao cadastrar novo usuario de parceiros
-    Entao validar se a conta foi criada com sucesso
+    Quando clico no botao continuar
+    Entao nao habilitar o botao2
 
   @CadastroSelecionarParceiro
   Cenario: Validar parametros da parceria com campo propriedade da aplicaçao selecionado parceiro e preencher o campo forcencedor da aplica��o
@@ -466,7 +487,7 @@ Funcionalidade: Cadastro
     Entao nao habilitar o botao2
 
   @ComunicaoMaximoDeItens
-  Cenario: Verificar cadastro de parceria com campo comunicacao com  m�ximo de itens permitidos
+  Cenario: Verificar cadastro de parceria com campo comunicacao com  maximo de itens permitidos
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias maximo itens comunicacao

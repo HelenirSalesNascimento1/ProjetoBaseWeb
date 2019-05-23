@@ -41,12 +41,12 @@ Funcionalidade: Atualizacao
     E clico no botao alterar parceiro
     E preencho o campo CNPJ "Em_BRANCO" 
     Mas preencho os demais campos do parceiros
-    Quando clicar no botao continuar
+    Quando clicar no botao continuar 
     Entao nao habilitar o botao
 
 @AtualizacaoRazaoSocialemBranco
-  Cenario: Verificar atualiza��o de parceria com o campo Raz�o Social em branco
-    E que cadastro uma parceria
+  Cenario: Verificar atualizacao de parceria com o campo Raz�o Social em branco
+    E que cadastro uma parceria 
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada 
@@ -67,7 +67,7 @@ Funcionalidade: Atualizacao
     Entao apresentar mensagem de erro
 
 @AtualizacaoNUMEROemBranco
-  Cenario: Verificar atualiza��o de parceria com o campo n�mero em branco
+  Cenario: Verificar atualizacao de parceria com o campo numero em branco
     E que cadastro uma parceria 
     E acesso ao portal Parceiros 
     E entro com usuario e senha validos
@@ -101,7 +101,7 @@ Funcionalidade: Atualizacao
     Mas preencho os demais campos do parceiros
     Quando clicar no botao continuar
     Entao apresentar mensagem de erro
-
+ 
 @AtualizacaoUFemBranco
   Cenario: Verificar atualiza��o de parceria com o campo UF em branco
     E que cadastro uma parceria

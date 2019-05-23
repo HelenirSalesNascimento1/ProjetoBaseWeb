@@ -24,6 +24,15 @@ public class CadastroStep {
 		cadastroFuncionalidade.preencherParametrosParceirias();
 
 	}
+	
+	@Dado("clicar no botao continuar parametro de parceirias")
+	public void preenchoOsDadosDeParametrosParceiriasBotao() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.clicarContinuar3();
+
+	}
+	
+	
 
 	@Dado("preencho os dados de condiçoes comerciais")
 	public void preenchoOsDadosDeCondiçoesComerciais() throws Exception {
@@ -495,6 +504,7 @@ public class CadastroStep {
 
 	@Quando("clico no botao continuar")
 	public void clicoNoBotaoContinuar() {
+		
 	}
 
 	@Dado("preencho os MDR com campo campo taxa tarifa Zerado")

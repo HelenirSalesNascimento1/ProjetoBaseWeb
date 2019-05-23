@@ -549,7 +549,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		//clicarContinuar3();
+	//	clicarContinuar3();
 
 		// btnMatrizRisco();
 
@@ -596,7 +596,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		clicarContinuar3();
+		//clicarContinuar3();
 	}
 
 	public void preencherParametrosParceiriasCanalVendaEmBranco() throws Exception {
@@ -766,7 +766,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		//clicarContinuar3();
+		
 
 	}
 
@@ -1093,7 +1093,7 @@ public class CadastroFuncionalidade {
 
 	public void preencherSemForncedorAplicaçao(String fornecedorAplicaçao) throws Exception {
 	massa.setParametrosParceria(fornecedorAplicaçao);
-	preencherParametrosParceiria();
+	preencherPametrosParceiriasCampoPropriedadeAplicacao();
 	}
 
 	public void selecionarSemMarca() throws Exception {
