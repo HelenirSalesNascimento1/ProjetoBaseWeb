@@ -1,8 +1,10 @@
 package funcionalidades;
 
-import java.awt.List;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.text.DateFormat;
+import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Date;
 
 import apoio.MassaCadastro;
 import apoio.MassaDadosUtils;
@@ -52,6 +54,13 @@ public class CadastroFuncionalidade {
 		massa.setGrupoComercial(Config.getProperty("grupoComercial"));
 		massa.setCanal(Config.getProperty("canal"));
 	}
+	
+
+	public void setRazaoSocial() throws Exception {
+
+		cadastroPage.preencherRazaoSocial(massa.getRazaoSocial());
+
+	}
 
 	public void setCnpj() throws Exception {
 
@@ -59,11 +68,6 @@ public class CadastroFuncionalidade {
 
 	}
 
-	public void setRazaoSocial() throws Exception {
-
-		cadastroPage.preencherRazaoSocial(massa.getRazaoSocial());
-
-	}
 
 	public void setNomeParceiro() throws Exception {
 
@@ -360,7 +364,7 @@ public class CadastroFuncionalidade {
 		setBairro();
 		setCidade();
 		selecionarUf();
-		//botaoContinuarCadastroParceiro();
+		// botaoContinuarCadastroParceiro();
 
 	}
 
@@ -532,6 +536,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceirias() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -549,11 +554,12 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-	//	clicarContinuar3();
+		// clicarContinuar3();
 
 		// btnMatrizRisco();
 
 	}
+
 	public void preencherParametrosParceiria() throws Exception {
 		preencherCarteira();
 		preencherCelula();
@@ -596,7 +602,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		//clicarContinuar3();
+		// clicarContinuar3();
 	}
 
 	public void preencherParametrosParceiriasCanalVendaEmBranco() throws Exception {
@@ -724,7 +730,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		//aclicarContinuar3();
+		// aclicarContinuar3();
 
 	}
 
@@ -745,7 +751,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		//clicarContinuar3();
+		// clicarContinuar3();
 
 	}
 
@@ -766,7 +772,6 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		
 
 	}
 
@@ -807,7 +812,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		//clicarContinuar3();
+		// clicarContinuar3();
 
 	}
 
@@ -828,7 +833,7 @@ public class CadastroFuncionalidade {
 		btnComunicacao();
 		selecionarCanaisVenda();
 		btnLimiteAtuacao();
-		//clicarContinuar3();
+		// clicarContinuar3();
 
 	}
 
@@ -945,14 +950,13 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionaProdutoVista() throws Exception {
-		
+
 		try {
 			cadastroPage.preencherModalidade(" À vista ");
 		} catch (Exception e) {
 			System.out.println("Erro ao selecionar opção a vista pois Crédito não possui essa opção");
 			throw e;
 		}
-		
 
 	}
 
@@ -1092,8 +1096,8 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherSemForncedorAplicaçao(String fornecedorAplicaçao) throws Exception {
-	massa.setParametrosParceria(fornecedorAplicaçao);
-	preencherPametrosParceiriasCampoPropriedadeAplicacao();
+		massa.setParametrosParceria(fornecedorAplicaçao);
+		preencherPametrosParceiriasCampoPropriedadeAplicacao();
 	}
 
 	public void selecionarSemMarca() throws Exception {
@@ -1201,40 +1205,43 @@ public class CadastroFuncionalidade {
 
 	public void validarMsgDeErroAdicionarProduto() throws Exception {
 		validarMsgDeError("O campo produto é obrigatório");
-		
+
 	}
+
 	public void validarMsgDeErroAdicionarModalidade() throws Exception {
 		validarMsgDeError("O campo modalidade é obrigatório");
-		
+
 	}
+
 	public void validarMsgDeErroAdicionaRamoAtividade() throws Exception {
 		validarMsgDeError("O campo ramo de atividade é obrigatório");
-		
+
 	}
+
 	public void validarMsgDeErroAdicionaTaxa() throws Exception {
 		validarMsgDeError("O campo taxa é obrigatório");
-		
+
 	}
-	
+
 	public void validarMsgDeErroAdicionaTarifa() throws Exception {
 		validarMsgDeError("O campo tarifa é obrigatório");
-		
+
 	}
 
 	public void validarMsgErro(String msg) throws Exception {
 		System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
-	
+
 	}
-	
+
 	public void validarMsgErrobtn3(String msg) throws Exception {
 		System.out.println(cadastroPage.validarMsgDeErroBtn3(msg) + msg);
-	
+
 	}
-	 public void validarMsgDuplicada(String msg) throws Exception {
-		 System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
-	 }
-	
-	
+
+	public void validarMsgDuplicada(String msg) throws Exception {
+		System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
+	}
+
 	public void validarMsgDuplicada() throws Exception {
 		validarMsgDuplicada("Já existe MDR cadastrado para estes parametros.");
 
@@ -1244,7 +1251,7 @@ public class CadastroFuncionalidade {
 		validarMsgErro("continuar");
 
 	}
-	
+
 	public void validarMsgDeErroObrigatoriobtn3() throws Exception {
 		validarMsgErrobtn3("continuar");
 
@@ -1254,16 +1261,17 @@ public class CadastroFuncionalidade {
 		validarMsgDeError(" O regime é Inválido ");
 
 	}
-	
+
 	public void validarMsgDeErroObrigatoriaFator1() throws Exception {
 		validarMsgDeError(" O fator1 é inválido ");
 
 	}
+
 	public void validarMsgDeErroObrigatoriaFator2() throws Exception {
 		validarMsgDeError("O fator2 é inválido");
 
 	}
-	
+
 	public void validarMsgDeErroObrigatoriaCarteira() throws Exception {
 		validarMsgDeError("O campo carteira é obrigatório");
 
@@ -1302,8 +1310,42 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMsgDuplicadaMDR() throws Exception {
-		
+
 		validarMsgDuplicada();
+	}
+
+	private void selecionarInicio(LocalDateTime date) throws Exception {
+		cadastroPage.calendarioInicio(date.getDayOfMonth());
+		Thread.sleep(3000);
+	}
+
+	private void selecionarFim(LocalDateTime date) throws Exception {
+		cadastroPage.calendarioFim(date.getDayOfMonth());
+	}
+
+	public void selecionarCalendario() throws Exception {
+		selecionarInicio(dados.getDataAtual());
+		selecionarFim(dados.getDataAtual());
+
+	}
+
+	public void validarSemCampoDataFim() throws Exception {
+		selecionarInicio(dados.getDataAtual());
+
+	}
+
+	public void mensagemDeErro() throws Exception {
+		validarMsgDeError("O fim da vigência é obrigatório");
+
+	}
+
+	public void validarDataInicioAnterioDataCorrente() throws Exception {
+		selecionarCalendario();
+	}
+
+	public void validarDataFimAnteriorDataCorrente() throws Exception {
+		selecionarCalendario();
+		
 	}
 
 }

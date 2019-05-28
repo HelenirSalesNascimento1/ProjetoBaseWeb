@@ -14,7 +14,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar 
     E preencho os dados de parametros parceirias
     E clicar no botao continuar parametro de parceirias
-    E preencho os dados de condiçoes comerciais  
+    E preencho os dados de condiçoes comerciais    
     E clico no botao continua  
     E preencho os dados de flex
     Quando clicar no botao cadastrar novo usuario de parceiros 
@@ -352,7 +352,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
-    E preencho os MDR com campo fator2 zerado
+    E preencho os MDR com campo fator2 zerado 
     Quando clicar no botao cadastrar novo usuario de parceiros
     Entao validar se a conta foi criada com sucesso
 
@@ -444,7 +444,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     Mas no campo propriedade da aplicacao selecionar Parceiro e preencho no campo fornecedor da Aplicacao
     E preencho demais campos
-    E clico no botao continuar
+    E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex

@@ -14,10 +14,12 @@ import cucumber.api.junit.Cucumber;
 		strict = false, 
 	    glue = {"classpath:steps"}, 
 	    features = {"classpath:features"},
-	    tags = {"@Regressivo"}
+	    tags = {"@AtualizacaoTaxaBranco"}
 		)
 
 public class Runner {  
 	
 }
 //421.073.442/7613-1_
+
+//Já existe MDR cadastrado para estes parâmetros.

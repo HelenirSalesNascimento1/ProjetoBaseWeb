@@ -25,6 +25,8 @@ public class LoginFuncionalidade {
 
 	public void setLogin() throws Exception {
 		loginPage.preecherLogin(massa.getLogin());
+		
+		
 	}
 
 	public void setSenha() throws Exception {

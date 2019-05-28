@@ -3,6 +3,7 @@ package Controller;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +17,7 @@ public abstract class ControllerPage {
 	WebDriverFactory webDriverFactory;
 	private String msgError;
 	protected WebDriver webDriver;
-	private Integer timeOut = 30;
+	private Integer timeOut = 100;
 
 	protected WebDriverWait webDriverWait;
 
@@ -45,7 +46,7 @@ public abstract class ControllerPage {
 		}
 
 	}
-	
+
 	public List<WebElement> getListElement(String XPATH_INPUT) throws Exception {
 		try {
 			return webDriverFactory.getWebDriver().findElements(By.xpath(XPATH_INPUT));
@@ -57,7 +58,45 @@ public abstract class ControllerPage {
 	}
 
 	public void setInput(String xPath, String value) throws Exception {
-		getElement(xPath).sendKeys(value);
+		WebElement ele = getElement(xPath);
+		 Thread.sleep(timeOut);
+			try{
+				ele.clear();
+				ele.sendKeys(value);
+			}catch (Exception e) {
+				throw e;
+			}
+		
+	}
+	
+	public void setInput(String xPath, String value, String atributo) throws Exception {
+		WebElement ele = getElement(xPath);
+		 Thread.sleep(timeOut);
+			try{
+				String text = ele.getAttribute(atributo);
+				for(Integer i = 0; i <= text.length(); i++){
+					ele.sendKeys(Keys.BACK_SPACE);
+					//System.out.println("Backspace " + i);
+				}
+				
+				ele.sendKeys(value);
+			}catch (Exception e) {
+				throw e;
+			}
+		
+	}
+	
+	public void setInput(String xPath, String value, Integer timeWait) throws Exception {
+		
+		WebElement ele = getElement(xPath);
+		 Thread.sleep(timeWait);
+			try{
+				ele.clear();
+				ele.sendKeys(value);
+			}catch (Exception e) {
+				throw e;
+			}
+		
 	}
 
 	public WebElement getButton(String xPath) throws Exception {
@@ -159,12 +198,12 @@ public abstract class ControllerPage {
 
 	public List<WebElement> table(String xpath) throws Exception {
 		List<WebElement> allvalue = webDriver.findElements(By.xpath(xpath));
-		
+
 		return allvalue;
-//		for (int i = 0; i < allvalue.size(); i++) {
-//			System.out.println("Value é : " + allvalue.get(i).getText());
-//			
-//		}
+		//		for (int i = 0; i < allvalue.size(); i++) {
+		//			System.out.println("Value ï¿½ : " + allvalue.get(i).getText());
+		//			
+		//		}
 
 	}
 

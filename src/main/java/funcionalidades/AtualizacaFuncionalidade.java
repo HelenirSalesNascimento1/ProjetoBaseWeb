@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import apoio.MassaCadastro;
 import apoio.MassaDadosUtils;
+import pages.page.AtualizacaoPage;
 import pages.page.CadastroPage;
 import readers.Config;
 import utils.WebDriverFactory;
@@ -12,6 +13,7 @@ public class AtualizacaFuncionalidade {
 
 	WebDriverFactory DriverFactory = new WebDriverFactory();
 	CadastroPage cadastroPage = new CadastroPage();
+	AtualizacaoPage atualizacao = new AtualizacaoPage();
 	MassaCadastro massa;
 	MassaDadosUtils dados = new MassaDadosUtils();
 
@@ -40,28 +42,66 @@ public class AtualizacaFuncionalidade {
 		massa.setParametrosParceria(Config.getProperty("parametrosParceria"));
 	}
 
-	public void preencherRazaoSocialEmBranco(String razaoSocial) {
+	public void setRazaoSocial() throws Exception {
+
+		cadastroPage.preencherRazaoSocial(massa.getRazaoSocial());
+
+	}
+
+	public void preencherRazaoSocialEmBranco(String razaoSocial) throws Exception {
 		massa.setRazaoSocial(razaoSocial);
+		setRazaoSocial();
+		setRazaoSocial();
 
 	}
 
-	public void preencherLogradouroEmBranco(String logradouro) {
+	public void setLogradouro() throws Exception {
+
+		cadastroPage.preencherLogradouro(massa.getLogradouro());
+
+	}
+
+	public void preencherLogradouroEmBranco(String logradouro) throws Exception {
 		massa.setLogradouro(logradouro);
+		setLogradouro();
+		setLogradouro();
 
 	}
 
-	public void preencherNumeroEmBranco(String numero) {
+	public void setNumero() throws Exception {
+
+		cadastroPage.preencherNumero(massa.getNumero());
+
+	}
+
+	public void preencherNumeroEmBranco(String numero) throws Exception {
 		massa.setNumero(numero);
+		setNumero();
+		setNumero();
+
+	}
+	public void setBairro() throws Exception {
+
+		cadastroPage.preencherBairro(massa.getBairro());
 
 	}
 
-	public void preencherBairroEmBranco(String bairro) {
+	public void preencherBairroEmBranco(String bairro) throws Exception {
 		massa.setBairro(bairro);
+		setBairro();
+		setBairro();
+
+	}
+	public void setCidade() throws Exception {
+
+		cadastroPage.preencherCidade(massa.getCidade());
 
 	}
 
-	public void preencherCidadeEmBranco(String cidade) {
+	public void preencherCidadeEmBranco(String cidade) throws Exception {
 		massa.setCidade(cidade);
+		setCidade();
+		setCidade();
 
 	}
 
@@ -69,25 +109,96 @@ public class AtualizacaFuncionalidade {
 		massa.setUf(uf);
 
 	}
+	public void setCEP() throws Exception {
 
-	public void preencherCEPEmBranco(String cep) {
+		cadastroPage.preencherCep(massa.getCep());
+
+	}
+	
+
+	public void preencherCEPEmBranco(String cep) throws Exception {
 		massa.setCep(cep);
+		setCEP();
+		setCEP();
 
 	}
 
-	public void preencherNomeParceiro(String nomeParceiro) {
+	
+	public void setNomeParceiro() throws Exception {
+
+		cadastroPage.preencherNomeParceiro(massa.getNomeParceiro());
+
+	}
+	public void preencherNomeParceiro(String nomeParceiro) throws Exception {
 		massa.setNomeParceiro(nomeParceiro);
+		setNomeParceiro();
+		setNomeParceiro();
+
+	}
+	public void setTaxa() throws Exception {
+
+		cadastroPage.preencherTaxa(massa.getTaxaDebito());
 
 	}
 
-	public void preencherCampoTaxaEmBranco(String taxa) {
+	public void preencherCampoTaxaEmBranco(String taxa) throws Exception {
 		massa.setTaxaDebito(taxa);
+		setTaxa();
+		setTaxa();
 
 	}
 
 	public void preencherCampoTarifaEmBranco(String tarifa) {
 		massa.setTaxaDebito(tarifa);
 
+	}
+
+	public void clicarNoBotaoAlterarParceiro() throws Exception {
+		atualizacao.botãoAlterarParceiro();
+
+	}
+	public void validarMsgDeError(String msg) throws Exception {
+		System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
+	}
+
+
+	public void validarMsgRazaoSocial() throws Exception {
+		validarMsgDeError("A razão social é inválida.");
+		
+	}
+	public void validarMsgLogradouro() throws Exception {
+		validarMsgDeError("O logradouro é inválida.");
+		
+	}
+
+	public void validarMsgNumero() throws Exception {
+		validarMsgDeError("O número é inválido.");
+		
+	}
+
+	public void validarMsgBairro() throws Exception {
+		validarMsgDeError("O bairro é inválido.");
+		
+	}
+
+	public void validarMsgCidade() throws Exception {
+	validarMsgDeError("A cidade é inválida.");
+		
+	}
+
+	public void validarMsgCEP() throws Exception {
+		validarMsgDeError("O CEP é inválido.");
+		
+	}
+
+	public void validarMsgNomeParceiro() throws Exception {
+		validarMsgDeError("O nome do parceiro é inválido.");
+		
+	}
+
+	public void validarMsgAlteracaoParceiro() throws Exception {
+		validarMsgDeError("Parceiro alterado com sucesso.");
+		
 	}
 
 }

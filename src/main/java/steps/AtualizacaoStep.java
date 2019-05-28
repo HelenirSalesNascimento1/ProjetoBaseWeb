@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import apoio.MassaDadosUtils;
 import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.Entao;
 import funcionalidades.AtualizacaFuncionalidade;
 import funcionalidades.CadastroFuncionalidade;
 
@@ -45,28 +46,29 @@ public class AtualizacaoStep {
 	}
 
 	@Dado("preencho o campo razao social {string}")
-	public void preenchoOCampoRazaoSocial(String razaoSocial) {
+	public void preenchoOCampoRazaoSocial(String razaoSocial) throws Exception {
 		atualizacaFuncionalidade.preencherRazaoSocialEmBranco(dados.switValue(razaoSocial));
+		
 
 	}
 
 	@Dado("preencho o campo logradouro com valor {string}")
-	public void preenchoOCampoLogradouroComValor(String logradouro) {
+	public void preenchoOCampoLogradouroComValor(String logradouro) throws Exception {
 		atualizacaFuncionalidade.preencherLogradouroEmBranco(dados.switValue(logradouro));
 	}
 
 	@Dado("preencho o campo numero com valor {string}")
-	public void preenchoOCampoNumeroComValor(String numero) {
+	public void preenchoOCampoNumeroComValor(String numero) throws Exception {
 		atualizacaFuncionalidade.preencherNumeroEmBranco(dados.switValue(numero));
 	}
 
 	@Dado("preencho o campo bairro com valor {string}")
-	public void preenchoOCampoBairroComValor(String bairro) {
+	public void preenchoOCampoBairroComValor(String bairro) throws Exception {
 		atualizacaFuncionalidade.preencherBairroEmBranco(dados.switValue(bairro));
 	}
 
 	@Dado("preencho o campo cidade com valor {string}")
-	public void preenchoOCampoCidadeComValor(String cidade) {
+	public void preenchoOCampoCidadeComValor(String cidade) throws Exception {
 		atualizacaFuncionalidade.preencherCidadeEmBranco(dados.switValue(cidade));
 	}
 
@@ -76,18 +78,19 @@ public class AtualizacaoStep {
 	}
 
 	@Dado("preencho o campo cep com valor {string}")
-	public void preenchoOCampoCepComValor(String cep) {
+	public void preenchoOCampoCepComValor(String cep) throws Exception {
 		atualizacaFuncionalidade.preencherCEPEmBranco(dados.switValue(cep));
 	}
 
 	@Dado("preencho o campo NomeParceiro com valor {string}")
-	public void preenchoOCampoNomeParceiroComValor(String nomeParceiro) {
+	public void preenchoOCampoNomeParceiroComValor(String nomeParceiro) throws Exception {
 		atualizacaFuncionalidade.preencherNomeParceiro(dados.switValue(nomeParceiro));
 		
 	}
 	
 	@Dado("clico no botao alterar parceiro")
 	public void clicoNoBotaoAlterarParceiro() throws Exception {
+		atualizacaFuncionalidade.clicarNoBotaoAlterarParceiro();
 	}
 	
 	@Dado("clico condicoes comerciais")
@@ -105,13 +108,53 @@ public class AtualizacaoStep {
 		cadastroFuncionalidade.btnParametrosDaParceria();
 	}
 	@Dado("preencho o campo TAXA com valor {string}")
-	public void preenchoOCampoTAXAComValor(String taxa) {
+	public void preenchoOCampoTAXAComValor(String taxa) throws Exception {
 		atualizacaFuncionalidade.preencherCampoTaxaEmBranco(dados.switValue(taxa));
+		cadastroFuncionalidade.preecherCondiçõesComerciais();
+		
 		
 	}
 	@Dado("preencho o campo TARIFA com valor {string}")
 	public void preenchoOCampoTARIFAComValor(String tarifa) {
 		atualizacaFuncionalidade.preencherCampoTarifaEmBranco(dados.switValue(tarifa));
 	}
+	
+	@Entao("apresentar mensagem A razão social é inválida.")
+	public void apresentarMensagemARazãoSocialÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgRazaoSocial();
+	}
+	
+	@Entao("apresentar mensagem O logradouro é inválida.")
+	public void apresentarMensagemOLogradouroÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgLogradouro();
+	}
+	@Entao("apresentar mensagem O número é inválido.")
+	public void apresentarMensagemONumeroÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgNumero();
+	}
+	@Entao("apresentar mensagem O bairro é inválido.")
+	public void apresentarMensagemOBairroÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgBairro();
+	}
+	@Entao("apresentar mensagem A cidade é inválida.")
+	public void apresentarMensagemACidadeÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgCidade();
+	}
+	@Entao("apresentar mensagem O CEP é inválido.")
+	public void apresentarMensagemACEPÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgCEP();
+	}
 
+	@Entao("apresentar mensagem O nome do parceiro é inválido.")
+	public void apresentarMensagemONomeParceiroÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgNomeParceiro();
+	}
+	@Entao("apresentar mensagem de sucesso")
+	public void apresentarMensagemDeSucesso() throws Exception {
+		atualizacaFuncionalidade.validarMsgAlteracaoParceiro();
+	}
+	
+	
+	
+	
 }

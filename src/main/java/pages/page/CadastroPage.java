@@ -8,6 +8,7 @@ import org.openqa.selenium.By.ByName;
 import org.openqa.selenium.WebElement;
 
 import Controller.ControllerPage;
+import net.bytebuddy.implementation.bind.annotation.This;
 
 public class CadastroPage extends ControllerPage {
 
@@ -18,9 +19,14 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void preencherRazaoSocial(String razaoSocial) throws Exception {
+        
+		this.preencherCampo("//input[@id='partnerCompanyName']", razaoSocial);
 
-		this.setInput("//input[@id='partnerCompanyName']", razaoSocial);
-
+	}
+	
+	private void preencherCampo(String path, String valor) throws Exception{
+			this.setInput(path, valor, "value");
+			
 	}
 
 	public void preencherLogradouro(String logradouro) throws Exception {
@@ -223,7 +229,7 @@ public class CadastroPage extends ControllerPage {
 
 	public void btnRegiaoGeografica() throws Exception {
 		this.getButton("//mat-checkbox[@id='mat-checkbox-27']//div[@class='mat-checkbox-inner-container']").click();
-	}	
+	}
 
 	public void btnMatrizRisco() throws Exception {
 		this.getButton("//mat-slide-toggle[@id='mat-slide-toggle-4']//div[@class='mat-slide-toggle-bar']").click();
@@ -242,11 +248,11 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void validarMdrSucesso() throws Exception {
-		List<WebElement> allvalue = 
-				this.table("//table[@class='mat-elevation-z8 mat-table']");
+		List<WebElement> allvalue = this.table("//table[@class='mat-elevation-z8 mat-table']");
 		for (int i = 0; i < allvalue.size(); i++) {
 			System.out.println("Value é : " + allvalue.get(i).getText());
-	    //	System.out.println(allvalue.get(i).getAttribute("Já existe MDR cadastrado para estes parâmetros."));
+			// System.out.println(allvalue.get(i).getAttribute("Já existe MDR
+			// cadastrado para estes parâmetros."));
 		}
 
 	}
@@ -269,14 +275,16 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public boolean validarMsgDeErro(String msg) throws Exception {
-		return this.getMsg("//button[@id='btnParceiros1']//span[@class='mat-button-wrapper'][contains(text(),'" + msg + "')]", msg);
+		return this.getMsg(
+				"//button[@id='btnParceiros1']//span[@class='mat-button-wrapper'][contains(text(),'" + msg + "')]",
+				msg);
 	}
-	
 
 	public boolean validarMsgDeErroBtn3(String msg) throws Exception {
-		return this.getMsg("//button[@id='btnParceiros3']//span[@class='mat-button-wrapper'][contains(text(),'" + msg + "')]", msg);
+		return this.getMsg(
+				"//button[@id='btnParceiros3']//span[@class='mat-button-wrapper'][contains(text(),'" + msg + "')]",msg);
 	}
-	
+
 	public boolean validarMsgDeError(String msg) throws Exception {
 		return this.getMsg("//div[@class='cdk-visually-hidden']", msg);
 	}
@@ -294,18 +302,30 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void recuperarListaSelect() throws Exception {
-//		this.getLabel(//*[@id="cdk-overlay-7"]/div/div//matcontrol)
-//		this.getLabel("//span[contains(text(),'" + crediario + "')]").click(); //*[@id="cdk-overlay-7"]/div/div
+		// this.getLabel(//*[@id="cdk-overlay-7"]/div/div//matcontrol)
+		// this.getLabel("//span[contains(text(),'" + crediario +
+		// "')]").click(); //*[@id="cdk-overlay-7"]/div/div
 		List<WebElement> k = this.getListElement("//*[@id=\"cdk-overlay-7\"]/div");
 		k.size();
 		ArrayList<String> l = new ArrayList<>();
-		for(int i =0;i<k.size(); i++) {
+		for (int i = 0; i < k.size(); i++) {
 			l.add(k.get(1).getText());
 			System.out.println(l.get(i));
 		}
-		
-		
-	
+
 	}
+
+	public void calendarioInicio(int data) throws Exception {
+		this.getButton("//mat-datepicker-toggle[@id='commercialBeginningValidity']//button[@class='mat-icon-button']").click();
+		this.getButton("//div[contains(text(),'" + (data - 1) + "')]").click();
+	}
+	public void calendarioFim(int value) throws Exception {
+		this.getButton("//mat-datepicker-toggle[@id='commercialEndValidity']//button[@class='mat-icon-button']").click();
+		this.getButton("//div[contains(text(),'" + value + "')]").click();
+	}
+	
+	
+	
+	
 
 }

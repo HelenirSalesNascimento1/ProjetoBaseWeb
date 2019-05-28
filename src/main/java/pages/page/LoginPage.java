@@ -6,6 +6,7 @@ public class LoginPage extends ControllerPage {
 
 	public void preecherLogin(String login) throws Exception {
 		this.setInput("//input[@ng-reflect-name='username']", login);
+		
 	}
 
 	public void preecherSenha(String senha) throws Exception {

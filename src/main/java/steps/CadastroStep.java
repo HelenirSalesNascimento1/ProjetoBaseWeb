@@ -24,15 +24,13 @@ public class CadastroStep {
 		cadastroFuncionalidade.preencherParametrosParceirias();
 
 	}
-	
+
 	@Dado("clicar no botao continuar parametro de parceirias")
 	public void preenchoOsDadosDeParametrosParceiriasBotao() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.clicarContinuar3();
 
 	}
-	
-	
 
 	@Dado("preencho os dados de condiçoes comerciais")
 	public void preenchoOsDadosDeCondiçoesComerciais() throws Exception {
@@ -385,12 +383,14 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.btnContinuarCadastroParceiro();
 	}
-   //arrumar esse cara quando o bueno subir alteraçao 
+
+	// arrumar esse cara quando o bueno subir alteraçao
 	@Entao("nao habilitar o botao")
 	public void apresentarMensagemDeErro() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroObrigatorio();
 	}
+
 	@Entao("nao habilitar o botao2")
 	public void apresentarMensagemDeErrobtn3() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -402,13 +402,13 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroObrigatoriaRegime();
 	}
-	
+
 	@Entao("apresentar mensagem de erro campo fator1")
 	public void apresentarMensagemDeErrofator1() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroObrigatoriaFator1();
 	}
-	
+
 	@Entao("apresentar mensagem de erro campo fator2")
 	public void apresentarMensagemDeErrofator2() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -417,7 +417,8 @@ public class CadastroStep {
 
 	@Quando("clico no botao adicionar produto")
 	public void clicoNoBotaoAdicionarProduto() throws Exception {
-		// CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		// CadastroFuncionalidade cadastroFuncionalidade = new
+		// CadastroFuncionalidade();
 		// cadastroFuncionalidade.btnAdicionarProduto();
 	}
 
@@ -465,27 +466,25 @@ public class CadastroStep {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroAdicionarProduto();
 	}
+
 	@Entao("apresentar mensagem de erro campo modalidade obrigatorio")
 	public void apresentarMensagemDeErroModalidadeObrigatorio() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroAdicionarModalidade();
 	}
-	
-	
-	
+
 	@Entao("apresentar mensagem de erro campo ramo de atividade obrigatorio")
 	public void apresentarMensagemDeErroRamoAtividadeObrigatorio() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroAdicionaRamoAtividade();
 	}
-	
-	
+
 	@Entao("apresentar mensagem de erro campo taxa obrigatorio")
 	public void apresentarMensagemDeErroTaxaObrigatorio() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
 		cadastroFuncionalidade.validarMsgDeErroAdicionaTaxa();
 	}
-	
+
 	@Entao("apresentar mensagem de erro campo tarifa obrigatorio")
 	public void apresentarMensagemDeErroTarifaObrigatorio() throws Exception {
 		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
@@ -504,7 +503,7 @@ public class CadastroStep {
 
 	@Quando("clico no botao continuar")
 	public void clicoNoBotaoContinuar() {
-		
+
 	}
 
 	@Dado("preencho os MDR com campo campo taxa tarifa Zerado")
@@ -522,6 +521,53 @@ public class CadastroStep {
 
 	@Entao("habilitar o botao continuar")
 	public void deixarPassarOTeste() {
+	}
+
+	@Dado("seleciono a data fim e data inicio do campo calendario parametros parceirias")
+	public void selecionoOCampoCaledarioDeParametrosParceirias() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.selecionarCalendario();
+	}
+
+	@Entao("cadastrar com sucesso")
+	public void cadastrarComSucesso() {
+	}
+
+	@Quando("preencher os demais campos")
+	public void preencherOsDemaisCampos() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.preencherParametrosParceirias();
+
+	}
+
+	@Dado("seleciono campo caledario FIM: {string}")
+	public void selecionoCampoCaledarioFIM(String dataFim) throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarSemCampoDataFim();
+
+	}
+
+	@Entao("apresentar mensagem de erro")
+	public void apresentarMensagemDeErro1() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.mensagemDeErro();
+	}
+
+	@Dado("seleciono a data inicio e data corrente")
+	public void selecionoADataInicioEDataCorrente() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarDataInicioAnterioDataCorrente();
+
+	}
+
+	@Dado("seleciono a data fim e data corrente")
+	public void selecionoADataFimEDataCorrente() throws Exception {
+		CadastroFuncionalidade cadastroFuncionalidade = new CadastroFuncionalidade();
+		cadastroFuncionalidade.validarDataFimAnteriorDataCorrente();
+	}
+	
+	@Entao("passa o teste")
+	public void passaOTeste() {
 	}
 
 }

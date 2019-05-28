@@ -1,23 +1,29 @@
 package apoio;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Random;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class MassaDadosUtils {
-
+//
+//	public String switValue(String value) {
+//		switch (value) {
+//		case "Em_BRANCO":
+//			return "";
+//
+//		default:
+//			break;
+//
+//		}
+//		return value;
+//	}
 	public String switValue(String value) {
-		switch (value) {
-		case "Em_BRANCO":
-			return "";
-
-		default:
-			break;
-
-		}
-		return value;
-	}
-	public String switValues(String value) {
 		switch (value) {
 		case "Em_BRANCO":
 			return "   ";
@@ -93,6 +99,11 @@ public class MassaDadosUtils {
 			pot *= 10;
 		}
 		return result;
+	}
+	
+	public LocalDateTime getDataAtual(){
+		return LocalDateTime.now();
+		
 	}
 
 }
