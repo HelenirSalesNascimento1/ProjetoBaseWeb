@@ -11,6 +11,10 @@ public class ExclusãoPage extends ControllerPage{
 	public void btnExcluirParceiro() throws Exception {
 		getButton("//button[@id='deletePartner']").click();
 	}
+	public void botaoExcluirParceiro() throws Exception {
+		getButton("//button[@id='deletePartner']").click();
+		
+	}
 	
 
 }

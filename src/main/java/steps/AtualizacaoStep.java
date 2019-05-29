@@ -115,8 +115,9 @@ public class AtualizacaoStep {
 		
 	}
 	@Dado("preencho o campo TARIFA com valor {string}")
-	public void preenchoOCampoTARIFAComValor(String tarifa) {
+	public void preenchoOCampoTARIFAComValor(String tarifa) throws Exception {
 		atualizacaFuncionalidade.preencherCampoTarifaEmBranco(dados.switValue(tarifa));
+		cadastroFuncionalidade.preecherCondiçõesComerciais();
 	}
 	
 	@Entao("apresentar mensagem A razão social é inválida.")
@@ -152,6 +153,20 @@ public class AtualizacaoStep {
 	@Entao("apresentar mensagem de sucesso")
 	public void apresentarMensagemDeSucesso() throws Exception {
 		atualizacaFuncionalidade.validarMsgAlteracaoParceiro();
+	}
+	@Dado("seleciono a data fim e data inicio do campo calendario parametros parceiria")
+	public void selecionoOCampoCaledarioDeParametrosParceirias() throws Exception {
+		atualizacaFuncionalidade.selecionarCalendarioAtualizacao();
+	}
+	@Dado("atualizar a data inicio e data corrente")
+	public void atualizarADataInicioEDataCorrente() throws Exception {
+		atualizacaFuncionalidade.validarDataInicioAnterioDataCorrente();
+
+	}
+	@Dado("atualizar a data fim e data corrente")
+	public void atualizarADataFimEDataCorrente() throws Exception {
+		atualizacaFuncionalidade.validarDataFimAnteriorDataCorrente();
+
 	}
 	
 	

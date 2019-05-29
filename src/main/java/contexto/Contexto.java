@@ -1,6 +1,5 @@
 package contexto;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Contexto {
@@ -17,24 +16,24 @@ public class Contexto {
 
 	
 	private static ArrayList<String> listaURL = new ArrayList<String>();{
-		listaURL.add("http://localhost:4200/#/login?returnUrl=%2F");
-		listaURL.add("Link2");
+		listaURL.add("http://localhost:4200/#/login");
+		listaURL.add("http://partner.ui.redelabs.tech.s3-website-us-east-1.amazonaws.com");
 		listaURL.add("Link3");
 		listaURL.add("Link4");
 	}
-	
+	 
 	public String recuperarLinkDev(){
 		int posicao = 0;
 		return listaURL.get(posicao);
 	}
 	
 	public String recuperarLinkHom(){
-		int posicao = 0;
+		int posicao = 1;
 		return listaURL.get(posicao);
 	}
 	
 	public String recuperarLink(){
-		int posicao = 0;
+		int posicao = 2;
 		return listaURL.get(posicao);
 	}
  }

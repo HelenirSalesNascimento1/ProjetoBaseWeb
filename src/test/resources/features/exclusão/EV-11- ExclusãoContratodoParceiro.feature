@@ -1,14 +1,15 @@
 #language: pt
 #encoding: UTF-8
 @GoogleChrome
-Funcionalidade: Exclus�o do Contrato do Parceiro
+Funcionalidade: Exclusao do Contrato do Parceiro
 
   Contexto: 
     Dado acesso ao portal Parceiros
     E entro com usuario e senha validos
+    E validar conta conectada com sucesso
 
   @ExclusaoMDR
-  Cenario: Verificar exclus�o de condi��es comerciais MDR ao adicionar produtos
+  Cenario: Verificar exclusao de condicoes comerciais MDR ao adicionar produtos
     E preencho os dados do parceiro
     E preencho os dados de parametros parceirias
     E preencho os dados de condiçoes comerciais
@@ -17,7 +18,10 @@ Funcionalidade: Exclus�o do Contrato do Parceiro
      
 
   @ExclusaoCadastroParceiros
-  Cenario: Verificar exclus�o de cadastro de parceiros
-    E consulto os dados do parceiro com CNPJ ja cadastrado
+  Cenario: Verificar exclusao de cadastro de parceiros
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros
+    E entro com usuario e senha validos
+    E que carrego os dados da parceria cadastrada
     Quando clico no botao excluir parceiro
-    Entao aprensentar mensagem que foi desabilitado parceiro
+    #Entao aprensentar mensagem que foi desabilitado parceiro

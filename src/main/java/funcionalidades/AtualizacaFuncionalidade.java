@@ -1,6 +1,7 @@
 package funcionalidades;
 
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 
 import apoio.MassaCadastro;
 import apoio.MassaDadosUtils;
@@ -147,9 +148,17 @@ public class AtualizacaFuncionalidade {
 		setTaxa();
 
 	}
+	
+	public void setTarifa() throws Exception {
 
-	public void preencherCampoTarifaEmBranco(String tarifa) {
-		massa.setTaxaDebito(tarifa);
+		cadastroPage.preencherTarifa(massa.getTarifaDebito());
+
+	}
+
+	public void preencherCampoTarifaEmBranco(String tarifa) throws Exception {
+		massa.setTarifaDebito(tarifa);
+	    setTarifa();
+		setTarifa();
 
 	}
 
@@ -200,5 +209,31 @@ public class AtualizacaFuncionalidade {
 		validarMsgDeError("Parceiro alterado com sucesso.");
 		
 	}
+
+	public void selecionarCalendarioAtualizacao() throws Exception {
+		selecionarInicio(dados.getDataAtual());
+		selecionarFim(dados.getDataAtual());
+	}
+	
+	private void selecionarInicio(LocalDateTime date) throws Exception {
+		atualizacao.calendarioInicio(date.getDayOfMonth());
+		Thread.sleep(1000);
+	}
+
+	private void selecionarFim(LocalDateTime date) throws Exception {
+		atualizacao.calendarioFim(date.getDayOfMonth());
+	}
+
+	public void validarDataInicioAnterioDataCorrente() throws Exception {
+		selecionarCalendarioAtualizacao();
+		
+	}
+
+	public void validarDataFimAnteriorDataCorrente() throws Exception {
+		selecionarCalendarioAtualizacao();
+
+	}
+
+	
 
 }

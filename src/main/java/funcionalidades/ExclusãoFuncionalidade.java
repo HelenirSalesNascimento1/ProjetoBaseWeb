@@ -51,4 +51,9 @@ public class ExclusãoFuncionalidade {
 		
 	}
 
+	public void clicarBotaoExcluir() throws Exception {
+		exclusãoPage.botaoExcluirParceiro();
+		
+	}
+
 }

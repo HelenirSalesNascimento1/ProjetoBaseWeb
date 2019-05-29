@@ -54,7 +54,6 @@ public class CadastroFuncionalidade {
 		massa.setGrupoComercial(Config.getProperty("grupoComercial"));
 		massa.setCanal(Config.getProperty("canal"));
 	}
-	
 
 	public void setRazaoSocial() throws Exception {
 
@@ -67,7 +66,6 @@ public class CadastroFuncionalidade {
 		cadastroPage.preencherCnpj(massa.getCnpj());
 
 	}
-
 
 	public void setNomeParceiro() throws Exception {
 
@@ -1316,7 +1314,7 @@ public class CadastroFuncionalidade {
 
 	private void selecionarInicio(LocalDateTime date) throws Exception {
 		cadastroPage.calendarioInicio(date.getDayOfMonth());
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	private void selecionarFim(LocalDateTime date) throws Exception {
@@ -1345,7 +1343,7 @@ public class CadastroFuncionalidade {
 
 	public void validarDataFimAnteriorDataCorrente() throws Exception {
 		selecionarCalendario();
-		
+
 	}
 
 }

@@ -5,6 +5,7 @@ Funcionalidade: Consulta
   Contexto: 
     Dado acesso ao portal Parceiros
     E entro com usuario e senha validos
+    E validar conta conectada com sucesso
 
 @ConsultaCadastroComSucesso
 Cenario: Validar consulta de parceria com CNPJ ja cadastrado 
