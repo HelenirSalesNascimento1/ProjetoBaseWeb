@@ -89,7 +89,7 @@ public class CadastroPage extends ControllerPage {
 
 	public void selecionarModalidade() throws Exception {
 		this.getLabel("//mat-select[@id='mat-select-7']").click();
-		this.getLabel("//span[contains(text(),'� vista')]").click();
+		this.getLabel("//span[contains(text(),'À Vista')]").click();
 	}
 
 	public void selecionarRamoAtividade() throws Exception {
@@ -155,7 +155,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void selecionarPrecificaçaoClienteFinal() throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-1']//div[@class='mat-select-value']").click();
+		this.getLabel("//mat-select[@ng-reflect-placeholder='Precificação Cliente Final']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
 	}
 
@@ -178,7 +178,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnCanaisdeVenda() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-23']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//mat-checkbox[@id='mat-checkbox-6']//div[@class='mat-checkbox-inner-container']").click();
 	}
 
 	public void btnTLMKTAtivo() throws Exception {
@@ -194,7 +194,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnTipodeCaptura() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-7']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//mat-checkbox[@id='mat-checkbox-22']//div[@class='mat-checkbox-inner-container']").click();
 	}
 
 	public void btnTecnologiaCaptura() throws Exception {
@@ -207,7 +207,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnComunicaçao() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-16']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//mat-checkbox[@id='mat-checkbox-25']//div[@class='mat-checkbox-inner-container']").click();
 	}
 
 	public void btnComunicaçaoSerasa() throws Exception {
@@ -224,7 +224,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnLimiteAtuacao() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-28']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//mat-checkbox[@id='mat-checkbox-2']//div[@class='mat-checkbox-inner-container']").click();
 	}
 
 	public void btnRegiaoGeografica() throws Exception {
@@ -236,7 +236,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnCredenciamento() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-2']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//mat-checkbox[@id='mat-checkbox-17']//div[@class='mat-checkbox-inner-container']").click();
 	}
 
 	public void btnCadastrarParceiro() throws Exception {

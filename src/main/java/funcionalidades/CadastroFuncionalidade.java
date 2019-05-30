@@ -122,7 +122,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarModalidade() throws Exception {
-		cadastroPage.preencherModalidade(" À vista ");
+		cadastroPage.preencherModalidade(" À Vista ");
 	}
 
 	public void selecionarRamoDeAtividade() throws Exception {

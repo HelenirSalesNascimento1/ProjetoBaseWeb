@@ -18,6 +18,6 @@ public class LoginPage extends ControllerPage {
 		getButton("//button[@class='mat-button']").click();
 }
 	public boolean validarMsg(String msg) throws Exception {
-      return this.getMsg("//div[contains(text(),'Bem-vindo,')]", msg);
+      return this.getMsg("//p[contains(text(),'Cadastro de Parceiros')]", msg);
  
 } }

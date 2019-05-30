@@ -18,4 +18,9 @@ public class AtualizacaoPage extends ControllerPage {
 		this.getButton("//div[contains(text(),'" + value + "')]").click();
 	}
 
+	public void btnParametrosDaParceria() throws Exception {
+		this.getButton("//div[contains(text(),'Parâmetros da Parceria')]").click();
+		
+	}
+
 }

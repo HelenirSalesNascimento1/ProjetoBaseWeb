@@ -30,7 +30,7 @@ Funcionalidade: Cadastro
   @RazaoSocialValorEmBranco
   Cenario: Verificar cadastro com campo razao social com valor em branco
     E preencho o campo RAZAO SOCIAL "Em_BRANCO"
-    Mas preencho os demais campos do parceiros
+    Mas preencho os demais campos do parceiros 
     Quando clico no botao continuar
     Entao nao habilitar o botao
 
@@ -170,7 +170,7 @@ Funcionalidade: Cadastro
     E com mesmo endereço anteriomente
 
   @MDRDuplicado
-  Cenario: Validar cadastro de parceria com MDR duplicada na mesma requisi��o
+  Cenario: Validar cadastro de parceria com MDR duplicada na mesma requisicao
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
@@ -208,7 +208,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto credito e modalidade � vista
     Quando clico no botao adicionar produto
-    #Entao validar sem sucesso
+    Entao validar a lista de MDR
     
   @MDRCreditoComJuros
   Cenario: Verificar cadastro de parceria com MDR credito parcelado com juros
@@ -248,6 +248,8 @@ Funcionalidade: Cadastro
     E preencho os dados de parametros parceirias
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade parcelado com juros
+    Quando clico no botao adicionar produto
+    Entao validar a lista de MDR
 
   @MDRDebitoSemJuros
   Cenario: Verificar cadastro de parceria com MDR debito parcelado sem juros
@@ -256,6 +258,8 @@ Funcionalidade: Cadastro
     E preencho os dados de parametros parceirias
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade sem juros
+    Quando clico no botao adicionar produto
+    Entao validar a lista de MDR
 
   @MDRDebitoCrediario
   Cenario: Verificar cadastro de parceria com MDR debito crediario
@@ -264,6 +268,8 @@ Funcionalidade: Cadastro
     E preencho os dados de parametros parceirias
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade crediario
+    Quando clico no botao adicionar produto
+    Entao validar a lista de MDR
 
   @TaxaValorZerado
   Cenario: Verificar cadastro de parceria com campo taxa com o valor zerado
@@ -430,7 +436,7 @@ Funcionalidade: Cadastro
 
 #bug
   @FornecedoraplicacaoEmBranco
-  Cenario: Verificar cadastro de parceria sem o campo fornecedor da aplicacao  em branco
+  Cenario: Verificar cadastro de parceria sem o campo fornecedor da aplicacao em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o fornecedor da aplicacao "Em_BRANCO"

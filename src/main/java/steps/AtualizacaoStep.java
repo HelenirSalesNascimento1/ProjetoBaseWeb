@@ -48,7 +48,6 @@ public class AtualizacaoStep {
 	@Dado("preencho o campo razao social {string}")
 	public void preenchoOCampoRazaoSocial(String razaoSocial) throws Exception {
 		atualizacaFuncionalidade.preencherRazaoSocialEmBranco(dados.switValue(razaoSocial));
-		
 
 	}
 
@@ -85,62 +84,93 @@ public class AtualizacaoStep {
 	@Dado("preencho o campo NomeParceiro com valor {string}")
 	public void preenchoOCampoNomeParceiroComValor(String nomeParceiro) throws Exception {
 		atualizacaFuncionalidade.preencherNomeParceiro(dados.switValue(nomeParceiro));
-		
+
 	}
-	
+
 	@Dado("clico no botao alterar parceiro")
 	public void clicoNoBotaoAlterarParceiro() throws Exception {
 		atualizacaFuncionalidade.clicarNoBotaoAlterarParceiro();
 	}
-	
+
 	@Dado("clico condicoes comerciais")
 	public void clicoCondiçõedsComerciais() throws Exception {
 		cadastroFuncionalidade.btnCondiçaoComerciaisMDR();
-		
+
 	}
+
 	@Dado("clico condicoes comerciais flex")
 	public void clicoCondiçoesComerciaisFlex() throws Exception {
 		cadastroFuncionalidade.btnCondiçaoComerciaisFlex();
 	}
-	
+
 	@Dado("clico par�metros da parceria")
 	public void clicoParametrosDaParceria() throws Exception {
 		cadastroFuncionalidade.btnParametrosDaParceria();
 	}
+
 	@Dado("preencho o campo TAXA com valor {string}")
 	public void preenchoOCampoTAXAComValor(String taxa) throws Exception {
 		atualizacaFuncionalidade.preencherCampoTaxaEmBranco(dados.switValue(taxa));
 		cadastroFuncionalidade.preecherCondiçõesComerciais();
-		
-		
+
 	}
+
 	@Dado("preencho o campo TARIFA com valor {string}")
 	public void preenchoOCampoTARIFAComValor(String tarifa) throws Exception {
 		atualizacaFuncionalidade.preencherCampoTarifaEmBranco(dados.switValue(tarifa));
 		cadastroFuncionalidade.preecherCondiçõesComerciais();
 	}
+
+	@Dado("preencho o campo REGIME {string}")
+	public void preenchoOCampoRegimeComValor(String regime) throws Exception {
+		atualizacaFuncionalidade.preencherCampoRegimeEmBranco(dados.switValue(regime));
+	}
+
+	@Entao("apresentar mensagem O regime é inválido.")
+	public void apresentarMensagemORegimeÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgRegime();
+	}
+
+	@Dado("preencho o campo FATOR1 {string}")
+	public void preenchoOCampoFator1ComValor(String fator1) throws Exception {
+		atualizacaFuncionalidade.preencherCampoFator1EmBranco(dados.switValue(fator1));
+	}
 	
+
+	@Dado("preencho o campo Fator{int} {string}")
+	public void preenchoOCampoFator(Integer int1, String string) throws Exception {
+		atualizacaFuncionalidade.validarMsgFator1();
+	}
+
 	@Entao("apresentar mensagem A razão social é inválida.")
 	public void apresentarMensagemARazãoSocialÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgRazaoSocial();
 	}
-	
+
 	@Entao("apresentar mensagem O logradouro é inválida.")
 	public void apresentarMensagemOLogradouroÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgLogradouro();
 	}
+
 	@Entao("apresentar mensagem O número é inválido.")
 	public void apresentarMensagemONumeroÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgNumero();
 	}
+
 	@Entao("apresentar mensagem O bairro é inválido.")
 	public void apresentarMensagemOBairroÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgBairro();
 	}
+
 	@Entao("apresentar mensagem A cidade é inválida.")
 	public void apresentarMensagemACidadeÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgCidade();
 	}
+	@Entao("apresentar mensagem A carteira é inválida.")
+	public void apresentarMensagemACarteiraÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgCarteira();
+	}
+
 	@Entao("apresentar mensagem O CEP é inválido.")
 	public void apresentarMensagemACEPÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgCEP();
@@ -150,26 +180,51 @@ public class AtualizacaoStep {
 	public void apresentarMensagemONomeParceiroÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgNomeParceiro();
 	}
+
 	@Entao("apresentar mensagem de sucesso")
 	public void apresentarMensagemDeSucesso() throws Exception {
 		atualizacaFuncionalidade.validarMsgAlteracaoParceiro();
 	}
+
 	@Dado("seleciono a data fim e data inicio do campo calendario parametros parceiria")
 	public void selecionoOCampoCaledarioDeParametrosParceirias() throws Exception {
 		atualizacaFuncionalidade.selecionarCalendarioAtualizacao();
 	}
+
 	@Dado("atualizar a data inicio e data corrente")
 	public void atualizarADataInicioEDataCorrente() throws Exception {
 		atualizacaFuncionalidade.validarDataInicioAnterioDataCorrente();
 
 	}
+
 	@Dado("atualizar a data fim e data corrente")
 	public void atualizarADataFimEDataCorrente() throws Exception {
 		atualizacaFuncionalidade.validarDataFimAnteriorDataCorrente();
 
 	}
 	
+	@Dado("preencho os MDR com campo campo FATOR{int} zerado")
+	public void preenchoOsMDRComCampoCampoFatorZerado(Integer int1) throws Exception {
+		atualizacaFuncionalidade.preencherFator1Zerado();
+	}
+	
+	@Dado("clico parametros da parceria")
+	public void btnParametrosDaParceiria() throws Exception {
+		atualizacaFuncionalidade.btnParametrosParceria();
+	}
+	
+	@Dado("preencho o CARTEIRA {string}")
+	public void preenchoOCampoCarteiraEmBranco(String carteira) throws Exception {
+		atualizacaFuncionalidade.preencherCampoCarteiraEmBranco(dados.switValue(carteira));
+	}
+	
+	@Dado("preencho o CELULA {string}")
+	public void preenchoOCampoCelulaEmBranco(String celula) throws Exception {
+		atualizacaFuncionalidade.preencherCampoCelulaEmBranco(dados.switValue(celula));
+	}
+
 	
 	
 	
+
 }

@@ -81,6 +81,7 @@ public class AtualizacaFuncionalidade {
 		setNumero();
 
 	}
+
 	public void setBairro() throws Exception {
 
 		cadastroPage.preencherBairro(massa.getBairro());
@@ -93,6 +94,7 @@ public class AtualizacaFuncionalidade {
 		setBairro();
 
 	}
+
 	public void setCidade() throws Exception {
 
 		cadastroPage.preencherCidade(massa.getCidade());
@@ -110,12 +112,12 @@ public class AtualizacaFuncionalidade {
 		massa.setUf(uf);
 
 	}
+
 	public void setCEP() throws Exception {
 
 		cadastroPage.preencherCep(massa.getCep());
 
 	}
-	
 
 	public void preencherCEPEmBranco(String cep) throws Exception {
 		massa.setCep(cep);
@@ -124,18 +126,19 @@ public class AtualizacaFuncionalidade {
 
 	}
 
-	
 	public void setNomeParceiro() throws Exception {
 
 		cadastroPage.preencherNomeParceiro(massa.getNomeParceiro());
 
 	}
+
 	public void preencherNomeParceiro(String nomeParceiro) throws Exception {
 		massa.setNomeParceiro(nomeParceiro);
 		setNomeParceiro();
 		setNomeParceiro();
 
 	}
+
 	public void setTaxa() throws Exception {
 
 		cadastroPage.preencherTaxa(massa.getTaxaDebito());
@@ -148,7 +151,7 @@ public class AtualizacaFuncionalidade {
 		setTaxa();
 
 	}
-	
+
 	public void setTarifa() throws Exception {
 
 		cadastroPage.preencherTarifa(massa.getTarifaDebito());
@@ -157,8 +160,35 @@ public class AtualizacaFuncionalidade {
 
 	public void preencherCampoTarifaEmBranco(String tarifa) throws Exception {
 		massa.setTarifaDebito(tarifa);
-	    setTarifa();
 		setTarifa();
+		setTarifa();
+
+	}
+
+	public void setRegime() throws Exception {
+
+		cadastroPage.preencherRegime(massa.getRegime());
+
+	}
+
+	public void preencherCampoRegimeEmBranco(String regime) throws Exception {
+		massa.setRegime(regime);
+		setRegime();
+		setRegime();
+		setRegime();
+
+	}
+
+	public void setFator1() throws Exception {
+
+		cadastroPage.preencherFator1(massa.getFator1());
+
+	}
+
+	public void preencherCampoFator1EmBranco(String fator1) throws Exception {
+		massa.setFator1(fator1);
+		setFator1();
+		setFator1();
 
 	}
 
@@ -166,55 +196,59 @@ public class AtualizacaFuncionalidade {
 		atualizacao.botãoAlterarParceiro();
 
 	}
+
 	public void validarMsgDeError(String msg) throws Exception {
 		System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
-	}
+		if (!cadastroPage.validarMsgDeError(msg))
+			throw new Exception();
 
+	}
 
 	public void validarMsgRazaoSocial() throws Exception {
 		validarMsgDeError("A razão social é inválida.");
-		
+
 	}
+
 	public void validarMsgLogradouro() throws Exception {
 		validarMsgDeError("O logradouro é inválida.");
-		
+
 	}
 
 	public void validarMsgNumero() throws Exception {
 		validarMsgDeError("O número é inválido.");
-		
+
 	}
 
 	public void validarMsgBairro() throws Exception {
 		validarMsgDeError("O bairro é inválido.");
-		
+
 	}
 
 	public void validarMsgCidade() throws Exception {
-	validarMsgDeError("A cidade é inválida.");
-		
+		validarMsgDeError("A cidade é inválida.");
+
 	}
 
 	public void validarMsgCEP() throws Exception {
 		validarMsgDeError("O CEP é inválido.");
-		
+
 	}
 
 	public void validarMsgNomeParceiro() throws Exception {
 		validarMsgDeError("O nome do parceiro é inválido.");
-		
+
 	}
 
 	public void validarMsgAlteracaoParceiro() throws Exception {
 		validarMsgDeError("Parceiro alterado com sucesso.");
-		
+
 	}
 
 	public void selecionarCalendarioAtualizacao() throws Exception {
 		selecionarInicio(dados.getDataAtual());
 		selecionarFim(dados.getDataAtual());
 	}
-	
+
 	private void selecionarInicio(LocalDateTime date) throws Exception {
 		atualizacao.calendarioInicio(date.getDayOfMonth());
 		Thread.sleep(1000);
@@ -226,7 +260,7 @@ public class AtualizacaFuncionalidade {
 
 	public void validarDataInicioAnterioDataCorrente() throws Exception {
 		selecionarCalendarioAtualizacao();
-		
+
 	}
 
 	public void validarDataFimAnteriorDataCorrente() throws Exception {
@@ -234,6 +268,41 @@ public class AtualizacaFuncionalidade {
 
 	}
 
-	
+	public void validarMsgRegime() throws Exception {
+		validarMsgDeError("O regime é inválido.");
+
+	}
+
+	public void validarMsgFator1() throws Exception {
+		validarMsgDeError("O fator1 é inválido.");
+
+	}
+
+	public void preencherFator1() throws Exception {
+		cadastroPage.preencherFator1(massa.getZerado());
+	}
+
+	public void preencherFator1Zerado() throws Exception {
+		preencherFator1Zerado();
+	}
+
+	public void btnParametrosParceria() throws Exception {
+		atualizacao.btnParametrosDaParceria();
+
+	}
+
+	public void preencherCampoCarteiraEmBranco(String carteira) throws Exception {
+		cadastroPage.preencherCarteira(carteira);
+
+	}
+
+	public void validarMsgCarteira() throws Exception {
+		validarMsgDeError("A carteira é inválido.");
+	}
+
+	public void preencherCampoCelulaEmBranco(String celula) throws Exception {
+		cadastroPage.preencherCelula(celula);
+		
+	}
 
 }
