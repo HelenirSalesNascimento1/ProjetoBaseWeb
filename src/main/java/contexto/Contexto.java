@@ -16,10 +16,10 @@ public class Contexto {
 
 	
 	private static ArrayList<String> listaURL = new ArrayList<String>();{
-		listaURL.add("http://partner.ui.redelabs.tech.s3-website-us-east-1.amazonaws.com/#/login");
+		listaURL.add("http://dev-rl7-partner-ui.s3-website-us-east-1.amazonaws.com/#/");
 		listaURL.add("http://localhost:4200/#/login");
-		listaURL.add("Link3");
-		listaURL.add("Link4");
+		listaURL.add("http://partner.ui.redelabs.tech.s3-website-us-east-1.amazonaws.com/#/login");
+		listaURL.add("");
 	}
 	 
 	public String recuperarLinkDev(){

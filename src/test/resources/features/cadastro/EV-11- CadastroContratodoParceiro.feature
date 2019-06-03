@@ -8,7 +8,7 @@ Funcionalidade: Cadastro
     E entro com usuario e senha validos  
     E validar conta conectada com sucesso
  
-  @CadastroComSucesso
+  @CadastroComSucesso 
   Cenario: Verificar cadastro de parcerias com todos os campos obrigatario com sucesso
     E preencho os dados do parceiro
     E clicar no botao continuar 
@@ -22,72 +22,72 @@ Funcionalidade: Cadastro
 
   @CNPJValorEmBranco
   Cenario: Verificar cadastro com campo CNPJ com valor em branco
-    E preencho o campo CNPJ "Em_BRANCO"
+    E preencho o campo CNPJ "Em_BRANCO" 
     Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
+    Quando clicar no botao continuar
     Entao nao habilitar o botao
 
   @RazaoSocialValorEmBranco
   Cenario: Verificar cadastro com campo razao social com valor em branco
     E preencho o campo RAZAO SOCIAL "Em_BRANCO"
     Mas preencho os demais campos do parceiros 
-    Quando clico no botao continuar
+    E clicar no botao continuar
+    Quando apresentar mensagem A razão social é inválida.
     Entao nao habilitar o botao
 
   @logradouroValorEmBranco
   Cenario: Verificar cadastro com campo logradouro com valor branco
     E preencho o campo LOGRADOURO com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar 
+    E clicar no botao continuar 
+    Quando apresentar mensagem O logradouro é inválida.
     Entao nao habilitar o botao
-
+	
   @NumeroValorEmBranco
   Cenario: Verificar cadastro com campo n�mero com valor branco
     E preencho o campo NUMERO com valor "Em_BRANCO"
-    Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
+    Quando preencho os demais campos do parceiros
     Entao nao habilitar o botao
 
   @ComplementoValorEmBranco
   Cenario: Verificar cadastro com campo complemento com valor branco
     E preencho o campo COMPLEMENTO com valor "Em_BRANCO"
-    Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
-    Entao habilitar o botao continuar
+    Quando preencho os demais campos do parceiros
+    Entao habilitar o botao continuar e clicar
  
   @BairroValorEmBranco
   Cenario: Verificar cadastro com campo bairro com valor branco
     E preencho o campo BAIRRO com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
+    E clicar no botao continuar
+    Quando apresentar mensagem O bairro é inválido.
     Entao nao habilitar o botao
 
   @CidadeValorEmBranco
   Cenario: Verificar cadastro com campo cidade com valor branco
     E preencho o campo CIDADE com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
+    E clicar no botao continuar
+    Quando apresentar mensagem A cidade é inválida.
     Entao nao habilitar o botao
 
   @UFValorEmBranco
   Cenario: Verificar cadastro com campo UF com valor branco
     E preencho o campo UF com valor "Em_BRANCO"
-    Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
+    Quando preencho os demais campos do parceiros
     Entao nao habilitar o botao
 
   @CEPValorEmBranco
   Cenario: Verificar cadastro com campo CEP com valor branco
     E preencho o campo CEP com valor "Em_BRANCO"
-    Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
+    Quando preencho os demais campos do parceiros
     Entao nao habilitar o botao
 
   @NomeParceiroValorEmBranco
   Cenario: Verificar cadastro com campo Nome Parceiro com valor branco
     E preencho o campo Nome Parceiro com valor "Em_BRANCO"
-    Mas preencho os demais campos do parceiros
-    Quando clico no botao continuar
+    E clicar no botao continuar
+    Quando apresentar mensagem O nome do parceiro é inválido.
     Entao nao habilitar o botao
 
   @MDRcomSucesso
@@ -206,7 +206,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
     E clicar no botao continuar parametro de parceirias
-    E seleciono MDR com campo produto credito e modalidade � vista
+    E seleciono MDR com campo produto credito e modalidade a vista
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
     
@@ -369,15 +369,14 @@ Funcionalidade: Cadastro
     E preencho o carteira "Em_BRANCO"
     E preencho demais campos
     Quando clico no botao continuar
-    Entao nao habilitar o botao2
+    Entao apresentar mensagem A carteira é inválida.
 
   @CelulaEmBranco
-  Cenario: Verificar cadastro de parceria com campo c�lula com valor em branco
+  Cenario: Verificar cadastro de parceria com campo celula com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o celula "Em_BRANCO"
-    E preencho demais campos
-    Quando clico no botao continuar
+    Quando preencho demais campos
     Entao nao habilitar o botao2
 
   @GrupoComercialEmBranco
@@ -387,15 +386,14 @@ Funcionalidade: Cadastro
     E preencho o grupo comercial "Em_BRANCO"
     E preencho demais campos
     Quando clico no botao continuar
-    Entao nao habilitar o botao2
+    Entao apresentar mensagem O grupo comercial é inválido.
 
   @CanalEmBranco
   Cenario: Verificar cadastro de parceria com campo canal com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o canal "Em_BRANCO"
-    E preencho demais campos
-    Quando clico no botao continuar
+    Quando preencho demais campos
     Entao nao habilitar o botao2
 
   @ClienteFinalEmBranco
@@ -403,9 +401,9 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o precificacao cliente final "Em_BRANCO"
-    E preencho demais campos
-    Quando clico no botao continuar
+    Quando preencho demais campos
     Entao nao habilitar o botao2
+     
 
 #@CadastroCampoAntecipacao
   #Cenario: Verificar cadastro de parceria com campo antecipa�ao rede com valor em branco
@@ -421,31 +419,29 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o propriedade terminal "Em_BRANCO"
-    E preencho demais campos
-    Quando clico no botao continuar
+    Quando preencho demais campos
     Entao nao habilitar o botao2
 
   @propriedadeAplicacaoFinalEmBranco
-  Cenario: Verificar cadastro de parceria com campo propriedade aplica��o com valor em branco
+  Cenario: Verificar cadastro de parceria com campo propriedade aplicacao com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o propriedade aplicaçao "Em_BRANCO"
-    E preencho demais campos
-    Quando clico no botao continuar
+    Quando preencho demais campos
     Entao nao habilitar o botao2
 
 #bug
-  @FornecedoraplicacaoEmBranco
+  @FornecedoraplicacaoEmBranco @bug
   Cenario: Verificar cadastro de parceria sem o campo fornecedor da aplicacao em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o fornecedor da aplicacao "Em_BRANCO"
     E preencho demais campos
     Quando clico no botao continuar
-    Entao nao habilitar o botao2
+    #Entao apresentar mensagem O grupo comercial é inválido.
 
   @CadastroSelecionarParceiro
-  Cenario: Validar parametros da parceria com campo propriedade da aplicaçao selecionado parceiro e preencher o campo forcencedor da aplica��o
+  Cenario: Validar parametros da parceria com campo propriedade da aplicaçao selecionado parceiro e preencher o campo forcencedor da aplicacao
     E preencho os dados do parceiro
     E clicar no botao continuar
     Mas no campo propriedade da aplicacao selecionar Parceiro e preencho no campo fornecedor da Aplicacao
@@ -463,7 +459,6 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias maximo itens canal de venda
     E preencho demais campos
-    E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -476,7 +471,6 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho o canal de venda "Em_BRANCO"
     E preencho demais campos
-    E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -488,8 +482,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o marca "Em_BRANCO"
-    E preencho demais campos
-    Quando clico no botao continuar
+    Quando preencho demais campos
     Entao nao habilitar o botao2
 
   @ComunicaoMaximoDeItens
@@ -498,7 +491,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias maximo itens comunicacao
     E preencho demais campos
-    E clico no botao continuar
+    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -511,7 +504,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho o comunicacao "Em_BRANCO"
     E preencho demais campos
-    E clico no botao continuar
+    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -523,8 +516,7 @@ Funcionalidade: Cadastro
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o atendimento "Em_BRANCO"
-    E preencho demais campos
-    Quando clico no botao continuar
+    Quando preencho demais campos
     Entao nao habilitar o botao2
 
   @AtuacaoMaximoDeItens
@@ -533,7 +525,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias maximo itens atuacao
     E preencho demais campos
-    E clico no botao continuar
+    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -546,7 +538,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho o atuaçao "Em_BRANCO"
     E preencho demais campos
-    E clico no botao continuar
+    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex

@@ -171,6 +171,15 @@ public class AtualizacaoStep {
 		atualizacaFuncionalidade.validarMsgCarteira();
 	}
 
+	@Entao("apresentar mensagem A célula é inválida.")
+	public void apresentarMensagemACelulaÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgCelula();
+	}
+	@Entao("apresentar mensagem O grupo comercial é inválido.")
+	public void apresentarMensagemOGrupoComercialÉInválida() throws Exception {
+		atualizacaFuncionalidade.validarMsgGrupoComercial();
+	}
+	
 	@Entao("apresentar mensagem O CEP é inválido.")
 	public void apresentarMensagemACEPÉInválida() throws Exception {
 		atualizacaFuncionalidade.validarMsgCEP();
@@ -186,7 +195,7 @@ public class AtualizacaoStep {
 		atualizacaFuncionalidade.validarMsgAlteracaoParceiro();
 	}
 
-	@Dado("seleciono a data fim e data inicio do campo calendario parametros parceiria")
+	@Dado("seleciono a data inicio e data fim do campo calendario parametros parceiria")
 	public void selecionoOCampoCaledarioDeParametrosParceirias() throws Exception {
 		atualizacaFuncionalidade.selecionarCalendarioAtualizacao();
 	}
@@ -220,7 +229,12 @@ public class AtualizacaoStep {
 	
 	@Dado("preencho o CELULA {string}")
 	public void preenchoOCampoCelulaEmBranco(String celula) throws Exception {
-		atualizacaFuncionalidade.preencherCampoCelulaEmBranco(dados.switValue(celula));
+		atualizacaFuncionalidade.preencherCampoCelulaEmBranco(dados.switValues(celula));
+	}
+	
+	@Dado("preencho o grupo COMERCIAL {string}")
+	public void preenchoOCampoComercialEmBranco(String celula) throws Exception {
+		atualizacaFuncionalidade.preencherCampoGrupoComercialEmBranco(dados.switValue(celula));
 	}
 
 	

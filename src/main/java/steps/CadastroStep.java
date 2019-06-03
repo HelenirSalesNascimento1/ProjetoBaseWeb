@@ -15,11 +15,10 @@ public class CadastroStep {
 	MassaDadosUtils dados = new MassaDadosUtils();
 	CadastroFuncionalidade cadastroFuncionalidade;
 
-	
 	public CadastroStep() throws ClassNotFoundException, SQLException {
 		cadastroFuncionalidade = new CadastroFuncionalidade();
 	}
-	
+
 	@Dado("preencho os dados do parceiro")
 	public void preenchoOsDadosDoParceiro() throws ExceptionUtils, Exception {
 		cadastroFuncionalidade.preencherParceiros();
@@ -152,7 +151,7 @@ public class CadastroStep {
 		cadastroFuncionalidade.preencherDadosMDR();
 	}
 
-	@Dado("seleciono MDR com campo produto credito e modalidade � vista")
+	@Dado("seleciono MDR com campo produto credito e modalidade a vista")
 	public void selecionoMDRComCampoProdutoCreditoEModalidadeaVista() throws Exception {
 		cadastroFuncionalidade.preencherDadosMDR2();
 	}
@@ -437,7 +436,8 @@ public class CadastroStep {
 	}
 
 	@Quando("clico no botao continuar")
-	public void clicoNoBotaoContinuar() {
+	public void clicoNoBotaoContinuar() throws Exception {
+		cadastroFuncionalidade.btnContinuar2();
 
 	}
 
@@ -456,7 +456,7 @@ public class CadastroStep {
 	public void deixarPassarOTeste() {
 	}
 
-	@Dado("seleciono a data fim e data inicio do campo calendario parametros parceirias")
+	@Dado("seleciono a data inicio e data fim do campo calendario parametros parceirias")
 	public void selecionoOCampoCaledarioDeParametrosParceirias() throws Exception {
 		cadastroFuncionalidade.selecionarCalendario();
 	}
@@ -497,4 +497,17 @@ public class CadastroStep {
 	public void passaOTeste() {
 	}
 
+	@Dado("apresentar mensagem preencher CNPJ")
+	public void apresentarMensagemPreencherCNPJ() throws Exception {
+		cadastroFuncionalidade.validarMsgCNPJ();
+	}
+
+	@Entao("habilitar o botao continuar e clicar")
+	public void habilitarOBotaoContinuarEClicar() throws Exception {
+		cadastroFuncionalidade.btnContinuar();
+	}
+	@Dado("no campo propriedade da aplicacao selecionar parceiro e preencho no campo fornecedor da Aplicacao")
+	public void noCampoPropriedadeDaAplicacaoSelecionarParceiroEPreenchoNoCampoFornecedorDaAplicacao() throws Exception {
+		cadastroFuncionalidade.selecionarFornecedor();
+	}
 }

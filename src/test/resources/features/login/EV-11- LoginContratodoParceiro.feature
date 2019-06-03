@@ -1,6 +1,6 @@
 #language: pt
 #encoding: UTF-8
-@GoogleChrome
+@GoogleChrome @login
 Funcionalidade: Login
 
   Contexto: 
@@ -14,19 +14,19 @@ Funcionalidade: Login
   #@LoginUsuarioInvalido
   #Cenario: validar tela login com usuario invalido
     #Quando entro com usuario invalido e senha valida
-    #Entao validar que a conta não foi conectada
+    #Entao validar que a conta nï¿½o foi conectada
 #
   #@LoginSenhaInvalido 
   #Cenario: validar tela login com senha invalida 
-    #Quando login com usuário válido e senha inválida
-    #Entao validar que a conta não foi conectada
+    #Quando login com usuï¿½rio vï¿½lido e senha invï¿½lida
+    #Entao validar que a conta nï¿½o foi conectada
 #
   #@LoginSemUsuario
   #Cenario: validar tela login sem usuario em branco
-    #Quando login sem usuário "Em_BRANCO"
-    #Entao validar que a conta não foi conectada
+    #Quando login sem usuï¿½rio "Em_BRANCO"
+    #Entao validar que a conta nï¿½o foi conectada
 #
   #@LoginSemSenha
   #Cenario: validar tela login sem senha
     #Quando login sem senha "Em_BRANCO"
-    #Entao validar que a conta não foi conectada
+    #Entao validar que a conta nï¿½o foi conectada

@@ -60,7 +60,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void selecionarUF(String uf) throws Exception {
-		this.getLabel("//mat-select[@ng-reflect-placeholder='UF']").click();
+		this.getLabel("//mat-select[@placeholder='UF']").click();
 		this.getLabel("//span[contains(text(),'" + uf + "')]").click();
 
 	}
@@ -322,6 +322,10 @@ public class CadastroPage extends ControllerPage {
 	public void calendarioFim(int value) throws Exception {
 		this.getButton("//mat-datepicker-toggle[@id='commercialEndValidity']//button[@class='mat-icon-button']").click();
 		this.getButton("//div[contains(text(),'" + value + "')]").click();
+	}
+
+	public void btnContinuar() throws Exception {
+		this.getButton("//button[@id='btnParceiros3']").click();
 	}
 	
 	

@@ -10,8 +10,8 @@ import exceptions.ExceptionUtils;
 
 public class Config {
 	/**
-	 * Este método lê um arquivo de properties e retorna o valor correspondente pela chave informada
-	 * @author Fábio Vaz
+	 * Este metodo lï¿½ um arquivo de properties e retorna o valor correspondente pela chave informada
+	 * @author Fï¿½bio Vaz
 	 * @since 27/09/2018
 	 */
 	public static String getProperty(String value) throws ExceptionUtils {

@@ -12,17 +12,17 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 public class MassaDadosUtils {
 //
-//	public String switValue(String value) {
-//		switch (value) {
-//		case "Em_BRANCO":
-//			return "";
-//
-//		default:
-//			break;
-//
-//		}
-//		return value;
-//	}
+	public String switValues(String value) {
+		switch (value) {
+		case "Em_BRANCO":
+			return " ";
+
+		default:
+			break;
+
+		}
+		return value;
+	}
 	public String switValue(String value) {
 		switch (value) {
 		case "Em_BRANCO":

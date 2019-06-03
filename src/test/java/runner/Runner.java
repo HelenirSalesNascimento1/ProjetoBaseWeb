@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 		strict = false, 
 	    glue = {"classpath:steps"}, 
 	    features = {"classpath:features"},
-	    tags = {"@AtualizacaoCelulaEmBranco"}
+	    tags = {"@CadastroComSucesso"}
 		)
 
 public class Runner {  
@@ -22,4 +22,3 @@ public class Runner {
 }
 //421.073.442/7613-1_
 
-//Já existe MDR cadastrado para estes parâmetros.

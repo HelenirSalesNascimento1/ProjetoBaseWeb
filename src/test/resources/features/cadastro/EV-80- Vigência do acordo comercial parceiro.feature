@@ -1,7 +1,7 @@
 #language: pt
 #encoding: UTF-8
-@GoogleChrome @testes
-Funcionalidade: Cadastro
+@GoogleChrome @RegressivoCalendario
+Funcionalidade: Cadastro Calendario 
 
   Contexto: 
     Dado acesso ao portal Parceiros
@@ -12,7 +12,7 @@ Funcionalidade: Cadastro
   Cenario: Verificar cadastro dos parametros parceirias campo caledario Inicio: e Fim: com sucesso 
     E preencho os dados do parceiro
     E clicar no botao continuar
-    E seleciono a data fim e data inicio do campo calendario parametros parceirias 
+    E seleciono a data inicio e data fim do campo calendario parametros parceirias
     E preencher os demais campos 
     E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais    

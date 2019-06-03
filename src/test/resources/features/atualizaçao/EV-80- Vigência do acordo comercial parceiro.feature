@@ -5,8 +5,8 @@ Funcionalidade: Atualização Calendario
 
   Contexto: 
     Dado acesso ao portal Parceiros
-    #E entro com usuario e senha validos
-    #E validar conta conectada com sucesso
+    E entro com usuario e senha validos
+    E validar conta conectada com sucesso
 
 @AtulizacaoCalendario
   Cenario: Verificar atualizacaoo dos parametros parceirias campo caledario Inicio: e Fim: com sucesso
@@ -14,7 +14,8 @@ Funcionalidade: Atualização Calendario
     E acesso ao portal Parceiros
     E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
-    E seleciono a data fim e data inicio do campo calendario parametros parceiria
+    E clico parametros da parceria
+    E seleciono a data inicio e data fim do campo calendario parametros parceirias
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso
 
@@ -35,7 +36,8 @@ Funcionalidade: Atualização Calendario
     E acesso ao portal Parceiros
     E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
-    E seleciono a data fim e data inicio do campo calendario parametros parceiria
+    E clico parametros da parceria
+    E seleciono a data inicio e data fim do campo calendario parametros parceiria
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso
 
@@ -45,6 +47,7 @@ Funcionalidade: Atualização Calendario
     E acesso ao portal Parceiros
     E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
+    E clico parametros da parceria
     E atualizar a data inicio e data corrente
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso
@@ -55,6 +58,7 @@ Funcionalidade: Atualização Calendario
     E acesso ao portal Parceiros
     E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
+    E clico parametros da parceria
     E atualizar a data fim e data corrente
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso

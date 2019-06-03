@@ -210,7 +210,7 @@ public class AtualizacaFuncionalidade {
 	}
 
 	public void validarMsgLogradouro() throws Exception {
-		validarMsgDeError("O logradouro é inválida.");
+		validarMsgDeError("O logradouro é inválido.");
 
 	}
 
@@ -297,11 +297,25 @@ public class AtualizacaFuncionalidade {
 	}
 
 	public void validarMsgCarteira() throws Exception {
-		validarMsgDeError("A carteira é inválido.");
+		validarMsgDeError("A carteira é inválida.");
 	}
 
 	public void preencherCampoCelulaEmBranco(String celula) throws Exception {
 		cadastroPage.preencherCelula(celula);
+		
+	}
+
+	public void validarMsgCelula() throws Exception {
+		validarMsgDeError("A célula é inválida.");
+		
+	}
+
+	public void preencherCampoGrupoComercialEmBranco(String grupoComercial) throws Exception {
+        cadastroPage.preencherGrupoComercial(grupoComercial);		
+	}
+
+	public void validarMsgGrupoComercial() throws Exception {
+		validarMsgDeError("O grupo comercial é inválido.");
 		
 	}
 

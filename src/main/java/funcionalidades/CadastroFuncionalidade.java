@@ -583,6 +583,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherPametrosParceiriasCampoPropriedadeAplicacao() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -604,6 +605,9 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceiriasCanalVendaEmBranco() throws Exception {
+		selecionarCalendario();
+		selecionarCalendario();
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -646,6 +650,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceiriasComunicacaoMaximoItem() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -668,6 +673,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceiriasAtuacaoMaximoItem() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -689,6 +695,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceiriasCanalVendaMaximoItem() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -712,6 +719,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemClienteFinal() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -733,6 +741,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemPropriedadeTerminal() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -754,6 +763,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemPropriedadeAplicar() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -794,6 +804,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemMarca() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -801,7 +812,6 @@ public class CadastroFuncionalidade {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
-		setFornecedorAplicacao();
 		selecionarCentralAtendimento();
 		btnAntecipaçaoRecebiveis();
 		btnCredenciamento();
@@ -815,6 +825,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void preencherParametrosParceriaSemCampoCentralAtendimento() throws Exception {
+		selecionarCalendario();
 		preencherCarteira();
 		preencherCelula();
 		preencherGrupoComercial();
@@ -822,7 +833,7 @@ public class CadastroFuncionalidade {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
-		setFornecedorAplicacao();
+		//setFornecedorAplicacao();
 		selecionarMarca();
 		btnAntecipaçaoRecebiveis();
 		btnCredenciamento();
@@ -950,7 +961,7 @@ public class CadastroFuncionalidade {
 	public void selecionaProdutoVista() throws Exception {
 
 		try {
-			cadastroPage.preencherModalidade(" À vista ");
+			cadastroPage.preencherModalidade(" À Vista ");
 		} catch (Exception e) {
 			System.out.println("Erro ao selecionar opção a vista pois Crédito não possui essa opção");
 			throw e;
@@ -1241,7 +1252,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMsgDuplicada() throws Exception {
-		validarMsgDuplicada("Já existe MDR cadastrado para estes parametros.");
+		validarMsgDuplicada("Já existe MDR cadastrado para estes parâmetros.");
 
 	}
 
@@ -1344,6 +1355,28 @@ public class CadastroFuncionalidade {
 	public void validarDataFimAnteriorDataCorrente() throws Exception {
 		selecionarCalendario();
 
+	}
+
+	public void validarMsgCNPJ() throws Exception {
+     validarMsgDeError("A razão social é inválida.");	
+	}
+
+	public void btnContinuar2() throws Exception {
+		cadastroPage.btnContinuar();
+		
+	}
+
+	public void btnContinuar() throws Exception {
+      cadastroPage.botaoContinuar();		
+	}
+	public void selecionarFornecedorDaAplicacao() throws Exception{
+		selecionarPropriedadeAplicacaoParceiro();
+		setFornecedorAplicacao();
+	}
+
+	public void selecionarFornecedor() throws Exception {
+		selecionarFornecedorDaAplicacao();
+		
 	}
 
 }
