@@ -7,9 +7,10 @@ import apoio.MassaDadosUtils;
 import pages.page.LoginPage;
 import readers.Config;
 import utils.WebDriverFactory;
+import utils.evidencia.Evidencia;
 
 public class LoginFuncionalidade {
-	WebDriverFactory DriverFactory = new WebDriverFactory();
+	WebDriverFactory driverFactory = new WebDriverFactory();
 	LoginPage loginPage = new LoginPage();
 	MassaCadastro massa;
 	MassaDadosUtils dados = new MassaDadosUtils();
@@ -25,8 +26,7 @@ public class LoginFuncionalidade {
 
 	public void setLogin() throws Exception {
 		loginPage.preecherLogin(massa.getLogin());
-		
-		
+
 	}
 
 	public void setSenha() throws Exception {
@@ -38,7 +38,7 @@ public class LoginFuncionalidade {
 	}
 
 	public void setLoginInvalido() throws Exception {
-		loginPage.preecherLogin("testes");
+		loginPage.preecherLogin("testes@hotmail.com");
 	}
 
 	public void setSenhaInvalido() throws Exception {
@@ -49,6 +49,7 @@ public class LoginFuncionalidade {
 		setLoginInvalido();
 		setSenha();
 		btnLogin();
+	
 
 	}
 
@@ -56,6 +57,7 @@ public class LoginFuncionalidade {
 		setLogin();
 		setSenha();
 		btnLogin();
+		
 
 	}
 
@@ -68,7 +70,8 @@ public class LoginFuncionalidade {
 
 	public void loginEmBraco(String login) throws Exception {
 		massa.setLogin(login);
-		Logar();
+		setLogin();
+		setSenha();
 
 	}
 
@@ -82,11 +85,26 @@ public class LoginFuncionalidade {
 		System.out.println(loginPage.validarMsg(msg) + msg);
 	}
 
+	public void validarMsgErro(String msg) throws Exception {
+		System.out.println(loginPage.validarMsgError(msg) + msg);
+	}
+
 	public void validarSucessoLogin() throws Exception {
 		validarMsgSucesso("Cadastro de Parceiros");
-		
-		
+
+	}
+
+	public void msgSemSucesso() throws Exception {
+		validarMsgErro("Usuário ou senha inválida.");
+	}
 	
+	public void validarMsgError(String msg) throws Exception {
+		System.out.println(loginPage.validarMsgErroLogin(msg) + msg);
+	}
+
+	public void msnDeError() throws Exception {
+		validarMsgError("Utilize seu e-mail para se autenticar");
+		
 	}
 
 }

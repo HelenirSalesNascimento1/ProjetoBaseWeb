@@ -139,16 +139,16 @@ public class CriarMovimentacaoPage {
 
 		boolean msg = true;
 
-		try {
-			DriverFactory.getWebDriver().findElement(By.xpath(XPATH_MSG_SUCESSO));
-			Evidencia.tirarPrint("Movimenta��o adicionada com sucesso!", getMsgSucesso());
-			msg = true;
-		} catch (Exception e) {
-
-			DriverFactory.getWebDriver().findElement(By.xpath(XPATH_MSG_SEM_SUCESSO));
-			Evidencia.tirarPrint("N�o foi possivel realizar a movimenta��o!", getMsgSemSucesso());
-			msg = false;
-		}
+//		try {
+//			DriverFactory.getWebDriver().findElement(By.xpath(XPATH_MSG_SUCESSO));
+//			Evidencia.tirarPrint("Movimenta��o adicionada com sucesso!", getMsgSucesso());
+//			msg = true;
+//		} catch (Exception e) {
+//
+//			DriverFactory.getWebDriver().findElement(By.xpath(XPATH_MSG_SEM_SUCESSO));
+//			Evidencia.tirarPrint("N�o foi possivel realizar a movimenta��o!", getMsgSemSucesso());
+//			msg = false;
+//		}
 
 		return msg;
 	}

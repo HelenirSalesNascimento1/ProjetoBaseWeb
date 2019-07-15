@@ -33,7 +33,7 @@ import utils.WebDriverFactory;
 
 public class Evidencia {
 
-	private static WebDriverFactory driver = new WebDriverFactory();
+//	private static WebDriverFactory driver = new WebDriverFactory();
 
 	private static Document document;
 	private static String nomeCT;
@@ -54,13 +54,13 @@ public class Evidencia {
 			Image logo = Image.getInstance(Config.getProperty("path.imagem.lobo"));
 			logo.setAlignment(Element.ALIGN_CENTER);
 			document.add(logo);
-			addFormatedText("Automação Seu Barriga", FontFactory.HELVETICA, 20, Font.BOLDITALIC, BaseColor.BLUE, 20, 20,
+			addFormatedText("Automaï¿½ï¿½o Seu Barriga", FontFactory.HELVETICA, 20, Font.BOLDITALIC, BaseColor.BLUE, 20, 20,
 					Element.ALIGN_CENTER);
 			Image image = Image.getInstance(Config.getProperty("path.imagem.seu.barriga"));
 			image.scalePercent(50, 50);
 			image.setAlignment(Element.ALIGN_CENTER);
 			document.add(image);
-			addFormatedText("Evidência de Teste", FontFactory.HELVETICA, 20, Font.BOLDITALIC, BaseColor.BLUE, 20, 20,
+			addFormatedText("Evidï¿½ncia de Teste", FontFactory.HELVETICA, 20, Font.BOLDITALIC, BaseColor.BLUE, 20, 20,
 					Element.ALIGN_CENTER);
 			String data = inserirDataHora();
 			addFormatedText("Data e Hora: " + data, FontFactory.HELVETICA, 12, Font.BOLD, BaseColor.BLACK, 180, 20,
@@ -85,7 +85,7 @@ public class Evidencia {
 		return data;
 	}
 
-	public static void inserirPrint() throws MalformedURLException, IOException {
+	public static void inserirPrint(WebDriverFactory driver) throws MalformedURLException, IOException {
 
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver.getWebDriver();
 		byte[] imagem = takesScreenshot.getScreenshotAs(OutputType.BYTES);
@@ -99,10 +99,10 @@ public class Evidencia {
 		}
 	}
 
-	public static void inserirPrint(WebElement... elementos) throws MalformedURLException, IOException {
+	public static void inserirPrint(WebDriverFactory driver, WebElement... elementos) throws MalformedURLException, IOException {
 
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver.getWebDriver();
-		marcarElemento(elementos);
+		marcarElemento(driver,elementos);
 		byte[] imagem = takesScreenshot.getScreenshotAs(OutputType.BYTES);
 
 		try {
@@ -148,19 +148,19 @@ public class Evidencia {
 		document.close();
 	}
 
-	public static void tirarPrint(String text) throws MalformedURLException, IOException {
+	public static void tirarPrint(String text, WebDriverFactory driver) throws MalformedURLException, IOException {
 		addNewPage();
-		inserirPrint();
+		inserirPrint(driver);
 		addFormatedText(text, FontFactory.HELVETICA, 12, Font.BOLD, BaseColor.BLACK, 10, 40, Element.ALIGN_LEFT);
 	}
 
-	public static void tirarPrint(String text, WebElement... elementos) throws MalformedURLException, IOException {
+	public static void tirarPrint(WebDriverFactory driver, String text, WebElement... elementos) throws MalformedURLException, IOException {
 		addNewPage();
-		inserirPrint(elementos);
+		inserirPrint(driver,elementos);
 		addFormatedText(text, FontFactory.HELVETICA, 12, Font.BOLD, BaseColor.BLACK, 10, 40, Element.ALIGN_LEFT);
 	}
 
-	public static void marcarElemento(WebElement... elementos) {
+	public static void marcarElemento(WebDriverFactory driver, WebElement... elementos) {
 
 		List<String> style = new ArrayList<String>();
 

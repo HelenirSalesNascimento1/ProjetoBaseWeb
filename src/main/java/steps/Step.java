@@ -15,7 +15,6 @@ public class Step {
 	@Dado("acesso ao portal Parceiros")
 	public void acessoAoPortalParceiro() throws Exception {
 		app = new Aplicacao();
-		//Thread.sleep(2000);
 		app.acessarPagina(Contexto.recuperarInstancia().recuperarLink());
 	}
 
@@ -25,12 +24,12 @@ public class Step {
 		login.Logar(); 
 	} 
 
-	// @Dado("login no portal com usuario e senha validos")
-	// public void loginNoPortalComUsuarioESenhaValidos() throws Exception {
-	// new LoginFuncionalidades().acessarPortal(null);
-	// new LoginFuncionalidades().realizarLogin(Config.getProperty("email.barriga"),
-	// Config.getProperty("senha.barriga"));
-	// }
+//	 @Dado("login no portal com usuario e senha validos")
+//	 public void loginNoPortalComUsuarioESenhaValidos() throws Exception {
+//	 new LoginFuncionalidades().acessarPortal(null);
+//	 new LoginFuncionalidades().realizarLogin(Config.getProperty("email.barriga"),
+//	 Config.getProperty("senha.barriga"));
+//	 }
 	//
 	// @Quando("criar uma nova conta")
 	// public void criarUmaNovaConta() throws MalformedURLException, IOException {

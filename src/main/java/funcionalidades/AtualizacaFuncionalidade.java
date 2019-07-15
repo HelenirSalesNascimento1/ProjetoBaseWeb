@@ -23,7 +23,7 @@ public class AtualizacaFuncionalidade {
 	}
 
 	private void carregarMassaDados(MassaCadastro massa) throws ClassNotFoundException, SQLException {
-		String cnpj = MassaDadosUtils.gerarCNPJ();
+		//String cnpj = MassaDadosUtils.gerarCNPJ();
 		massa.setCnpj(MassaDadosUtils.gerarCNPJ());
 		massa.setRazaoSocial(Config.getProperty("razaoSocial"));
 		massa.setNomeParceiro(Config.getProperty("nomeParceiro"));

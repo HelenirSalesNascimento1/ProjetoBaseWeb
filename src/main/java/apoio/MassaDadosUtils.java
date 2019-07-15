@@ -1,13 +1,6 @@
 package apoio;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Random;
-
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class MassaDadosUtils {
@@ -15,7 +8,7 @@ public class MassaDadosUtils {
 	public String switValues(String value) {
 		switch (value) {
 		case "Em_BRANCO":
-			return " ";
+			return "";
 
 		default:
 			break;

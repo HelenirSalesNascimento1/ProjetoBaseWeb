@@ -4,7 +4,6 @@ import java.sql.SQLException;
 
 import apoio.MassaDadosUtils;
 import cucumber.api.java.pt.Dado;
-import funcionalidades.CadastroFuncionalidade;
 import funcionalidades.ExclusãoFuncionalidade;
 
 public class ExclusãoStep {

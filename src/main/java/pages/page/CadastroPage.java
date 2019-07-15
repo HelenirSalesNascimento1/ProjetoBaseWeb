@@ -3,12 +3,9 @@ package pages.page;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByName;
 import org.openqa.selenium.WebElement;
 
 import Controller.ControllerPage;
-import net.bytebuddy.implementation.bind.annotation.This;
 
 public class CadastroPage extends ControllerPage {
 
@@ -92,9 +89,9 @@ public class CadastroPage extends ControllerPage {
 		this.getLabel("//span[contains(text(),'À Vista')]").click();
 	}
 
-	public void selecionarRamoAtividade() throws Exception {
-		this.getLabel("//mat-select[@ng-reflect-placeholder='Ramo de Atividade']").click();
-		this.getLabel("//span[contains(text(),'Bares')]").click();
+	public void selecionarRamoAtividade(String bares) throws Exception {
+		this.getLabel("//mat-select[@placeholder='Ramo de Atividade']").click();
+		this.getLabel("//span[contains(text(),'" + bares + "')]").click();
 	}
 
 	public void preencherTaxa(String taxa) throws Exception {
@@ -155,7 +152,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void selecionarPrecificaçaoClienteFinal() throws Exception {
-		this.getLabel("//mat-select[@ng-reflect-placeholder='Precificação Cliente Final']").click();
+		this.getLabel("//mat-select[@placeholder='Precificação Cliente Final']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
 	}
 
@@ -164,12 +161,12 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void selecionarPropriedadeTerminal() throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-2']//div[@class='mat-select-value']").click();
+		this.getLabel("//mat-select[@placeholder='Propriedade do Terminal']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
 	}
 
 	public void selecionarPropriedadeAplicaçao(String rede) throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-3']//div[@class='mat-select-value']").click();
+		this.getLabel("//mat-select[@placeholder='Propriedade da Aplicação']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'" + rede + "')]").click();
 	}
 
@@ -178,53 +175,53 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnCanaisdeVenda() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-6']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'EPS Híbrida')]").click();
 	}
 
 	public void btnTLMKTAtivo() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-24']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'TLMKT Ativo')]").click();
 	}
 
 	public void btnExecutivosRede() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-25']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Executivos Rede')]").click();
 	}
 
 	public void btnAutoCredenciamento() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-26']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Autocredenciamento')]").click();
 	}
 
 	public void btnTipodeCaptura() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-22']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Presencial')]").click();
 	}
 
 	public void btnTecnologiaCaptura() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-11']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'POO/POS')]").click();
 	}
 
 	public void selecionarMarca() throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-4']//div[@class='mat-select-value']").click();
+		this.getLabel("//mat-select[@placeholder='Marca']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
 	}
 
 	public void btnComunicaçao() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-25']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Customizada')]").click();
 	}
 
 	public void btnComunicaçaoSerasa() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-17']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Serasa')]").click();
 	}
 
 	public void btnComunicaçaoAtivacaoProdutos() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-18']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Ativação Produtos')]").click();
 	}
 
 	public void selecionarCentralAtendimento() throws Exception {
-		this.getLabel("//mat-select[@id='mat-select-5']//div[@class='mat-select-value']").click();
+		this.getLabel("//mat-select[@placeholder='Central de Atendimento']").click();
 		this.getLabel("//span[@class='mat-option-text'][contains(text(),'Rede')]").click();
 	}
 
 	public void btnLimiteAtuacao() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-2']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Ramo CNAE')]").click();
 	}
 
 	public void btnRegiaoGeografica() throws Exception {
@@ -236,7 +233,7 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void btnCredenciamento() throws Exception {
-		this.getButton("//mat-checkbox[@id='mat-checkbox-17']//div[@class='mat-checkbox-inner-container']").click();
+		this.getButton("//span[contains(text(),'Aceite de voz')]").click();
 	}
 
 	public void btnCadastrarParceiro() throws Exception {
@@ -258,12 +255,12 @@ public class CadastroPage extends ControllerPage {
 	}
 
 	public void preencherProduto(String credito) throws Exception {
-		this.getLabel("//mat-select[@ng-reflect-placeholder='Produto']").click();
+		this.getLabel("//mat-select[@placeholder='Produto']").click();
 		this.getLabel("//span[contains(text(),'" + credito + "')]").click();
 	}
 
 	public List<String> preencherModalidade(String crediario) throws Exception {
-		this.getLabel("//mat-select[@ng-reflect-placeholder='Modalidade']").click();
+		this.getLabel("//mat-select[@placeholder='Modalidade']").click();
 		this.getLabel("//span[contains(text(),'" + crediario + "')]").click();
 		return null;
 
@@ -327,8 +324,22 @@ public class CadastroPage extends ControllerPage {
 	public void btnContinuar() throws Exception {
 		this.getButton("//button[@id='btnParceiros3']").click();
 	}
+
+	public Boolean validarCNPJ(String msg) throws Exception {
+		return this.getMsg("//simple-snack-bar[@class='mat-simple-snackbar ng-tns-c22-45 ng-trigger ng-trigger-contentFade ng-star-inserted']", msg);
+	}
 	
+	public void preencherRegimeMDR(String regimeMDR) throws Exception{
+	   this.setInput("//input[@id='mdrRegime']", regimeMDR);
+	}
 	
+	public void preencherEmail(String email) throws Exception{
+		this.setInput("", email);
+	}
+	
+	public void preencherTelefone(String telefone) throws Exception{
+		this.setInput("", telefone);
+	}
 	
 	
 

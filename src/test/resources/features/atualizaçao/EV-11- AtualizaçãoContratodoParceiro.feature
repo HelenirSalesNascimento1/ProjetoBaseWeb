@@ -1,18 +1,18 @@
 #language: pt
 #encoding: UTF-8
 @GoogleChrome @RegressivoAtualizacao
-Funcionalidade: Atualizacao
+Funcionalidade: Atualizacao 
 
   Contexto: 
     Dado acesso ao portal Parceiros
     E entro com usuario e senha validos
     E validar conta conectada com sucesso
   
-  @removendoItemListaMDR @RodarNovamente
+  @removendoItemListaMDR @RodarNovamente 
   Cenario: Validar atualizacao de parceria removendo um item na lista de MDR
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E removo os dados de condicoes comerciais MDR
@@ -22,8 +22,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoAdicionarItemListaMDR @bug
   Cenario: Validar atualizacao de parceria adicionando um item na lista de MDR
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+   #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E validar a lista de MDR com sucesso
@@ -41,51 +41,52 @@ Funcionalidade: Atualizacao
   #Mas preencho os demais campos do parceiros
   #Quando clicar no botao continuar 
   #Entao nao habilitar o botao
+  
   @AtualizacaoRazaoSocialemBranco
   Cenario: Verificar atualizacao de parceria com o campo Razao Social em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E preencho o campo razao social "Em_BRANCO"
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem A razão social é inválida.
 
-  @AtualizacaoLOGRADOUROemBranco @teste
+  @AtualizacaoLOGRADOUROemBranco 
   Cenario: Verificar atualizacao de parceria com o campo logradouro em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E preencho o campo logradouro com valor "Em_BRANCO"
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem O logradouro é inválida.
 
-  @AtualizacaoNUMEROemBranco @teste
+  @AtualizacaoNUMEROemBranco 
   Cenario: Verificar atualizacao de parceria com o campo numero em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E preencho o campo numero com valor "Em_BRANCO"
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem O número é inválido.
 
-  @AtualizacaoBAIRROemBranco @teste
+  @AtualizacaoBAIRROemBranco 
   Cenario: Verificar atualizacao de parceria com o campo bairro em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E preencho o campo bairro com valor "Em_BRANCO"
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem O bairro é inválido.
 
-  @AtualizacaoCIDADEemBranco @teste
+  @AtualizacaoCIDADEemBranco
   Cenario: Verificar atualizacao de parceria com o campo cidade em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E preencho o campo cidade com valor "Em_BRANCO"
     Quando clico no botao alterar parceiro
@@ -101,31 +102,31 @@ Funcionalidade: Atualizacao
   #Quando clico no botao alterar parceiro
   #Entao apresentar mensagem A cidade é inválida.
   
-  @AtualizacaoCEPemBranco @teste
+  @AtualizacaoCEPemBranco 
   Cenario: Verificar atualizacao de parceria com o campo cep em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E preencho o campo cep com valor "Em_BRANCO"
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem O CEP é inválido.
 
-  @AtualizacaoNOMEPARCEIROemBranco @teste
+  @AtualizacaoNOMEPARCEIROemBranco 
   Cenario: Verificar atualizacao com campo Nome Parceiro com valor branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E preencho o campo NomeParceiro com valor "Em_BRANCO"
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem O nome do parceiro é inválido.
 
-  @AtualizacaoParceriaCrediroCrediario
-  Cenario: Verificar atualizacao de parceria com MDR credito credierio
+  @AtualizacaoParceriaCrediroCrediario @credito
+  Cenario: Verificar atualizacao de parceria com MDR credito crediario
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E seleciono MDR com campo produto credito e modalidade crediario
@@ -133,77 +134,77 @@ Funcionalidade: Atualizacao
     Quando clico no botao adicionar produto
     Entao apresentar mensagem de sucesso
 
-  @AtualizacaoParceriaCrediroVista
+  @AtualizacaoParceriaCrediroVista @bug
   Cenario: Verificar atualizacao de parceria com MDR credito a vista
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E seleciono MDR com campo produto credito e modalidade a vista
     Quando clico no botao alterar parceiro
-    Entao apresentar mensagem de sucesso
+    Entao apresentar mensagem modalidade invalida para o produto escolhido
 
-  @AtualizacaoParceriaParceladoComJuros
+  @AtualizacaoParceriaParceladoComJuros @credito
   Cenario: Verificar atualizacao de parceria com MDR credito parcelado com juros
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E seleciono MDR com campo produto credito e modalidade com juros
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso
 
-  @AtualizacaoParceriaParceladoSemJuros
+  @AtualizacaoParceriaParceladoSemJuros @credito
   Cenario: Verificar atualizacao de parceria com MDR credito parcelado sem juros
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E seleciono MDR com campo produto credito e modalidade parcelado sem juros
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso
 
-  @AtualizacaoParceriaParceladoDebitoVista
+  @AtualizacaoParceriaParceladoDebitoVista @credito 
   Cenario: Verificar atualizacao de parceria com MDR debito a vista
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E seleciono MDR com campo produto debito e modalidade a vista
     Quando clico no botao adicionar produto
     Entao apresentar mensagem que ja existe MDR cadastrado
 
-  @AtualizacaoParceriaParceladoDebitoComJuros
+  @AtualizacaoParceriaParceladoDebitoComJuros @bug
   Cenario: Verificar atualizacao de parceria com MDR debito parcelado com juros
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E seleciono MDR com campo produto debito e modalidade parcelado com juros
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso
 
-  @AtualizacaoParceriaParceladoDebitoSemJuros
+  @AtualizacaoParceriaParceladoDebitoSemJuros @bug
   Cenario: Verificar atualizacao de parceria com MDR debito parcelado sem juros
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E seleciono MDR com campo produto debito e modalidade sem juros
     Quando clico no botao alterar parceiro
     Entao apresentar mensagem de sucesso
 
-  @AtualizacaoParceriaParceladoDebitoCrediario
+  @AtualizacaoParceriaParceladoDebitoCrediario @bug
   Cenario: Verificar atualizacao de parceria com MDR debito crediario
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico no botao alterar parceiro
     E clico condicoes comerciais
@@ -225,8 +226,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoTaxaValorZeradoAtualizacao
   Cenario: Verificar atualizacao de parceria com campo taxa com o valor zerado
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E preencho os MDR com campo campo taxa zerado
@@ -236,8 +237,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoTarifaValorZerado
   Cenario: Verificar atualizacao de parceria com campo tarifa com valor Zerado
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais
     E preencho os MDR com campo campo taxa tarifa Zerado
@@ -258,8 +259,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoRegimeBranco @bug
   Cenario: Verificar atualizacao de parceria com campo regime com valor em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais flex
     E preencho o campo REGIME "Em_BRANCO"
@@ -269,19 +270,19 @@ Funcionalidade: Atualizacao
   @AtualizacaoFator1Branco @bug
   Cenario: Verificar atualizacao de parceria com campo fator1 com valor em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais flex
     E preencho o campo fator1 "Em_BRANCO"
     Quando clico no botao alterar parceiro
-    Entao apresentar mensagem O fator1 é inválido.
+    #Entao apresentar mensagem O fator1 é inválido.
 
   @AtualizacaoTarifaFator1ValorZerado
   Cenario: Verificar atualizacao de parceria com campo fator1 com o valor zerado
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais flex
     E preencho os MDR com campo campo fator1 zerado
@@ -291,8 +292,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoTarifaFator2ValorZerado
   Cenario: Verificar atualizacao de parceria com campo fator2 com o valor zerado
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico condicoes comerciais flex
     E preencho os MDR com campo fator2 zerado
@@ -314,8 +315,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoCarteiraEmBranco @embranco
   Cenario: Verificar atualizacao de parceria com campo carteira com valor em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     E preencho o CARTEIRA "Em_BRANCO"
@@ -325,8 +326,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoCelulaEmBranco @bug
   Cenario: Verificar atualizacao de parceria com campo celula com valor em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     E preencho o CELULA "Em_BRANCO"
@@ -336,8 +337,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoGrupoComercialEmBranco @embranco
   Cenario: Verificar atualizacao de parceria com campo grupo comercial com valor em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     E preencho o grupo COMERCIAL "Em_BRANCO"
@@ -347,25 +348,25 @@ Funcionalidade: Atualizacao
   @AtualizacaoCanalEmBranco @bug
   Cenario: Verificar atualizacao de parceria com campo canal com valor em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     E preencho o canal "Em_BRANCO"
     Quando clico no botao alterar parceiro
-
-  #Entao apresentar mensagem de erro obrigatorio
+   #Entao apresentar mensagem de erro obrigatorio
+   
   @AtualizacaoFornecedorDaAplicacaoBranco @bug
   Cenario: Verificar atualizacao de parceria sem o campo fornecedor da aplicacao  em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     E preencho o fornecedor da aplicacao "Em_BRANCO"
     Quando clico no botao alterar parceiro
-
-  #Entao sem sucesso
+   #Entao sem sucesso
+ 
   #@AtualizacaoClienteFinalEmBranco
   #Cenario: Verificar atualiza��o de parceria com campo precifica��o cliente final com valor em branco
   #E que cadastro uma parceria
@@ -406,8 +407,8 @@ Funcionalidade: Atualizacao
   @atualizacaoSelecionarParceiro
   Cenario: Validar atualizacao parametros da parceria com campo propriedade da aplicacao selecionado parceiro e preencher o campo forcencedor da aplicacao
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     Mas no campo propriedade da aplicacao selecionar parceiro e preencho no campo fornecedor da Aplicacao
@@ -417,8 +418,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoCanalVendaMaximoItens
   Cenario: Verificar atualizacao de parceria com campo canal de venda com  maximo de itens permitidos
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     E preencho os dados de parametros parceirias maximo itens canal de venda
@@ -428,8 +429,8 @@ Funcionalidade: Atualizacao
   @AtualizacaoCanalVendaBrancoParcerias 
   Cenario: Verificar atualizacao de parceria sem o campo canal de venda em branco
     E que cadastro uma parceria
-    E acesso ao portal Parceiros
-    E entro com usuario e senha validos
+    #E acesso ao portal Parceiros
+    #E entro com usuario e senha validos
     E que carrego os dados da parceria cadastrada
     E clico parametros da parceria
     E preencho o canal de venda "Em_BRANCO"

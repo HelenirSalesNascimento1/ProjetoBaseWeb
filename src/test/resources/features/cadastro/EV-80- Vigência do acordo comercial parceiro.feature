@@ -34,7 +34,7 @@ Funcionalidade: Cadastro Calendario
   Cenario: Verificar cadastro dos parametros parceirias campo caledario, se a data fim deve ser posterior a data inicio
     E preencho os dados do parceiro
     E clicar no botao continuar
-    E seleciono a data fim e data inicio do campo calendario parametros parceirias
+    E seleciono a data inicio e data fim do campo calendario parametros parceirias
     Quando preencher os demais campos
     Entao passa o teste
 

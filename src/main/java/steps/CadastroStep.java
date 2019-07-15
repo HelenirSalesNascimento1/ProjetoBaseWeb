@@ -7,7 +7,6 @@ import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 import exceptions.ExceptionUtils;
-import funcionalidades.AtualizacaFuncionalidade;
 import funcionalidades.CadastroFuncionalidade;
 
 public class CadastroStep {
@@ -55,10 +54,6 @@ public class CadastroStep {
 
 	}
 
-	// @Quando("cadastrar novo usu�rio de parceiros")
-	// public void cadastrarNovoUsu�rioDeParceiros() {
-	//
-	// }
 	@Dado("preencho o campo CNPJ {string}")
 	public void preenchoOCampoCNPJComValor(String cnpj) throws Exception {
 		cadastroFuncionalidade.validarCnpj(dados.switValue(cnpj));
@@ -138,12 +133,12 @@ public class CadastroStep {
 
 	@Dado("preencho o campo taxa com valor {string}")
 	public void preenchoOCampoTaxaComValor(String taxa) throws Exception {
-		cadastroFuncionalidade.preecherCondiçõesComerciaisSemTaxa(dados.switValue(taxa));
+		cadastroFuncionalidade.preecherCondiçõesComerciaisSemTaxa(dados.switValues(taxa));
 	}
 
 	@Dado("preencho o campo tarifa com valor {string}")
 	public void preenchoOCampoTarifaComValor(String tarifa) throws Exception {
-		cadastroFuncionalidade.preecherCondiçõesComerciaisSemTarifa(dados.switValue(tarifa));
+		cadastroFuncionalidade.preecherCondiçõesComerciaisSemTarifa(dados.switValues(tarifa));
 	}
 
 	@Dado("seleciono MDR com campo produto credito e modalidade crediario")
@@ -357,7 +352,7 @@ public class CadastroStep {
 
 	@Entao("apresentar mensagem de erro campo fator2")
 	public void apresentarMensagemDeErrofator2() throws Exception {
-		cadastroFuncionalidade.validarMsgDeErroObrigatoriaFator1();
+		cadastroFuncionalidade.validarMsgDeErroObrigatoriaFator2();
 	}
 
 	@Quando("clico no botao adicionar produto")
@@ -506,8 +501,102 @@ public class CadastroStep {
 	public void habilitarOBotaoContinuarEClicar() throws Exception {
 		cadastroFuncionalidade.btnContinuar();
 	}
+
 	@Dado("no campo propriedade da aplicacao selecionar parceiro e preencho no campo fornecedor da Aplicacao")
-	public void noCampoPropriedadeDaAplicacaoSelecionarParceiroEPreenchoNoCampoFornecedorDaAplicacao() throws Exception {
+	public void noCampoPropriedadeDaAplicacaoSelecionarParceiroEPreenchoNoCampoFornecedorDaAplicacao()
+			throws Exception {
 		cadastroFuncionalidade.selecionarFornecedor();
 	}
+
+	@Entao("apresentar mensagem O fornecedor da aplicação é inválido.")
+	public void apresentarMensagemOFornecedorDaAplicaçãoÉInválido() throws Exception {
+		cadastroFuncionalidade.validarMsgFornecedorDaAplicacao();
+	}
+
+	@Entao("apresentar mensagem modalidade invalida para o produto escolhido")
+	public void apresentarMensagemModalidadeInvalidaParaOProdutoEscolhido() throws Exception {
+		cadastroFuncionalidade.validarMsgErrorMDR();
+	}
+
+	@Dado("preencho o campo regime mdr com valor {string}")
+	public void preenchoOCampoRegimeMdrComValor(String regimeMDR) throws Exception {
+		cadastroFuncionalidade.preencherRegimeMDREmBranco(dados.switValue(regimeMDR));
+	}
+
+	@Dado("preencho o campo regime mdr zerado")
+	public void preenchoOCampoRegimeMdrZerado() throws Exception {
+		cadastroFuncionalidade.preencherRegimeMDRZerada();
+	}
+
+	@Dado("preencho os MDR com campo regime valor acima do permitido")
+	public void preenchoOsMDRComCampoRegimeValorAcimaDoPermitido() throws Exception {
+		cadastroFuncionalidade.preencherRegimeMDRAcimaPermitido();
+	}
+
+	@Entao("apresentar mensagem de erro campo prazo de liquidacao obrigatorio")
+	public void apresentarMensagemDeErroCampoPrazoDeLiquidacaoObrigatorio() throws Exception {
+		cadastroFuncionalidade.msgErroMDRRegime();
+	}
+
+	@Entao("apresentar mensagem de erro campo prazo liquidacao obrigatorio")
+	public void apresentarMensagemDeErroCampoPrazoLiquidacaoObrigatorio() throws Exception {
+		cadastroFuncionalidade.msgErroZeradoMDRRegime();
+	}
+
+	@Dado("preencho o campo regime mdr negativo")
+	public void preenchoOCampoRegimeMdrNegativo() throws Exception {
+		cadastroFuncionalidade.preencherCampoMDRRegimeNegativo();
+
+	}
+
+	@Dado("que tenho mesmo ramo de atividade")
+	public void queTenhoMesmoRamoDeAtividade() throws Exception {
+		cadastroFuncionalidade.preecherCondiçõesComerciais();
+	}
+
+	@Dado("preencho os MDR com campo regime com mesmo valor prazo")
+	public void preenchoOsMDRComCampoRegimeComMesmoValorPrazo() throws Exception {
+		cadastroFuncionalidade.preecherCondiçõesComerciais();
+	}
+
+	@Dado("preencho os MDR com campo regime com mesmo valores diferentes")
+	public void preenchoOsMDRComCampoRegimeComMesmoValoresDiferentes() throws Exception {
+		cadastroFuncionalidade.preencherMDRValoresDiferentes();
+	}
+
+	@Dado("que tenho varios ramo de atividade")
+	public void queTenhoVariosRamoDeAtividade() throws Exception {
+		cadastroFuncionalidade.preecherCondiçõesComerciais();
+	}
+
+	@Dado("preencho os MDR com campo regime com mesmo valor")
+	public void preenchoOsMDRComCampoRegimeComMesmoValor() throws Exception {
+		cadastroFuncionalidade.preencherCampoRegimeMesmoValor();
+	}
+
+	@Dado("preencho os MDR com campo regime com valores diferente no campo")
+	public void preenchoOsMDRComCampoRegimeComValoresDirefenteNoCampo() throws Exception {
+		cadastroFuncionalidade.preencherCampoRegimeValoresDiferente();
+	}
+
+	@Dado("preencho o campo telefone {string}")
+	public void preenchoOCampoTelefone(String telefone) throws Exception {
+		cadastroFuncionalidade.preencherCampoTelefoneEmBranco(dados.switValue(telefone));
+	}
+
+	@Dado("preencho o campo telefone negativo")
+	public void preenchoOCampoTelefoneNegativo() throws Exception {
+		cadastroFuncionalidade.preencherCampoTelefoneNegativo();
+	}
+
+	@Dado("preencho o campo telefone zerado")
+	public void preenchoOCampoTelefoneZerado() throws Exception {
+		cadastroFuncionalidade.preencherCampoTelefoneZerado();
+	}
+
+	@Dado("preencho o campo email {string}")
+	public void preenchoOCampoEmail(String email) throws Exception {
+		cadastroFuncionalidade.preencherCampoEmailEmBranco(dados.switValue(email));
+	}
+
 }

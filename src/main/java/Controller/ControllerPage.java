@@ -59,44 +59,42 @@ public abstract class ControllerPage {
 
 	public void setInput(String xPath, String value) throws Exception {
 		WebElement ele = getElement(xPath);
-		 Thread.sleep(timeOut);
-			try{
-				ele.clear();
-				ele.sendKeys(value);
-			}catch (Exception e) {
-				throw e;
-			}
+		try {
+			ele.clear();
+			ele.sendKeys(value);
+		} catch (Exception e) {
+			throw e;
+		}
 		
 	}
-	
+
 	public void setInput(String xPath, String value, String atributo) throws Exception {
 		WebElement ele = getElement(xPath);
-		 Thread.sleep(timeOut);
-			try{
-				String text = ele.getAttribute(atributo);
-				for(Integer i = 0; i <= text.length(); i++){
-					ele.sendKeys(Keys.BACK_SPACE);
-					//System.out.println("Backspace " + i);
-				}
-				
-				ele.sendKeys(value);
-			}catch (Exception e) {
-				throw e;
+		Thread.sleep(timeOut);
+		try {
+			String text = ele.getAttribute(atributo);
+			for (Integer i = 0; i <= text.length(); i++) {
+				ele.sendKeys(Keys.BACK_SPACE);
 			}
-		
+
+			ele.sendKeys(value);
+		} catch (Exception e) {
+			throw e;
+		}
+
 	}
-	
+
 	public void setInput(String xPath, String value, Integer timeWait) throws Exception {
-		
+
 		WebElement ele = getElement(xPath);
-		 Thread.sleep(timeWait);
-			try{
-				ele.clear();
-				ele.sendKeys(value);
-			}catch (Exception e) {
-				throw e;
-			}
-		
+		Thread.sleep(timeWait);
+		try {
+			ele.clear();
+			ele.sendKeys(value);
+		} catch (Exception e) {
+			throw e;
+		}
+
 	}
 
 	public WebElement getButton(String xPath) throws Exception {
@@ -115,18 +113,6 @@ public abstract class ControllerPage {
 		setInput(xPath, value);
 	}
 
-	// public Boolean getMsg(String XPATH_MSG_LOGIN_SUCCESS, String msg) throws
-	// Exception {
-	//
-	// try {
-	// String aux = getElement(XPATH_MSG_LOGIN_SUCCESS).getText();
-	// if (aux.equalsIgnoreCase(msg))
-	// return true;
-	// return false;
-	// } catch (Exception e) {
-	// throw e;
-	// }
-	// }
 	public Boolean getMsg(String XPATH_MSG_LOGIN_SUCCESS, String msg) throws Exception {
 
 		try {
@@ -200,10 +186,6 @@ public abstract class ControllerPage {
 		List<WebElement> allvalue = webDriver.findElements(By.xpath(xpath));
 
 		return allvalue;
-		//		for (int i = 0; i < allvalue.size(); i++) {
-		//			System.out.println("Value � : " + allvalue.get(i).getText());
-		//			
-		//		}
 
 	}
 

@@ -16,10 +16,11 @@ public class Contexto {
 
 	
 	private static ArrayList<String> listaURL = new ArrayList<String>();{
-		listaURL.add("http://dev-rl7-partner-ui.s3-website-us-east-1.amazonaws.com/#/");
-		listaURL.add("http://localhost:4200/#/login");
+		listaURL.add("https://rl7-dev-api.useredecloud.com.br/partner-ui/index.html");
+		listaURL.add("https://rl7-dev-api.useredecloud.com.br/partner-ui/index.html");
 		listaURL.add("http://partner.ui.redelabs.tech.s3-website-us-east-1.amazonaws.com/#/login");
-		listaURL.add("");
+		listaURL.add("https://rl7-hom-api.useredecloud.com.br/partner-ui/index.html");
+		
 	}
 	 
 	public String recuperarLinkDev(){
@@ -34,6 +35,11 @@ public class Contexto {
 	
 	public String recuperarLink(){
 		int posicao = 0;
+		return listaURL.get(posicao);
+	}
+	
+	public String recuperarLinkTeste(){
+		int posicao = 3;
 		return listaURL.get(posicao);
 	}
  }

@@ -1,10 +1,7 @@
 package funcionalidades;
 
 import java.sql.SQLException;
-import java.text.DateFormat;
 import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.Date;
 
 import apoio.MassaCadastro;
 import apoio.MassaDadosUtils;
@@ -29,7 +26,6 @@ public class CadastroFuncionalidade {
 
 	private void carregarMassaDados(MassaCadastro massa) throws ClassNotFoundException, SQLException {
 		String cnpj = MassaDadosUtils.gerarCNPJ();
-
 		massa.setCnpj(cnpj);
 		massa.setRazaoSocial(Config.getProperty("razaoSocial"));
 		massa.setNomeParceiro(Config.getProperty("nomeParceiro"));
@@ -47,12 +43,14 @@ public class CadastroFuncionalidade {
 		massa.setFator1(Config.getProperty("fator1"));
 		massa.setFator2(Config.getProperty("fator2"));
 		massa.setParametrosParceria(Config.getProperty("parametrosParceria"));
-		massa.setNegativo("");
-		massa.setZerado("000000");
+		massa.setNegativo("-1");
+		massa.setZerado(Config.getProperty("zerado"));
 		massa.setCarteira(Config.getProperty("carteira"));
 		massa.setCelula(Config.getProperty("celula"));
 		massa.setGrupoComercial(Config.getProperty("grupoComercial"));
 		massa.setCanal(Config.getProperty("canal"));
+		massa.setRegimeMDR(Config.getProperty("regimeMDR"));
+		massa.setTelefone(Config.getProperty("telefone"));
 	}
 
 	public void setRazaoSocial() throws Exception {
@@ -66,6 +64,7 @@ public class CadastroFuncionalidade {
 		cadastroPage.preencherCnpj(massa.getCnpj());
 
 	}
+	
 
 	public void setNomeParceiro() throws Exception {
 
@@ -105,11 +104,19 @@ public class CadastroFuncionalidade {
 		cadastroPage.selecionarUF("SP");
 
 	}
-
+	
 	public void setCep() throws Exception {
 
 		cadastroPage.preencherCep(massa.getCep());
 
+	}
+	
+	public void setEmail() throws Exception{
+		cadastroPage.preencherEmail(massa.getEmail());
+	}
+	
+	public void setTelefone() throws Exception{
+		cadastroPage.preencherTelefone(massa.getTelefone());
 	}
 
 	public void clicarContinuar() throws Exception {
@@ -126,7 +133,15 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionarRamoDeAtividade() throws Exception {
-		cadastroPage.selecionarRamoAtividade();
+		cadastroPage.selecionarRamoAtividade("Bares");
+	}
+	
+	public void selecionarRamoDeAtividadeLanchonetes() throws Exception {
+		cadastroPage.selecionarRamoAtividade("Lanchonetes");
+	}
+
+	public void selecionarMdrRegime() throws Exception {
+		cadastroPage.preencherRegimeMDR(massa.getRegimeMDR());
 	}
 
 	public void setTaxaDebito() throws Exception {
@@ -155,6 +170,13 @@ public class CadastroFuncionalidade {
 
 	public void setTaxaZerado() throws Exception {
 		cadastroPage.preencherTaxa(massa.getZerado());
+	}
+
+	public void setRegimeMDRZerado() throws Exception {
+		cadastroPage.preencherRegimeMDR(massa.getZerado());
+	}
+	public void setRegimeMDRNegativo() throws Exception {
+		cadastroPage.preencherRegimeMDR(massa.getNegativo());
 	}
 
 	public void setTarifaZerada() throws Exception {
@@ -362,6 +384,9 @@ public class CadastroFuncionalidade {
 		setBairro();
 		setCidade();
 		selecionarUf();
+	//	setEmail();
+	//	setTelefone();
+
 		// botaoContinuarCadastroParceiro();
 
 	}
@@ -402,6 +427,7 @@ public class CadastroFuncionalidade {
 		selecionarProduto();
 		selecionarModalidade();
 		selecionarRamoDeAtividade();
+		selecionarMdrRegime();
 		setTaxaDebito();
 		setTarifaDebito();
 		clicarAdicionarProduto();
@@ -833,7 +859,7 @@ public class CadastroFuncionalidade {
 		selecionarClienteFinal();
 		selecionarPropriedadeTerminal();
 		selecionarPropriedadeAplicacao();
-		//setFornecedorAplicacao();
+		// setFornecedorAplicacao();
 		selecionarMarca();
 		btnAntecipaçaoRecebiveis();
 		btnCredenciamento();
@@ -954,7 +980,12 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionaModalidadeCrediario() throws Exception {
-		cadastroPage.preencherModalidade("Crediário");
+		try {
+			cadastroPage.preencherModalidade("Crediário");
+		} catch (Exception e) {
+			System.out.println("Erro ao selecionar opção crediário pois Débito não possui essa opção");
+			throw e;
+		}
 
 	}
 
@@ -970,12 +1001,22 @@ public class CadastroFuncionalidade {
 	}
 
 	public void selecionaProdutoComJuros() throws Exception {
-		cadastroPage.preencherModalidade("Parcelado com juros");
+		try {
+			cadastroPage.preencherModalidade("Parcelado com juros");
+		} catch (Exception e) {
+			System.out.println("Erro ao selecionar opção a parcelado sem juros pois Débito não possui essa opção");
+			throw e;
+		}
 
 	}
 
 	public void selecionaProdutoSemJuros() throws Exception {
-		cadastroPage.preencherModalidade("Parcelado sem juros");
+		try {
+			cadastroPage.preencherModalidade("Parcelado sem juros");
+		} catch (Exception e) {
+			System.out.println("Erro ao selecionar opção a parcelado sem juros poid Débito não possui essa opção");
+			throw e;
+		}
 
 	}
 
@@ -996,6 +1037,18 @@ public class CadastroFuncionalidade {
 		selecionaProdutoCredito();
 		selecionaModalidadeCrediario();
 		selecionarRamoDeAtividade();
+		selecionarMdrRegime();
+		setTaxaCredito();
+		setTarifaCredito();
+		clicarAdicionarProduto();
+
+	}
+	public void preencherDadosMDRRamoAtividadeLanchonetes() throws Exception {
+
+		selecionaProdutoCredito();
+		selecionaModalidadeCrediario();
+		selecionarRamoDeAtividadeLanchonetes();
+		selecionarMdrRegime();
 		setTaxaCredito();
 		setTarifaCredito();
 		clicarAdicionarProduto();
@@ -1065,6 +1118,27 @@ public class CadastroFuncionalidade {
 		selecionarProduto();
 		selecionaModalidadeCrediario();
 		selecionarRamoDeAtividade();
+		setTaxaDebito();
+		setTarifaDebito();
+		clicarAdicionarProduto();
+
+	}
+
+	public void preencherRegimeMDRZerado() throws Exception {
+		selecionarProduto();
+		selecionarModalidade();
+		selecionarRamoDeAtividade();
+		setRegimeMDRZerado();
+		setTaxaDebito();
+		setTarifaDebito();
+		clicarAdicionarProduto();
+
+	}
+	public void preencherRegimeMDRNegativo() throws Exception {
+		selecionarProduto();
+		selecionarModalidade();
+		selecionarRamoDeAtividade();
+		setRegimeMDRNegativo();
 		setTaxaDebito();
 		setTarifaDebito();
 		clicarAdicionarProduto();
@@ -1196,7 +1270,10 @@ public class CadastroFuncionalidade {
 	}
 
 	public void msgComSucesso(String msg) throws Exception {
+		// System.out.println(cadastroPage.validarMsg(msg) + msg);
 		System.out.println(cadastroPage.validarMsg(msg) + msg);
+		if (!cadastroPage.validarMsg(msg))
+			throw new Exception();
 	}
 
 	public void validarMsgDeCadastroComSucesso() throws Exception {
@@ -1205,11 +1282,22 @@ public class CadastroFuncionalidade {
 
 	public void btnContinuarCadastroParceiro() throws Exception {
 		botaoContinuarCadastroParceiro();
+	}
+
+	public void validarMsgDeErrorCnpj(String msg) throws Exception {
+		// System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
+		System.out.println(cadastroPage.validarCNPJ(msg) + msg);
+		if (!cadastroPage.validarCNPJ(msg))
+			throw new Exception();
 
 	}
 
 	public void validarMsgDeError(String msg) throws Exception {
+		// System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
 		System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
+		if (!cadastroPage.validarMsgDeError(msg))
+			throw new Exception();
+
 	}
 
 	public void validarMsgDeErroAdicionarProduto() throws Exception {
@@ -1238,17 +1326,35 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMsgErro(String msg) throws Exception {
-		System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
+		// System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
+		System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
+		if (!cadastroPage.validarMsgDeError(msg))
+			throw new Exception();
 
 	}
 
 	public void validarMsgErrobtn3(String msg) throws Exception {
+		// System.out.println(cadastroPage.validarMsgDeErroBtn3(msg) + msg);
 		System.out.println(cadastroPage.validarMsgDeErroBtn3(msg) + msg);
+		if (!cadastroPage.validarMsgDeErroBtn3(msg))
+			throw new Exception();
 
 	}
 
 	public void validarMsgDuplicada(String msg) throws Exception {
+		// System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
 		System.out.println(cadastroPage.validarMsgDeError(msg) + msg);
+		if (!cadastroPage.validarMsgDeError(msg))
+			throw new Exception();
+
+	}
+
+	public void validarMsgErrorBtn1(String msg) throws Exception {
+		// System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
+		System.out.println(cadastroPage.validarMsgDeErro(msg) + msg);
+		if (!cadastroPage.validarMsgDeErro(msg))
+			throw new Exception();
+
 	}
 
 	public void validarMsgDuplicada() throws Exception {
@@ -1257,7 +1363,7 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMsgDeErroObrigatorio() throws Exception {
-		validarMsgErro("continuar");
+		validarMsgErrorBtn1("continuar");
 
 	}
 
@@ -1267,17 +1373,17 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMsgDeErroObrigatoriaRegime() throws Exception {
-		validarMsgDeError(" O regime é Inválido ");
+		validarMsgDeError("O regime é inválido.");
 
 	}
 
 	public void validarMsgDeErroObrigatoriaFator1() throws Exception {
-		validarMsgDeError(" O fator1 é inválido ");
+		validarMsgDeError("O fator 1 é inválido.");
 
 	}
 
 	public void validarMsgDeErroObrigatoriaFator2() throws Exception {
-		validarMsgDeError("O fator2 é inválido");
+		validarMsgDeError("O fator 2 é inválido.");
 
 	}
 
@@ -1325,7 +1431,7 @@ public class CadastroFuncionalidade {
 
 	private void selecionarInicio(LocalDateTime date) throws Exception {
 		cadastroPage.calendarioInicio(date.getDayOfMonth());
-		Thread.sleep(1000);
+
 	}
 
 	private void selecionarFim(LocalDateTime date) throws Exception {
@@ -1358,25 +1464,105 @@ public class CadastroFuncionalidade {
 	}
 
 	public void validarMsgCNPJ() throws Exception {
-     validarMsgDeError("A razão social é inválida.");	
+		validarMsgDeError("A razão social é inválida.");
 	}
 
 	public void btnContinuar2() throws Exception {
 		cadastroPage.btnContinuar();
-		
+
 	}
 
 	public void btnContinuar() throws Exception {
-      cadastroPage.botaoContinuar();		
+		cadastroPage.botaoContinuar();
 	}
-	public void selecionarFornecedorDaAplicacao() throws Exception{
+
+	public void selecionarFornecedorDaAplicacao() throws Exception {
 		selecionarPropriedadeAplicacaoParceiro();
 		setFornecedorAplicacao();
 	}
 
 	public void selecionarFornecedor() throws Exception {
 		selecionarFornecedorDaAplicacao();
+
+	}
+
+	public void validarMsgFornecedorDaAplicacao() throws Exception {
+		validarMsgDeError("O fornecedor da aplicação é inválido.");
+	}
+
+	public void validarMsgErrorMDR() throws Exception {
+		validarMsgDeError("Modalidade inválida para o produto escolhido");
+	}
+
+	public void preencherRegimeMDREmBranco(String regimeMDR) throws Exception {
+		massa.setRegimeMDR(regimeMDR);
+		preecherCondiçõesComerciais();
+	}
+
+	public void preencherRegimeMDRZerada() throws Exception {
+		preencherRegimeMDRZerado();
+
+	}
+
+	public void preencherRegimeMDRAcimaPermitido() throws Exception {
+		massa.setRegimeMDR("32");
+		preecherCondiçõesComerciais();
+	}
+
+	public void msgErroMDRRegime() throws Exception {
+		validarMsgDeError("O campo prazo de liquidação é obrigatório");
+	}
+
+	public void msgErroZeradoMDRRegime() throws Exception {
+		validarMsgDeError("O campo prazo de liquidação deve estar entre 1 e 31");
 		
 	}
+
+	public void preencherCampoMDRRegimeNegativo() throws Exception {
+		preencherRegimeMDRNegativo();		
+	}
+
+	public void preencherMDRValoresDiferentes() throws Exception {
+		massa.setRegimeMDR("31");
+		preencherDadosMDR();
+	}
+
+	public void preencherCampoRegimeMesmoValor() throws Exception {
+		preencherDadosMDRRamoAtividadeLanchonetes();
+	}
+
+	public void preencherCampoRegimeValoresDiferente() throws Exception {
+		massa.setRegimeMDR("31");
+		preencherDadosMDRRamoAtividadeLanchonetes();
+		
+	}
+
+	public void preencherCampoTelefoneEmBranco(String telefone) throws Exception {
+		//Testar
+		massa.setTelefone(telefone);
+		preencherParceiros();
+		
+	}
+
+	public void preencherCampoTelefoneNegativo() throws Exception {
+		//Testar
+		massa.setTelefone("-111");
+		preencherParceiros();
+	}
+
+	public void preencherCampoTelefoneZerado() throws Exception {
+		//Testar
+		massa.setTelefone("0000");
+		preencherParceiros();
+		
+	}
+
+	public void preencherCampoEmailEmBranco(String email) throws Exception {
+		//testar
+		massa.setEmail(email);
+		preencherParceiros();
+	}
+	
+	
 
 }

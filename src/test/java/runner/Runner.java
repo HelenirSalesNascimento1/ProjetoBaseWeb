@@ -14,11 +14,10 @@ import cucumber.api.junit.Cucumber;
 		strict = false, 
 	    glue = {"classpath:steps"}, 
 	    features = {"classpath:features"},
-	    tags = {"@CadastroComSucesso"}
+	    tags = {"@emailEmBranco"}
 		)
 
 public class Runner {  
 	
 }
-//421.073.442/7613-1_
 

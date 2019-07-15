@@ -1,50 +1,49 @@
 #language: pt
 #encoding: UTF-8
-@GoogleChrome @Regressivo
-Funcionalidade: Cadastro
+@GoogleChrome @RegressivoCadastro @generate-word
+Funcionalidade: Cadastro 
 
-  Contexto:  
-    Dado acesso ao portal Parceiros 
-    E entro com usuario e senha validos  
+  Contexto: 
+    Dado acesso ao portal Parceiros
+    E entro com usuario e senha validos
     E validar conta conectada com sucesso
- 
-  @CadastroComSucesso 
+
+  @CadastroComSucesso
   Cenario: Verificar cadastro de parcerias com todos os campos obrigatario com sucesso
     E preencho os dados do parceiro
-    E clicar no botao continuar 
+    E clicar no botao continuar
     E preencho os dados de parametros parceirias
     E clicar no botao continuar parametro de parceirias
-    E preencho os dados de condiçoes comerciais    
-    E clico no botao continua  
+    E preencho os dados de condiçoes comerciais 
+    E clico no botao continua
     E preencho os dados de flex
-    Quando clicar no botao cadastrar novo usuario de parceiros 
+    Quando clicar no botao cadastrar novo usuario de parceiros
     Entao validar se a conta foi criada com sucesso
 
   @CNPJValorEmBranco
   Cenario: Verificar cadastro com campo CNPJ com valor em branco
-    E preencho o campo CNPJ "Em_BRANCO" 
-    Mas preencho os demais campos do parceiros
-    Quando clicar no botao continuar
+    E preencho o campo CNPJ "Em_BRANCO"
+    Quando preencho os demais campos do parceiros
     Entao nao habilitar o botao
 
   @RazaoSocialValorEmBranco
   Cenario: Verificar cadastro com campo razao social com valor em branco
     E preencho o campo RAZAO SOCIAL "Em_BRANCO"
-    Mas preencho os demais campos do parceiros 
+    Mas preencho os demais campos do parceiros
     E clicar no botao continuar
-    Quando apresentar mensagem A razão social é inválida.
+    Quando apresentar mensagem A razão social é inválida. 
     Entao nao habilitar o botao
 
   @logradouroValorEmBranco
   Cenario: Verificar cadastro com campo logradouro com valor branco
     E preencho o campo LOGRADOURO com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
-    E clicar no botao continuar 
+    E clicar no botao continuar
     Quando apresentar mensagem O logradouro é inválida.
     Entao nao habilitar o botao
-	
+
   @NumeroValorEmBranco
-  Cenario: Verificar cadastro com campo n�mero com valor branco
+  Cenario: Verificar cadastro com campo numero com valor branco
     E preencho o campo NUMERO com valor "Em_BRANCO"
     Quando preencho os demais campos do parceiros
     Entao nao habilitar o botao
@@ -54,7 +53,7 @@ Funcionalidade: Cadastro
     E preencho o campo COMPLEMENTO com valor "Em_BRANCO"
     Quando preencho os demais campos do parceiros
     Entao habilitar o botao continuar e clicar
- 
+
   @BairroValorEmBranco
   Cenario: Verificar cadastro com campo bairro com valor branco
     E preencho o campo BAIRRO com valor "Em_BRANCO"
@@ -91,7 +90,7 @@ Funcionalidade: Cadastro
     Entao nao habilitar o botao
 
   @MDRcomSucesso
-  Cenario: Validar cadastro de parcerias com uma lista de MDR com sucesso 
+  Cenario: Validar cadastro de parcerias com uma lista de MDR com sucesso
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
@@ -121,18 +120,18 @@ Funcionalidade: Cadastro
     Entao apresentar mensagem de erro campo modalidade obrigatorio
 
   @MDRRamoValorEmBranco
-  Cenario: Verificar cadastro condi��es comerciais MDR campo ramo de atividade com valor em branco
+  Cenario: Verificar cadastro condicoes comerciais MDR campo ramo de atividade com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
     E clicar no botao continuar parametro de parceirias
     E preencho o campo ramo de atividade com valor "Em_BRANCO"
     Mas preencho os demais campos do parceiros
-    Quando  clico no botao adicionar produto
+    Quando clico no botao adicionar produto
     Entao apresentar mensagem de erro campo ramo de atividade obrigatorio
 
   @MDRTaxaValorEmBranco
-  Cenario: Verificar cadastro condi��es comerciais MDR campo taxa com valor em branco
+  Cenario: Verificar cadastro condicoes comerciais MDR campo taxa com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
@@ -143,7 +142,7 @@ Funcionalidade: Cadastro
     Entao apresentar mensagem de erro campo taxa obrigatorio
 
   @MDRTarifaValorEmBranco
-  Cenario: Verificar cadastro condi��es comerciais MDR campo tarifa com valor em branco
+  Cenario: Verificar cadastro condicoes comerciais MDR campo tarifa com valor em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias
@@ -153,21 +152,21 @@ Funcionalidade: Cadastro
     Quando clico no botao adicionar produto
     Entao apresentar mensagem de erro campo tarifa obrigatorio
 
-  @CadastrarOutroCNPJ
-  Cenario: Verificar cadastro de parceria com endereco ja cadastrado em outro CNPJ
-    E preencho os dados do parceiro
-    E clicar no botao continuar
-    E preencho os dados de parametros parceirias
-    E clicar no botao continuar parametro de parceirias
-    E preencho os dados de condiçoes comerciais
-    E clico no botao continua
-    E preencho os dados de flex
-    Quando clicar no botao cadastrar novo usuario de parceiros
-    Entao validar se a conta foi criada com sucesso
-    Dado acesso ao portal Parceiros
-    E entro com usuario e senha validos
-    E preencho outro cnpj 
-    E com mesmo endereço anteriomente
+  #@CadastrarOutroCNPJ
+  #Cenario: Verificar cadastro de parceria com endereco ja cadastrado em outro CNPJ
+    #E preencho os dados do parceiro
+    #E clicar no botao continuar
+    #E preencho os dados de parametros parceirias
+    #E clicar no botao continuar parametro de parceirias
+    #E preencho os dados de condiçoes comerciais 
+    #E clico no botao continua
+    #E preencho os dados de flex
+    #Quando clicar no botao cadastrar novo usuario de parceiros
+    #Entao validar se a conta foi criada com sucesso
+    #Dado acesso ao portal Parceiros
+    #E entro com usuario e senha validos
+    #E preencho outro cnpj
+    #E com mesmo endereço anteriomente
 
   @MDRDuplicado
   Cenario: Validar cadastro de parceria com MDR duplicada na mesma requisicao
@@ -181,15 +180,6 @@ Funcionalidade: Cadastro
     Quando clico no botao adicionar produto
     Entao apresentar mensagem que ja existe MDR cadastrado
 
-  #ver com a vivi
-  #Cenario: Validar cadastro de parceria com dados de MDR cadastrados em outra parceria
-  #E preencho os dados do parceiro
-  #E preencho os dados de condi��es comerciais em outra parceria
-  #E preencho os dados de flex
-  #E preencho os dados de par�metros parceirias
-  #Quando cadastrar novo usu�rio de parceiros
-  #Entao validar se a conta foi criada com sucesso
-  
   @MDRCreditoCrediario
   Cenario: Verificar cadastro da parceria com MDR credito crediario
     E preencho os dados do parceiro
@@ -208,8 +198,8 @@ Funcionalidade: Cadastro
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto credito e modalidade a vista
     Quando clico no botao adicionar produto
-    Entao validar a lista de MDR
-    
+    Entao apresentar mensagem modalidade invalida para o produto escolhido
+
   @MDRCreditoComJuros
   Cenario: Verificar cadastro de parceria com MDR credito parcelado com juros
     E preencho os dados do parceiro
@@ -230,7 +220,6 @@ Funcionalidade: Cadastro
     Quando clico no botao adicionar produto
     Entao validar a lista de MDR
 
-#debugar
   @MDRDebitoVista
   Cenario: Verificar cadastro de parceria com MDR debito a vista
     E preencho os dados do parceiro
@@ -249,7 +238,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade parcelado com juros
     Quando clico no botao adicionar produto
-    Entao validar a lista de MDR
+    Entao apresentar mensagem modalidade invalida para o produto escolhido
 
   @MDRDebitoSemJuros
   Cenario: Verificar cadastro de parceria com MDR debito parcelado sem juros
@@ -259,7 +248,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade sem juros
     Quando clico no botao adicionar produto
-    Entao validar a lista de MDR
+    Entao apresentar mensagem modalidade invalida para o produto escolhido
 
   @MDRDebitoCrediario
   Cenario: Verificar cadastro de parceria com MDR debito crediario
@@ -269,7 +258,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar parametro de parceirias
     E seleciono MDR com campo produto debito e modalidade crediario
     Quando clico no botao adicionar produto
-    Entao validar a lista de MDR
+    Entao apresentar mensagem modalidade invalida para o produto escolhido
 
   @TaxaValorZerado
   Cenario: Verificar cadastro de parceria com campo taxa com o valor zerado
@@ -301,8 +290,8 @@ Funcionalidade: Cadastro
     E clico no botao continua
     E preencho o campo regime "Em_BRANCO"
     Quando clicar no botao cadastrar novo usuario de parceiros
-    Entao apresentar mensagem de erro campo regime 
- 
+    Entao apresentar mensagem de erro campo regime
+
   @fator1EmBranco
   Cenario: Verificar cadastro de parceria com campo fator1 com valor em branco
     E preencho os dados do parceiro
@@ -339,17 +328,6 @@ Funcionalidade: Cadastro
     Quando clicar no botao cadastrar novo usuario de parceiros
     Entao apresentar mensagem de erro campo fator2
 
-  #ver com bueno
-  #@TarifaFator2ValorNegativo
-  #Cenario: Verificar cadastro de parceria com campo fator2 com valor negativo
-  #E preencho os dados do parceiro
-  #E preencho os dados de par�metros parceirias
-  #E preencho os dados de condi��es comerciais
-  #E clico no bot�o continua
-  #E preencho os MDR com campo fator2 negativo
-  #Quando clicar no bot�o cadastrar novo usu�rio de parceiros
-  #Entao apresentar mensagem de erro
-  
   @TarifaFator2ValorZerado
   Cenario: Verificar cadastro de parceria com campo fator2 com o valor zerado
     E preencho os dados do parceiro
@@ -358,7 +336,7 @@ Funcionalidade: Cadastro
     E clicar no botao continuar parametro de parceirias
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
-    E preencho os MDR com campo fator2 zerado 
+    E preencho os MDR com campo fator2 zerado
     Quando clicar no botao cadastrar novo usuario de parceiros
     Entao validar se a conta foi criada com sucesso
 
@@ -403,16 +381,6 @@ Funcionalidade: Cadastro
     E preencho o precificacao cliente final "Em_BRANCO"
     Quando preencho demais campos
     Entao nao habilitar o botao2
-     
-
-#@CadastroCampoAntecipacao
-  #Cenario: Verificar cadastro de parceria com campo antecipa�ao rede com valor em branco
-    #E preencho os dados do parceiro
-    #E clicar no botao continuar
-    #E preencho o precificacao cliente final "Em_BRANCO"
-    #E preencho demais campos
-    #Quando clico no botao continuar
-    #Entao nao habilitar o botao2
 
   @propriedadeTerminalFinalEmBranco
   Cenario: Verificar cadastro de parceria com campo propriedade terminal com valor em branco
@@ -430,15 +398,14 @@ Funcionalidade: Cadastro
     Quando preencho demais campos
     Entao nao habilitar o botao2
 
-#bug
-  @FornecedoraplicacaoEmBranco @bug
+  @FornecedoraplicacaoEmBranco 
   Cenario: Verificar cadastro de parceria sem o campo fornecedor da aplicacao em branco
     E preencho os dados do parceiro
     E clicar no botao continuar
     E preencho o fornecedor da aplicacao "Em_BRANCO"
     E preencho demais campos
     Quando clico no botao continuar
-    #Entao apresentar mensagem O grupo comercial é inválido.
+    Entao apresentar mensagem O fornecedor da aplicação é inválido.
 
   @CadastroSelecionarParceiro
   Cenario: Validar parametros da parceria com campo propriedade da aplicaçao selecionado parceiro e preencher o campo forcencedor da aplicacao
@@ -491,7 +458,6 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias maximo itens comunicacao
     E preencho demais campos
-    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -504,7 +470,6 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho o comunicacao "Em_BRANCO"
     E preencho demais campos
-    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -525,7 +490,6 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho os dados de parametros parceirias maximo itens atuacao
     E preencho demais campos
-    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex
@@ -538,7 +502,6 @@ Funcionalidade: Cadastro
     E clicar no botao continuar
     E preencho o atuaçao "Em_BRANCO"
     E preencho demais campos
-    #E clico no botao continuar
     E preencho os dados de condiçoes comerciais
     E clico no botao continua
     E preencho os dados de flex

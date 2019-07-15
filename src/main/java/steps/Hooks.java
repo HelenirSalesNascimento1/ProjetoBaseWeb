@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Properties;
@@ -28,7 +29,7 @@ public class Hooks {
 	@Rule
 	public TestName testName = new TestName();
 	
-	private List<String> wordTableString;
+	private List<String> wordTableString = new ArrayList<String>();
 	@Before("@GoogleChrome")
 	public void setGoogleChromeDriver(Scenario s) throws MalformedURLException, IOException {
 		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
@@ -48,16 +49,16 @@ public class Hooks {
         FrameworkWordEvidence evidence = new FrameworkWordEvidence();
         WordprocessingMLPackage template = evidence.getTemplate(prop.getProperty("templateWord"));
 
-         evidence.replacePlaceholder(template, this.wordTableString.get(0), "<ambiente>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(0), "<ambiente>");
          String timeStamp = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
          evidence.replacePlaceholder(template, timeStamp, "<data>");
-         evidence.replacePlaceholder(template, this.wordTableString.get(1), "<id_nomeCT>");
-         evidence.replacePlaceholder(template, this.wordTableString.get(2), "<objetivo>");
-         evidence.replacePlaceholder(template, this.wordTableString.get(3), "<resultado_esperado>");
-         evidence.replacePlaceholder(template, this.wordTableString.get(4), "<resultado_obtido>");
-         evidence.replacePlaceholder(template, this.wordTableString.get(5), "<executor>");
-         evidence.replacePlaceholder(template, this.wordTableString.get(6), "<sp>");
-         evidence.replacePlaceholder(template, this.wordTableString.get(7), "<cdt>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(1), "<id_nomeCT>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(2), "<objetivo>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(3), "<resultado_esperado>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(4), "<resultado_obtido>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(5), "<executor>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(6), "<sp>");
+         //evidence.replacePlaceholder(template, this.wordTableString.get(7), "<cdt>");
 
         evidence.createWordEvidence(template, path, fileName);
     }

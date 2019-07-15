@@ -9,7 +9,9 @@ Funcionalidade: Consulta
 
 @ConsultaCadastroComSucesso
 Cenario: Validar consulta de parceria com CNPJ ja cadastrado 
-    E consulto os dados do parceiro com CNPJ ja cadastrado 
-    Quando restonar os dados de parceria  
+    E que cadastro uma parceria
+    E acesso ao portal Parceiros
+    E entro com usuario e senha validos
+    Quando que carrego os dados da parceria cadastrada
     Entao validar cadastro com sucesso
        
