@@ -65,7 +65,7 @@ public abstract class ControllerPage {
 		} catch (Exception e) {
 			throw e;
 		}
-		
+
 	}
 
 	public void setInput(String xPath, String value, String atributo) throws Exception {

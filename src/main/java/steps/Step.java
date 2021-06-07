@@ -4,7 +4,7 @@ import apoio.MassaDadosUtils;
 import contexto.Aplicacao;
 import contexto.Contexto;
 import cucumber.api.java.pt.Dado;
-import funcionalidades.LoginFuncionalidade;
+//import funcionalidades.LoginFuncionalidade;
 
 public class Step {
 
@@ -12,17 +12,17 @@ public class Step {
 	Aplicacao app;
 	MassaDadosUtils dados = new MassaDadosUtils();
 
-	@Dado("acesso ao portal Parceiros")
+	@Dado("acesso ao portal seu barriga")
 	public void acessoAoPortalParceiro() throws Exception {
 		app = new Aplicacao();
 		app.acessarPagina(Contexto.recuperarInstancia().recuperarLink());
 	}
 
-	@Dado("entro com usuario e senha validos")
-	public void entroComUsuarioESenhaValidos() throws Exception {
-		LoginFuncionalidade login = new LoginFuncionalidade();
-		login.Logar(); 
-	} 
+//	@Dado("entro com usuario e senha validos")
+//	public void entroComUsuarioESenhaValidos() throws Exception {
+//		LoginFuncionalidade login = new LoginFuncionalidade();
+//		login.Logar(); 
+//	} 
 
 //	 @Dado("login no portal com usuario e senha validos")
 //	 public void loginNoPortalComUsuarioESenhaValidos() throws Exception {

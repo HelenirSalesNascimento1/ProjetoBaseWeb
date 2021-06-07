@@ -2,15 +2,12 @@ package utils;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebDriverFactory {
 	static WebDriver driver;
 	private Integer timeOut = 10;
-	
+
 	public void setNavegador(WebDriver driver) {
 		WebDriverFactory.driver = driver;
 		timeOutModule();
@@ -28,11 +25,11 @@ public class WebDriverFactory {
 	public void quitDriver() {
 		driver.quit();
 	}
-	
+
 	private Integer getTimeOut() {
 		return timeOut;
 	}
-	
+
 	public void setTimeOut(Integer timeSeconds) {
 		timeOut = timeSeconds;
 	}

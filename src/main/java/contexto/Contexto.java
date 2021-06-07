@@ -16,10 +16,9 @@ public class Contexto {
 
 	
 	private static ArrayList<String> listaURL = new ArrayList<String>();{
-		listaURL.add("https://rl7-dev-api.useredecloud.com.br/partner-ui/index.html");
-		listaURL.add("https://rl7-dev-api.useredecloud.com.br/partner-ui/index.html");
-		listaURL.add("http://partner.ui.redelabs.tech.s3-website-us-east-1.amazonaws.com/#/login");
-		listaURL.add("https://rl7-hom-api.useredecloud.com.br/partner-ui/index.html");
+		listaURL.add("https://seubarriga.wcaquino.me/login");
+		listaURL.add("");
+	
 		
 	}
 	 

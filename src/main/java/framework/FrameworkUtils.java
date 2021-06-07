@@ -8,7 +8,7 @@ public class FrameworkUtils {
 	private ArrayList<String[]> fullLog;
 	private int step;
 	private String evidencePath;
-	private int example = 1;
+	private int evidencia = 1;
 	private String scenarioName = "";
 
 	public FrameworkUtils() {
@@ -18,19 +18,19 @@ public class FrameworkUtils {
 	public void setEvidencePath(String scenario) {
 		if (!scenario.equals(scenarioName)) {
 			this.scenarioName = scenario;
-			this.example = 1;
+			this.evidencia = 1;
 		}
-		String path = System.getProperty("user.dir") + "/" + "output/";
+		String path = System.getProperty("user.dir") + "/" + "evidencia/";
 		File dir = new File(path);
 		dir.mkdir();
 		path = path + scenario;
 		dir = new File(path);
 		dir.mkdir();
-		path = path + "/example_" + String.valueOf(this.example);
+		path = path + "/evidencia_" + String.valueOf(this.evidencia);
 		dir = new File(path);
 		dir.mkdir();
 		this.step = 0;
-		this.example++;
+		this.evidencia++;
 		this.evidencePath = path;
 	}
 
@@ -40,7 +40,7 @@ public class FrameworkUtils {
 	}
 
 	public String getExampleName() {
-		return "example_" + String.valueOf(this.example - 1);
+		return "evidencia_" + String.valueOf(this.evidencia - 1);
 	}
 
 	public void addLogStep(String result, String expectedResult, String actualResult) {

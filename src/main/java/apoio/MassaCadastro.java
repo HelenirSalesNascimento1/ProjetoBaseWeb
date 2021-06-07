@@ -1,6 +1,5 @@
 package apoio;
 
-import javax.xml.bind.annotation.XmlRootElement;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
@@ -9,7 +8,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@XmlRootElement
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MassaCadastro {
 
@@ -32,7 +30,7 @@ public class MassaCadastro {
 	private String fator2;
 	private String parametrosParceria;
 	private String marca;
-	private String comunicaçao;
+	private String comunicacao;
 	private String centralAtendimento;
 	private String limiteAtuacao;
 	private String matrizRisco;
